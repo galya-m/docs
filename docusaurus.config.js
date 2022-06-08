@@ -9,7 +9,7 @@ const config = {
   title: 'Nevermined Documentation',
   tagline: 'The digital ecosystems builder',
   url: 'https://docs.nevermined.io',
-  baseUrl: '/',
+  baseUrl: '/nvm-docs/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
