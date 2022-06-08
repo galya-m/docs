@@ -102,19 +102,15 @@ const config = {
             items: [
               {
                 label: 'Overview',
-                to: '/docs/overview',
+                to: '/docs/overview/what-is-nvm',
               },
               {
                 label: 'Architecture',
-                to: '/docs/architecture',
+                to: '/docs/architecture/overview',
               },
               {
                 label: 'Integration',
                 to: '/docs/integration',
-              },
-              {
-                label: 'Tutorials',
-                to: '/docs/tutorials',
               },
             ],
           },
