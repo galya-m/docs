@@ -7,12 +7,13 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Nevermined Documentation',
-  tagline: 'The digital ecosystems builder',
+  tagline: 'Nevermined is an ecosystem development platform for Builders, Entrepreneurs, Artists, Creators, Collectors, Data Nerds, Techies, Degens and Corporate Innovators. It offers the best of Web3 tech as easy-to-integrate components.',
   url: 'https://docs.nevermined.io',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
+  plugins: ['docusaurus-plugin-sass'],
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -47,7 +48,7 @@ const config = {
           'https://github.com/nevermined-io/nvm-docs/tree/main/blog/',
         },
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: require.resolve('./src/scss/custom.scss'),
         },
       }),
     ],
@@ -57,6 +58,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
+        style: 'dark',
         title: 'Nevermined Docs',
         logo: {
           alt: 'Nevermined Logo',
@@ -95,7 +97,6 @@ const config = {
         ],
       },
       footer: {
-        style: 'dark',
         links: [
           {
             title: 'Docs',
@@ -158,6 +159,9 @@ const config = {
           },
         ],
         copyright: `Copyright © ${new Date().getFullYear()} Nevermined AG.`,
+      },
+      colorMode: {
+        disableSwitch: true
       },
       prism: {
         theme: lightCodeTheme,
