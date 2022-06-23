@@ -71,6 +71,13 @@ footer {
 
 @media all and (max-width: 1023px) {
   .nvm {
+    &__title, &__description {
+      word-break: keep-all;
+    }
+
+    &__title {
+      font-size: 4vh;
+    }
     &__page-wrapper {
       @supports (background-blend-mode: lighten) {
         background-image: url('/nevermined/backgrounds/header-bg_mobile.png'), url('/nevermined/backgrounds/home-bg-banner_mobile.png');

@@ -13,7 +13,7 @@ const config = {
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  plugins: ['docusaurus-plugin-sass'],
+  plugins: ['docusaurus-plugin-sass', './src/plugins/http-support'],
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -82,7 +82,13 @@ const config = {
             docId: 'integration',
             position: 'left',
             label: 'Integration',
-          },          
+          },
+          {
+            type: 'doc',
+            docId: 'tutorials/index',
+            position: 'left',
+            label: 'Tutorials',
+          }, 
           {to: '/blog', label: 'Blog', position: 'left'},
           {
             href: 'https://github.com/nevermined-io',
@@ -113,6 +119,10 @@ const config = {
                 label: 'Integration',
                 to: '/docs/integration',
               },
+              {
+                label: 'Tutorials',
+                to: 'docs/tutorials'
+              }
             ],
           },
           {

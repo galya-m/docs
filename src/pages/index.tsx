@@ -50,6 +50,7 @@ const FeatureList: BoxItem[] = [
   {
     title: 'Tutorials',
     className: b('box'),
+    link: 'docs/category/tutorials',
     Svg: require('@site/static/nevermined/tutorialsDocs.svg').default,
     description: (
       <>
@@ -78,8 +79,8 @@ export default function Home(): JSX.Element {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />"
+      title={`${siteConfig.title} docs`}
+      description="Everything about Nevermined, documentation and tutorials"
     >
       <div className={b('page-wrapper')}>
         <HomepageHeader />
