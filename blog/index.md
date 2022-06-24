@@ -5,6 +5,6 @@ description: Blog Posts
 
 import Blog from '@site/src/components/blog'
 
-# Blog Posts
+# The last 10 Post
 
 <Blog/>
