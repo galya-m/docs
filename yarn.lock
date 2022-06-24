@@ -2514,7 +2514,7 @@
   "resolved" "https://registry.npmjs.org/batch/-/batch-0.6.1.tgz"
   "version" "0.6.1"
 
-"bem-helpers@*":
+"bem-helpers@*", "bem-helpers@^1.1.0":
   "integrity" "sha512-1CJ/VfYCNH1IuZ5QX3eiSJP1cdS6HqMwhP95FEAY7BVlnw2Yj2sZI7zsSuTHDfaJzuzGiog6YMcGGr/ZE90iug=="
   "resolved" "https://registry.npmjs.org/bem-helpers/-/bem-helpers-1.1.0.tgz"
   "version" "1.1.0"
