@@ -7,12 +7,13 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Nevermined Documentation',
-  tagline: 'The digital ecosystems builder',
+  tagline: 'Nevermined is an ecosystem development platform for Builders, Entrepreneurs, Artists, Creators, Collectors, Data Nerds, Techies, Degens and Corporate Innovators. It offers the best of Web3 tech as easy-to-integrate components.',
   url: 'https://docs.nevermined.io',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
+  plugins: ['docusaurus-plugin-sass', './src/plugins/http-support'],
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -47,7 +48,7 @@ const config = {
           'https://github.com/nevermined-io/nvm-docs/tree/main/blog/',
         },
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: require.resolve('./src/scss/custom.scss'),
         },
       }),
     ],
@@ -57,6 +58,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
+        style: 'dark',
         title: 'Nevermined Docs',
         logo: {
           alt: 'Nevermined Logo',
@@ -80,7 +82,13 @@ const config = {
             docId: 'integration',
             position: 'left',
             label: 'Integration',
-          },          
+          },
+          {
+            type: 'doc',
+            docId: 'tutorials/index',
+            position: 'left',
+            label: 'Tutorials',
+          }, 
           {to: '/blog', label: 'Blog', position: 'left'},
           {
             href: 'https://github.com/nevermined-io',
@@ -95,7 +103,6 @@ const config = {
         ],
       },
       footer: {
-        style: 'dark',
         links: [
           {
             title: 'Docs',
@@ -112,6 +119,10 @@ const config = {
                 label: 'Integration',
                 to: '/docs/integration',
               },
+              {
+                label: 'Tutorials',
+                to: 'docs/tutorials'
+              }
             ],
           },
           {
@@ -123,7 +134,7 @@ const config = {
               },
               {
                 label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
+                href: 'https://twitter.com/nevermined_io',
               },
               {
                 label: 'Medium',
@@ -158,6 +169,9 @@ const config = {
           },
         ],
         copyright: `Copyright © ${new Date().getFullYear()} Nevermined AG.`,
+      },
+      colorMode: {
+        disableSwitch: true
       },
       prism: {
         theme: lightCodeTheme,
