@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import styles from './styles.module.scss'
-import { UiText, BEM } from '@nevermined-io/styles'
+import styles from './styles.module.scss';
+import { UiText, BEM } from '@nevermined-io/styles';
+import { convertLinkToGift } from '../../utils';
 
 const b = BEM('blog', styles)
 
@@ -21,7 +22,13 @@ const Blog = () => {
             }
         })
 
-        setPost([...result.data.items])
+        const items = result.data.items.map(item => {
+            const itemReplaced = {...item};
+            itemReplaced.content = convertLinkToGift(item.content);
+            return itemReplaced
+        });
+
+        setPost([...items])
     }
 
     useEffect(() => {
@@ -31,11 +38,11 @@ const Blog = () => {
     return (
         <div>
             {posts.map(p => 
-                <>
+                <div key={p.title} className={b('content')}>
                     <UiText type='h2' className={b('title')}>{p.title}</UiText>
                     <UiText dangerouslySetInnerHTML={{__html: p.content}} className={b('content')}/>
-                    <UiText type='small' className={b('pub-data')}>{p.pubDate}</UiText>   
-                </>    
+                    <UiText type='small' className={b('pub-data')}><strong>Published:</strong> {p.pubDate}</UiText>   
+                </div>    
             )}
         </div>
     )

@@ -1,4 +1,8 @@
 .blog {
+    &__content{
+        margin-bottom: 100px;
+    }
+    margin-bottom: 100 px;
     &__title {
         color: #000;
         font-weight: bold;
@@ -16,18 +20,20 @@
         }
 
         strong {
-            font-weight: bold;
-            display: block;
-            margin-top: 20px;    
+            font-weight: bold; 
         }
 
         figcaption {
             font-size: small;
             margin-bottom: 30px;
         }
+
+        img {
+            margin-bottom: 10px;
+        }
     }
     &__pub-data {
-
+        color: #000;
     }
 
 }
