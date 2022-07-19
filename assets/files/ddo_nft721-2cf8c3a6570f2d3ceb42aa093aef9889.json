@@ -139,7 +139,7 @@
           }, {
             "name": "_transferNft",
             "type": "boolean",
-            "value": "true"
+            "value": "false"
           }],
           "events": [{
             "name": "Fulfilled",
