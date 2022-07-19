@@ -137,7 +137,7 @@
             "type": "address",
             "value": "0xf0ff000512fC47ab52aC8e4f90E335a5Fe3dD024"
           }, {
-            "name": "_transferNft",
+            "name": "_nftTransfer",
             "type": "boolean",
             "value": "false"
           }],
