@@ -149,3 +149,107 @@ function App() {
 
 export default App;
 ```
+
+### Login with Metamask
+
+After see how it is possible list some data coming from the blockchain let's see how you can login with your Nevermined dApp using our catalog integration with Metamask.
+
+1. As before, add the WalletProvider in `index.tsx`.
+```
+import ChainConfig from './ChainConfig';
+
+...
+      <Catalog.WalletProvider nodeUri={appConfig.nodeUri!} correctNetworkId='0x13881' chainConfig={ChainConfig}>
+        <App />
+      </Catalog.WalletProvider>
+```
+2. Copy and paste this in `ChainConfig.ts` in your `src` folder. It contains blockchain networks information:
+```
+import { zeroX } from '@nevermined-io/nevermined-sdk-js/dist/node/utils'
+
+const spreeChainId = zeroX((1337).toString(16))
+const polygonLocalnetChainId = zeroX((8997).toString(16))
+const mumbaiChainId = zeroX((80001).toString(16))
+const mainnetChainId = zeroX((137).toString(16))
+
+const ChainConfig = {
+  development: {
+    chainId: spreeChainId,
+    chainName: 'Localhost development',
+    nativeCurrency: {
+      name: 'Ethereum',
+      symbol: 'ETH',
+      decimals: 18
+    },
+    rpcUrls: ['http://localhost:8545'],
+    blockExplorerUrls: [''],
+    iconUrls: ['https://s2.coinmarketcap.com/static/img/coins/64x64/3890.png']
+  },
+  mumbai: {
+    chainId: mumbaiChainId,
+    chainName: 'Polygon Testnet Mumbai',
+    nativeCurrency: {
+      name: 'Matic',
+      symbol: 'MATIC',
+      decimals: 18
+    },
+    rpcUrls: [
+      'https://matic-mumbai.chainstacklabs.com',
+      'https://rpc-endpoints.superfluid.dev/mumbai'
+    ],
+    blockExplorerUrls: ['https://mumbai.polygonscan.com/'],
+    iconUrls: ['https://s2.coinmarketcap.com/static/img/coins/64x64/3890.png']
+  },
+  mainnet: {
+    chainId: mainnetChainId,
+    chainName: 'Polygon Mainnet',
+    nativeCurrency: {
+      name: 'Matic',
+      symbol: 'MATIC',
+      decimals: 18
+    },
+    rpcUrls: ['https://polygon-rpc.com'],
+    blockExplorerUrls: ['https://polygonscan.com/'],
+    iconUrls: ['https://s2.coinmarketcap.com/static/img/coins/64x64/3890.png']
+  },
+  returnConfig: (chainIdHex: string) => {
+    if (chainIdHex === spreeChainId || chainIdHex === polygonLocalnetChainId) {
+      return ChainConfig.development
+    }
+    if (chainIdHex === mumbaiChainId) {
+      return ChainConfig.mumbai
+    }
+    if (chainIdHex === mainnetChainId) {
+      return ChainConfig.mainnet
+    }
+    return ChainConfig.development
+  }
+}
+
+export default ChainConfig
+```
+3. Modify `App.tsx` to create a login button.
+```
+import Catalog from '@nevermined-io/components-catalog'
+import React, { useEffect, useState } from 'react'
+
+function App() {
+  const { loginMetamask, walletAddress, logout, checkIsLogged } = Catalog.useWallet();
+  
+  return (
+    <div className="App">
+      <header className="App-header">
+             {!walletAddress ? <button onClick={loginMetamask}>Login</button> : <button onClick={logout}>logout</button>}
+             {walletAddress ? 
+               <>
+                   <div className="nav-item">{walletAddress}</div>
+               </>
+              : <></>
+             }
+      </header>
+    </div>
+  );
+}
+
+export default App;
+```
