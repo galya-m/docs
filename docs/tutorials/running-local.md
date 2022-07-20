@@ -5,7 +5,7 @@ description: Building a DApp using Nevermined frameworks
 
 # How to build a React application integrated with Nevermined
 
-The idea of this tutorial is give a quick go through about using the [Nevermined Catalog](https://github.com/nevermined-io/components-catalog) of React components to support the development of dApps using the Nevermined environment.
+The idea of this tutorial is give a quick go through about using the [Nevermined Catalog](https://github.com/nevermined-io/components-catalog) of React components to support the development of dApps using the Nevermined environment. Nevermined Catalog is a library that provides some React components to make it easier the integration with Nevermined technologies. You can find more info in the [documentation](https://nvm-docs.nevermined.io/docs/architecture/components/catalog/getting-started/). 
 
 ## Prerequisites
 The tutorial assumes your familiarity with blockchain, and general programming.
@@ -21,30 +21,28 @@ Instructions for following along locally using your preferred text editor.
 4. Run `yarn add @nevermined-io/components-catalog` or `npm install --save @nevermined-io/components-catalog` depending of your favourite package manager.
 5. Run `yarn run start` and open http://localhost:3000 and you will see the progress.
 
+
+![image](https://user-images.githubusercontent.com/3496824/179922422-82411749-0c62-4a2b-8969-cbd35611ffa9.png)
+*Screenshot of the current application status.*
+
 ### Create your Nevermined dApp
 
 Once the react app is running and you have your catalog dependency, the next step will be to setup the configuration:
 
-1. Donwload [Nevermined abi](http://artifacts-nevermined-rocks.s3.amazonaws.com/80001/public/contracts_v2.0.0.tar.gz) and store them in a folder named contracts in the public folder.
+1. Donwload [Nevermined abi](http://artifacts-nevermined-rocks.s3.amazonaws.com/80001/public/contracts_v2.0.0.tar.gz) and store them in a folder named contracts in the public folder. These abis are the interface to iteract with Nevermined contracts deployed on the blockchain. Visit [ABI specification](https://docs.soliditylang.org/en/develop/abi-spec.html) to learn more about.
 2. Create a `config.ts` file and provide the Nevermined config as follow:
 
-    **For the `REACT_APP_NODE_URI` you can connect to a [QuickNode](https://www.quicknode.com/) or [Infura](https://infura.io/) puclic Node.**
+    **For the `REACT_APP_NODE_URI` you can connect to a [QuickNode](https://www.quicknode.com/) or [Infura](https://infura.io/) puclic Node. Both services allow to connect your dApp to different blockchain networks. You will need to connect to iteract with Nevermined contracts.**
 
 ```
 import { Config } from '@nevermined-io/nevermined-sdk-js';
 import Web3 from 'web3';
 
-export const serviceUri =
-  process.env.REACT_APP_SERVICE_URI ||
-  'http://localhost:3445';
-export const gatewayAddress =
-  process.env.REACT_APP_GATEWAY_ADDRESS || '0xB82dc620BB4dE6712376055a5cfc0DF11112D442';
-export const gatewayUri =
-  process.env.REACT_APP_GATEWAY_URI || 'https://gateway.mumbai.public.nevermined.rocks/';
-export const faucetUri =
-  process.env.REACT_APPREACT_APP_FAUCET_URI_FAUCET_URI || 'https://faucet.mumbai.public.nevermined.rocks';
-export const nodeUri =
-  process.env.REACT_APP_NODE_URI || 'https://bold-little-glitter.matic-testnet.discover.quiknode.pro/';
+export const serviceUri = process.env.REACT_APP_SERVICE_URI || 'http://localhost:3445';
+export const gatewayAddress = process.env.REACT_APP_GATEWAY_ADDRESS || '0xB82dc620BB4dE6712376055a5cfc0DF11112D442';
+export const gatewayUri = process.env.REACT_APP_GATEWAY_URI || 'https://gateway.mumbai.public.nevermined.rocks/';
+export const faucetUri = process.env.REACT_APPREACT_APP_FAUCET_URI_FAUCET_URI || 'https://faucet.mumbai.public.nevermined.rocks';
+export const nodeUri = process.env.REACT_APP_NODE_URI || 'https://bold-little-glitter.matic-testnet.discover.quiknode.pro/';
 export const acceptedChainId = process.env.REACT_APP_ACCEPTED_CHAIN_ID || '80001'; // for Mumbai
 export const rootUri = process.env.REACT_APP_ROOT_URI || 'http://localhost:3445';
 export const marketplaceUri = process.env.REACT_APP_MARKETPLACE_URI || 'https://marketplace-api.mumbai.public.nevermined.rocks';
@@ -152,7 +150,7 @@ export default App;
 
 ### Login with Metamask
 
-After see how it is possible list some data coming from the blockchain let's see how you can login with your Nevermined dApp using our catalog integration with Metamask.
+After see how it is possible list some data coming from the blockchain let's see how you can login with your Nevermined dApp using our catalog integration with Metamask. Metamask is a popular cryptowallet that is easy to integrate with a plugin in your browser. Visit the [documentation](https://docs.metamask.io/guide/#why-metamask) to learn more and [download](https://metamask.io/) it for your favourite browser.
 
 1. As before, add the WalletProvider in `index.tsx`.
 ```
