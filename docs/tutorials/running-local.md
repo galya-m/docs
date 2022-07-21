@@ -33,7 +33,7 @@ Once the react app is running and you have your catalog dependency, the next ste
 2. Create a `config.ts` file and provide the Nevermined config as follow:
 
 
-:::caution
+:::tip
 
 For the `REACT_APP_NODE_URI` you can connect to a [QuickNode](https://www.quicknode.com/) or [Infura](https://infura.io/) puclic Node. Both services allow to connect your dApp to different blockchain networks. You will need to connect to iteract with Nevermined contracts.
 
@@ -163,7 +163,14 @@ export default App;
 
 ### Login with Metamask
 
-After see how it is possible list some data coming from the blockchain let's see how you can login with your Nevermined dApp using our catalog integration with Metamask. Metamask is a popular cryptowallet that is easy to integrate with a plugin in your browser. Visit the [documentation](https://docs.metamask.io/guide/#why-metamask) to learn more and [download](https://metamask.io/) it for your favourite browser.
+After see how it is possible list some data coming from the blockchain let's see how you can login with your Nevermined dApp using our catalog integration with Metamask. 
+
+
+:::info
+
+Metamask is a popular cryptowallet that is easy to integrate with a plugin in your browser. Visit the [documentation](https://docs.metamask.io/guide/#why-metamask) to learn more and [download](https://metamask.io/) it for your favourite browser.
+
+:::
 
 1. As before, add the WalletProvider in `index.tsx`.
 ```
