@@ -10,8 +10,8 @@ sidebar_position: 6
     + [Autonomies testing Mumbai (Application environment)](#autonomies-testing-mumbai-application-environment)
     + [Autonomies Pre Mumbai (Application environment)](#autonomies-pre-mumbai-application-environment)
   * [Production environments](#production-environments)
-    + [Public Polygon environment](#public-polygon-environment)%
-    
+    + [Public Polygon environment](#public-polygon-environment)
+
 # Nevermined Public Environments
 
 This section provides links and information regarding the different public environments where Nevermined is deployed and can be used.
