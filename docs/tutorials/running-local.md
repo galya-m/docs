@@ -32,19 +32,32 @@ Once the react app is running and you have your catalog dependency, the next ste
 1. Donwload [Nevermined abi](http://artifacts-nevermined-rocks.s3.amazonaws.com/80001/public/contracts_v2.0.0.tar.gz) and store them in a folder named contracts in the public folder. These abis are the interface to iteract with Nevermined contracts deployed on the blockchain. Visit [ABI specification](https://docs.soliditylang.org/en/develop/abi-spec.html) to learn more about.
 2. Create a `config.ts` file and provide the Nevermined config as follow:
 
-    **For the `REACT_APP_NODE_URI` you can connect to a [QuickNode](https://www.quicknode.com/) or [Infura](https://infura.io/) puclic Node. Both services allow to connect your dApp to different blockchain networks. You will need to connect to iteract with Nevermined contracts.**
+
+:::caution
+
+For the `REACT_APP_NODE_URI` you can connect to a [QuickNode](https://www.quicknode.com/) or [Infura](https://infura.io/) puclic Node. Both services allow to connect your dApp to different blockchain networks. You will need to connect to iteract with Nevermined contracts.
+
+:::
 
 ```
 import { Config } from '@nevermined-io/nevermined-sdk-js';
 import Web3 from 'web3';
 
+// URL where run the app
 export const serviceUri = process.env.REACT_APP_SERVICE_URI || 'http://localhost:3445';
+// Ethereum address own by the gateway.
 export const gatewayAddress = process.env.REACT_APP_GATEWAY_ADDRESS || '0xB82dc620BB4dE6712376055a5cfc0DF11112D442';
+// Gateway service
 export const gatewayUri = process.env.REACT_APP_GATEWAY_URI || 'https://gateway.mumbai.public.nevermined.rocks/';
+// Fauce uri to get some tokens.
 export const faucetUri = process.env.REACT_APPREACT_APP_FAUCET_URI_FAUCET_URI || 'https://faucet.mumbai.public.nevermined.rocks';
+// Blockchain node
 export const nodeUri = process.env.REACT_APP_NODE_URI || 'https://bold-little-glitter.matic-testnet.discover.quiknode.pro/';
+// Chain id of your network
 export const acceptedChainId = process.env.REACT_APP_ACCEPTED_CHAIN_ID || '80001'; // for Mumbai
+//URL where run the root of the app is. Important to find public folder with abis.
 export const rootUri = process.env.REACT_APP_ROOT_URI || 'http://localhost:3445';
+// Marketplace API uri to store metadata.
 export const marketplaceUri = process.env.REACT_APP_MARKETPLACE_URI || 'https://marketplace-api.mumbai.public.nevermined.rocks';
 
 export const appConfig: Config = {
@@ -251,3 +264,5 @@ function App() {
 
 export default App;
 ```
+
+You can find the source code in [github](https://github.com/nevermined-io/tutorials/tree/main/catalog).
