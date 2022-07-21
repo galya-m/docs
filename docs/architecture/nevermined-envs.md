@@ -2,6 +2,16 @@
 sidebar_position: 6
 ---
 
+- [Nevermined Public Environments](#nevermined-public-environments)
+  * [About the tags](#about-the-tags)
+  * [Testnet environments](#testnet-environments)
+    + [Public Mumbai (Shared enviromnet)](#public-mumbai-shared-enviromnet)
+    + [DefiMarketplace Mumbai (Application environment)](#defimarketplace-mumbai-application-environment)
+    + [Autonomies testing Mumbai (Application environment)](#autonomies-testing-mumbai-application-environment)
+    + [Autonomies Pre Mumbai (Application environment)](#autonomies-pre-mumbai-application-environment)
+  * [Production environments](#production-environments)
+    + [Public Polygon environment](#public-polygon-environment)%
+    
 # Nevermined Public Environments
 
 This section provides links and information regarding the different public environments where Nevermined is deployed and can be used.
@@ -19,6 +29,8 @@ Tags are different contract deployments for the same network&version. Each tag i
 Testnet environments are public nevermined environments deployed in public EVM-compatible testnet networks. Typically we use Polygon Mumbai.
 Use [Alchemy's Mumbai Faucet](https://mumbaifaucet.com/) or [Polygon's Mumbai faucet](https://faucet.polygon.technology/) for requesting MATIC.
 
+### Public Mumbai (Shared enviromnet)
+
 - *`public-nvm-v2-mumbai`*: Public environment in Mumbai. Using `public` contract tag. Use this if you want to integrate with Nevermined in Mumbai/Testnet.
 
 | Environment | Network | Contracts Version | Tag | Component | URL | Comments |
@@ -27,6 +39,8 @@ Use [Alchemy's Mumbai Faucet](https://mumbaifaucet.com/) or [Polygon's Mumbai fa
 | public-nvm-v2-mumbai | Mumbai | 2.0.0 | public | Marketplace API | https://marketplace-api.mumbai.public.nevermined.rocks | |
 | public-nvm-v2-mumbai | Mumbai | 2.0.0 | public | Faucet | https://faucet.mumbai.public.nevermined.rocks | |
 | public-nvm-v2-mumbai | Mumbai | 2.0.0 | public | GraphNode | https://api.thegraph.com/subgraphs/name/nevermined-io/public | Use with sdk >= 0.21.0 |
+
+### DefiMarketplace Mumbai (Application environment)
 
 - *`defi-marketplace-v2-mumbai`*: DefiMarketplace developlment environment for Autonomies. Using `common` contract tag.
 
@@ -38,6 +52,8 @@ Use [Alchemy's Mumbai Faucet](https://mumbaifaucet.com/) or [Polygon's Mumbai fa
 | autonomies-v2-mumbai | Mumbai | 2.0.0 | common | Marketplace bundler | https://defi.v2.bundler.mumbai.nevermined.rocks | |
 | autonomies-v2-mumbai | Mumbai | 2.0.0 | common | GraphNode | https://api.thegraph.com/subgraphs/name/nevermined-io/common | Use with sdk >= 0.21.0 |
 
+### Autonomies testing Mumbai (Application environment)
+
 - *`autonomies-v2-mumbai`*: Test(dev) environment for Autonomies. Using `common` contract tag.
 
 | Environment | Network | Contracts Version | Tag | Component | URL | Comments |
@@ -48,6 +64,8 @@ Use [Alchemy's Mumbai Faucet](https://mumbaifaucet.com/) or [Polygon's Mumbai fa
 | autonomies-v2-mumbai | Mumbai | 2.0.0 | common | Autonomies backend | https://backend.autonomies.test.nevermined.rocks | |
 | autonomies-v2-mumbai | Mumbai | 2.0.0 | common | Autonomies profile service | https://auto-profile-service.autonomies.test.nevermined.rocks | |
 | autonomies-v2-mumbai | Mumbai | 2.0.0 | common | GraphNode | https://api.thegraph.com/subgraphs/name/nevermined-io/common | Use with sdk >= 0.21.0 |
+
+### Autonomies Pre Mumbai (Application environment)
 
 - *`autonomies-v2-mumbai-pre`*: Preproduction(QA) environment for Autonomies. Using `common` contract tag.
 
@@ -61,6 +79,8 @@ Use [Alchemy's Mumbai Faucet](https://mumbaifaucet.com/) or [Polygon's Mumbai fa
 | autonomies-v2-mumbai-pre | Mumbai | 2.0.0 | common | GraphNode | https://api.thegraph.com/subgraphs/name/nevermined-io/common | Use with sdk >= 0.21.0 |
 
 ## Production environments
+
+### Public Polygon environment
 
 - *`public-nvm-v2-mumbai`*: Public environment in Polygon. Use this if you want to integrate with Nevermined in Polygon for production.
 
