@@ -3,7 +3,7 @@ sidebar_position: 2
 description: Nevermined technical Specifications
 ---
 
-# Nevermined Specifications
+# Specifications
 
 The core of the platform is documented in detail in Specification documents (aka **SPECs**).
 Here you can find a list of the most relevant SPECs:
