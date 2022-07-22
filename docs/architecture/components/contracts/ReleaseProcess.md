@@ -1,3 +1,8 @@
+---
+sidebar_position: 4
+---
+
+
 # Release Process
 
 ## Build a new version

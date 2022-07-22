@@ -1,3 +1,8 @@
+---
+sidebar_position: 3
+---
+
+
 # Packaging
 
 The following package describes how to package the Keeper Contracts in different formats.
