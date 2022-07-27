@@ -5,22 +5,23 @@ description: Building a DApp using Nevermined frameworks
 
 # How to build a React application integrated with Nevermined
 
-The idea of this tutorial is give a quick go through about using the [Nevermined Catalog](https://github.com/nevermined-io/components-catalog) of React components to support the development of dApps using the Nevermined environment. Nevermined Catalog is a library that provides some React components to make it easier the integration with Nevermined technologies. You can find more info in the [documentation](https://nvm-docs.nevermined.io/docs/architecture/components/catalog/getting-started/). 
+The idea of this tutorial is give a quick go through about using the [Nevermined Catalog](https://github.com/nevermined-io/components-catalog) of React components to support the development of dApps using the Nevermined environment. Nevermined Catalog is a library that provides some React components to make it easier the integration with Nevermined technologies. You can find more info in the [documentation](https://nvm-docs.nevermined.io/docs/architecture/components/catalog/getting-started/).
 
 ## Prerequisites
+
 The tutorial assumes your familiarity with blockchain, and general programming.
 
-## Let's go!!
+## Let's go
 
 Instructions for following along locally using your preferred text editor.
 
 ### Setup the React app
+
 1. Make sure you have a recent version of [Node.js](https://nodejs.org/en/) installed.
 2. Follow the [installation instructions for Create React App](https://reactjs.org/docs/create-a-new-react-app.html#create-react-app) to make a new project. Or simply run `npx create-react-app my-nevermined-app --template typescript`.
 3. Move to the my-nevermined-app directory `cd my-nevermined-app`.
-4. Run `yarn add @nevermined-io/components-catalog` or `npm install --save @nevermined-io/components-catalog` depending of your favourite package manager.
-5. Run `yarn run start` and open http://localhost:3000 and you will see the progress.
-
+4. Run `yarn add @nevermined-io/catalog-core` or `npm install --save @nevermined-io/catalog-core` depending of your favourite package manager.
+5. Run `yarn run start` and open <http://localhost:3000> and you will see the progress.
 
 ![image](https://user-images.githubusercontent.com/3496824/179922422-82411749-0c62-4a2b-8969-cbd35611ffa9.png)
 *Screenshot of the current application status.*
@@ -32,7 +33,6 @@ Once the react app is running and you have your catalog dependency, the next ste
 1. Donwload [Nevermined abi](http://artifacts-nevermined-rocks.s3.amazonaws.com/80001/public/contracts_v2.0.0.tar.gz) and store them in a folder named contracts in the public folder. These abis are the interface to iteract with Nevermined contracts deployed on the blockchain. Visit [ABI specification](https://docs.soliditylang.org/en/develop/abi-spec.html) to learn more about.
 2. Create a `config.ts` file and provide the Nevermined config as follow:
 
-
 :::tip
 
 For the `REACT_APP_NODE_URI` you can connect to a [QuickNode](https://www.quicknode.com/) or [Infura](https://infura.io/) puclic Node. Both services allow to connect your dApp to different blockchain networks. You will need to connect to iteract with Nevermined contracts.
@@ -41,7 +41,6 @@ For the `REACT_APP_NODE_URI` you can connect to a [QuickNode](https://www.quickn
 
 ```
 import { Config } from '@nevermined-io/nevermined-sdk-js';
-import Web3 from 'web3';
 
 // URL where run the app
 export const serviceUri = process.env.REACT_APP_SERVICE_URI || 'http://localhost:3445';
@@ -62,7 +61,7 @@ export const marketplaceUri = process.env.REACT_APP_MARKETPLACE_URI || 'https://
 
 export const appConfig: Config = {
   //@ts-ignore
-  web3Provider: new Web3(window.ethereum),
+  web3Provider: typeof window !== 'undefined' ? window.ethereum : new ethers.providers.JsonRpcProvider(nodeUri),
   nodeUri,
   gatewayUri,
   faucetUri,
@@ -76,14 +75,16 @@ export const appConfig: Config = {
 };
 
 ```
+
 3. Go to `index.tsx` and add the `NeverminedProvider`
+
 ```
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Catalog from '@nevermined-io/components-catalog';
+import Catalog from '@nevermined-io/catalog-core';
 import { appConfig } from './config';
 
 const root = ReactDOM.createRoot(
@@ -99,10 +100,11 @@ root.render(
 
 reportWebVitals();
 ```
+
 4. After that you will be able to iteract with the Nevermined ecosystem. List did assets deployed updating your `App.tsx`
 
 ```
-import Catalog from '@nevermined-io/components-catalog'
+import Catalog from '@nevermined-io/catalog-core'
 import React, { useEffect, useState } from 'react'
 
 function App() {
@@ -161,12 +163,9 @@ function App() {
 export default App;
 ```
 
-Visit the code [here](https://github.com/nevermined-io/tutorials/tree/main/catalog/001-Create%20Nevermined%20dApp).
-
 ### Login with Metamask
 
-After see how it is possible list some data coming from the blockchain let's see how you can login with your Nevermined dApp using our catalog integration with Metamask. 
-
+After see how it is possible list some data coming from the blockchain let's see how you can login with your Nevermined dApp using our catalog integration with Metamask.
 
 :::info
 
@@ -174,18 +173,21 @@ Metamask is a popular cryptowallet that is easy to integrate with a plugin in yo
 
 :::
 
-1. As before, add the WalletProvider in `index.tsx`.
-```
-import ChainConfig from './ChainConfig';
+1. Run `yarn add @nevermined-io/catalog-providers` or `npm install --save @nevermined-io/catalog-providers` depending of your favourite package manager. This library plan to give support to more wallet providers in near future. Stay tunned.
+
+2. As before, add the WalletProvider in `index.tsx`.
+
+```import ChainConfig from './ChainConfig';
 
 ...
-      <Catalog.WalletProvider nodeUri={appConfig.nodeUri!} correctNetworkId='0x13881' chainConfig={ChainConfig}>
+      <MetaMask.WalletProvider nodeUri={appConfig.nodeUri!} correctNetworkId='0x13881' chainConfig={ChainConfig}>
         <App />
-      </Catalog.WalletProvider>
+      </MetaMask.WalletProvider>
 ```
-2. Copy and paste this in `ChainConfig.ts` in your `src` folder. It contains blockchain networks information:
-```
-import { zeroX } from '@nevermined-io/nevermined-sdk-js/dist/node/utils'
+
+3. Copy and paste this in `ChainConfig.ts` in your `src` folder. It contains blockchain networks information:
+
+```import { zeroX } from '@nevermined-io/nevermined-sdk-js/dist/node/utils'
 
 const spreeChainId = zeroX((1337).toString(16))
 const polygonLocalnetChainId = zeroX((8997).toString(16))
@@ -248,13 +250,14 @@ const ChainConfig = {
 
 export default ChainConfig
 ```
-3. Modify `App.tsx` to create a login button.
-```
-import Catalog from '@nevermined-io/components-catalog'
-import React, { useEffect, useState } from 'react'
+
+4. Modify `App.tsx` to create a login button.
+
+```import { MetaMask } from '@nevermined-io/catalog-providers'
+import React from 'react'
 
 function App() {
-  const { loginMetamask, walletAddress, logout, checkIsLogged } = Catalog.useWallet();
+  const { loginMetamask, walletAddress, logout, checkIsLogged } = MetaMask.useWallet();
   
   return (
     <div className="App">
@@ -274,8 +277,4 @@ function App() {
 export default App;
 ```
 
-Visit the code [here](https://github.com/nevermined-io/tutorials/tree/main/catalog/002-Login%20with%20Metamask).
-
-
-
-You can find a full list of examples in [github](https://github.com/nevermined-io/tutorials/tree/main/catalog).
+You can find the source code in [github](https://github.com/nevermined-io/tutorials/tree/main/catalog).
