@@ -8,7 +8,7 @@ description: Nevermined Testnet Environments
 Testnet environments are public nevermined environments deployed in public EVM-compatible testnet networks. Typically we use Polygon Mumbai.
 Use [Alchemy's Mumbai Faucet](https://mumbaifaucet.com/) or [Polygon's Mumbai faucet](https://faucet.polygon.technology/) for requesting MATIC.
 
-## Public Mumbai (Shared enviromnet)
+## Public Mumbai (Shared environment)
 
 - *`public-nvm-v2-mumbai`*: Public environment in Mumbai. Using `public` contract tag. Use this if you want to integrate with Nevermined in Mumbai/Testnet.
 
