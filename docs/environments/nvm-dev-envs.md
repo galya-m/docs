@@ -14,10 +14,10 @@ Use [Alchemy's Mumbai Faucet](https://mumbaifaucet.com/) or [Polygon's Mumbai fa
 
 | Environment | Network | Contracts Version | Tag | Component | URL | Comments |
 |-------------|---------|-------------------|-----|-----------|-----|----------|
-| public-nvm-v2-mumbai | Mumbai | 2.0.0 | public | Gateway | https://gateway.mumbai.public.nevermined.rocks | |
-| public-nvm-v2-mumbai | Mumbai | 2.0.0 | public | Marketplace API | https://marketplace-api.mumbai.public.nevermined.rocks | |
-| public-nvm-v2-mumbai | Mumbai | 2.0.0 | public | Faucet | https://faucet.mumbai.public.nevermined.rocks | |
-| public-nvm-v2-mumbai | Mumbai | 2.0.0 | public | GraphNode | https://api.thegraph.com/subgraphs/name/nevermined-io/public | Use with sdk >= 0.21.0 |
+| public-nvm-v2-mumbai | Mumbai | 2.0.3 | public | Gateway | https://gateway.mumbai.public.nevermined.rocks | |
+| public-nvm-v2-mumbai | Mumbai | 2.0.3 | public | Marketplace API | https://marketplace-api.mumbai.public.nevermined.rocks | |
+| public-nvm-v2-mumbai | Mumbai | 2.0.3 | public | Faucet | https://faucet.mumbai.public.nevermined.rocks | |
+| public-nvm-v2-mumbai | Mumbai | 2.0.3 | public | GraphNode | https://api.thegraph.com/subgraphs/name/nevermined-io/public | Use with sdk >= 0.21.0 |
 
 ## DefiMarketplace Mumbai (Application environment)
 
