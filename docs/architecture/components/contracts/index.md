@@ -1,9 +1,3 @@
----
-sidebar_position: 2
-description: Contracts Reference 
----
-
-
 # Solidity API
 
 ## TestDisputeManager
@@ -24,476 +18,6 @@ function accepted(address provider, address buyer, bytes32 orig, bytes32 crypted
 
 ```solidity
 function setAccepted(bytes32 orig, bytes32 crypted, address provider, address buyer) public
-```
-
-## PlonkVerifier
-
-### n
-
-```solidity
-uint32 n
-```
-
-### nPublic
-
-```solidity
-uint16 nPublic
-```
-
-### nLagrange
-
-```solidity
-uint16 nLagrange
-```
-
-### Qmx
-
-```solidity
-uint256 Qmx
-```
-
-### Qmy
-
-```solidity
-uint256 Qmy
-```
-
-### Qlx
-
-```solidity
-uint256 Qlx
-```
-
-### Qly
-
-```solidity
-uint256 Qly
-```
-
-### Qrx
-
-```solidity
-uint256 Qrx
-```
-
-### Qry
-
-```solidity
-uint256 Qry
-```
-
-### Qox
-
-```solidity
-uint256 Qox
-```
-
-### Qoy
-
-```solidity
-uint256 Qoy
-```
-
-### Qcx
-
-```solidity
-uint256 Qcx
-```
-
-### Qcy
-
-```solidity
-uint256 Qcy
-```
-
-### S1x
-
-```solidity
-uint256 S1x
-```
-
-### S1y
-
-```solidity
-uint256 S1y
-```
-
-### S2x
-
-```solidity
-uint256 S2x
-```
-
-### S2y
-
-```solidity
-uint256 S2y
-```
-
-### S3x
-
-```solidity
-uint256 S3x
-```
-
-### S3y
-
-```solidity
-uint256 S3y
-```
-
-### k1
-
-```solidity
-uint256 k1
-```
-
-### k2
-
-```solidity
-uint256 k2
-```
-
-### X2x1
-
-```solidity
-uint256 X2x1
-```
-
-### X2x2
-
-```solidity
-uint256 X2x2
-```
-
-### X2y1
-
-```solidity
-uint256 X2y1
-```
-
-### X2y2
-
-```solidity
-uint256 X2y2
-```
-
-### q
-
-```solidity
-uint256 q
-```
-
-### qf
-
-```solidity
-uint256 qf
-```
-
-### w1
-
-```solidity
-uint256 w1
-```
-
-### G1x
-
-```solidity
-uint256 G1x
-```
-
-### G1y
-
-```solidity
-uint256 G1y
-```
-
-### G2x1
-
-```solidity
-uint256 G2x1
-```
-
-### G2x2
-
-```solidity
-uint256 G2x2
-```
-
-### G2y1
-
-```solidity
-uint256 G2y1
-```
-
-### G2y2
-
-```solidity
-uint256 G2y2
-```
-
-### pA
-
-```solidity
-uint16 pA
-```
-
-### pB
-
-```solidity
-uint16 pB
-```
-
-### pC
-
-```solidity
-uint16 pC
-```
-
-### pZ
-
-```solidity
-uint16 pZ
-```
-
-### pT1
-
-```solidity
-uint16 pT1
-```
-
-### pT2
-
-```solidity
-uint16 pT2
-```
-
-### pT3
-
-```solidity
-uint16 pT3
-```
-
-### pWxi
-
-```solidity
-uint16 pWxi
-```
-
-### pWxiw
-
-```solidity
-uint16 pWxiw
-```
-
-### pEval_a
-
-```solidity
-uint16 pEval_a
-```
-
-### pEval_b
-
-```solidity
-uint16 pEval_b
-```
-
-### pEval_c
-
-```solidity
-uint16 pEval_c
-```
-
-### pEval_s1
-
-```solidity
-uint16 pEval_s1
-```
-
-### pEval_s2
-
-```solidity
-uint16 pEval_s2
-```
-
-### pEval_zw
-
-```solidity
-uint16 pEval_zw
-```
-
-### pEval_r
-
-```solidity
-uint16 pEval_r
-```
-
-### pAlpha
-
-```solidity
-uint16 pAlpha
-```
-
-### pBeta
-
-```solidity
-uint16 pBeta
-```
-
-### pGamma
-
-```solidity
-uint16 pGamma
-```
-
-### pXi
-
-```solidity
-uint16 pXi
-```
-
-### pXin
-
-```solidity
-uint16 pXin
-```
-
-### pBetaXi
-
-```solidity
-uint16 pBetaXi
-```
-
-### pV1
-
-```solidity
-uint16 pV1
-```
-
-### pV2
-
-```solidity
-uint16 pV2
-```
-
-### pV3
-
-```solidity
-uint16 pV3
-```
-
-### pV4
-
-```solidity
-uint16 pV4
-```
-
-### pV5
-
-```solidity
-uint16 pV5
-```
-
-### pV6
-
-```solidity
-uint16 pV6
-```
-
-### pU
-
-```solidity
-uint16 pU
-```
-
-### pPl
-
-```solidity
-uint16 pPl
-```
-
-### pEval_t
-
-```solidity
-uint16 pEval_t
-```
-
-### pA1
-
-```solidity
-uint16 pA1
-```
-
-### pB1
-
-```solidity
-uint16 pB1
-```
-
-### pZh
-
-```solidity
-uint16 pZh
-```
-
-### pZhInv
-
-```solidity
-uint16 pZhInv
-```
-
-### pEval_l1
-
-```solidity
-uint16 pEval_l1
-```
-
-### pEval_l2
-
-```solidity
-uint16 pEval_l2
-```
-
-### pEval_l3
-
-```solidity
-uint16 pEval_l3
-```
-
-### pEval_l4
-
-```solidity
-uint16 pEval_l4
-```
-
-### pEval_l5
-
-```solidity
-uint16 pEval_l5
-```
-
-### pEval_l6
-
-```solidity
-uint16 pEval_l6
-```
-
-### pEval_l7
-
-```solidity
-uint16 pEval_l7
-```
-
-### lastMem
-
-```solidity
-uint16 lastMem
-```
-
-### verifyProof
-
-```solidity
-function verifyProof(bytes proof, uint256[] pubSignals) public view returns (bool)
 ```
 
 ## Common
@@ -3611,7 +3135,7 @@ _Fulfill method transfer a certain amount of NFTs_
 ### fulfillInternal
 
 ```solidity
-function fulfillInternal(address _account, bytes32 _agreementId, bytes32 _did, address _nftReceiver, uint256 _nftAmount, bytes32 _lockPaymentCondition, address _contract, bool _transfer) internal returns (enum ConditionStoreLibrary.ConditionState)
+function fulfillInternal(address _account, bytes32 _agreementId, bytes32 _did, address _nftReceiver, uint256 _nftAmount, bytes32 _lockPaymentCondition, address _contract, bool _transfer, uint256 _expirationBlock) internal returns (enum ConditionStoreLibrary.ConditionState)
 ```
 
 ### fulfillForDelegate
@@ -3635,6 +3159,34 @@ _Fulfill method transfer a certain amount of NFTs
 | _nftAmount | uint256 | amount of NFTs to transfer |
 | _lockPaymentCondition | bytes32 | lock payment condition identifier |
 | _transfer | bool | if yes it does a transfer if false it mints the NFT |
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| [0] | enum ConditionStoreLibrary.ConditionState | condition state (Fulfilled/Aborted) |
+
+### fulfillForDelegate
+
+```solidity
+function fulfillForDelegate(bytes32 _agreementId, bytes32 _did, address _nftHolder, address _nftReceiver, uint256 _nftAmount, bytes32 _lockPaymentCondition, bool _transfer, address _nftContractAddress, uint256 _expirationBlock) public returns (enum ConditionStoreLibrary.ConditionState)
+```
+
+fulfill the transfer NFT condition
+
+_Fulfill method transfer a certain amount of NFTs 
+      to the _nftReceiver address in the DIDRegistry contract. 
+      When true then fulfill the condition_
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| _agreementId | bytes32 | agreement identifier |
+| _did | bytes32 | refers to the DID in which secret store will issue the decryption keys |
+| _nftHolder | address | is the address of the account to receive the NFT |
+| _nftReceiver | address | is the address of the account to receive the NFT |
+| _nftAmount | uint256 | amount of NFTs to transfer |
+| _lockPaymentCondition | bytes32 | lock payment condition identifier |
+| _transfer | bool | if yes it does a transfer if false it mints the NFT |
+| _nftContractAddress | address | the address of the ERC-721 NFT contract |
+| _expirationBlock | uint256 | in which block the nft expires, if 0 it doesn't expire |
 
 | Name | Type | Description |
 | ---- | ---- | ----------- |
@@ -3873,6 +3425,33 @@ _Fulfill method transfer a certain amount of NFTs
 | _nftReceiver | address | is the address of the account to receive the NFT |
 | _nftAmount | uint256 | amount of NFTs to transfer |
 | _lockPaymentCondition | bytes32 | lock payment condition identifier |
+| _transfer | bool | if yes it does a transfer if false it mints the NFT |
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| [0] | enum ConditionStoreLibrary.ConditionState | condition state (Fulfilled/Aborted) |
+
+### fulfillForDelegate
+
+```solidity
+function fulfillForDelegate(bytes32 _agreementId, bytes32 _did, address _nftHolder, address _nftReceiver, uint256 _nftAmount, bytes32 _lockPaymentCondition, address _nftContractAddress, bool _transfer) public returns (enum ConditionStoreLibrary.ConditionState)
+```
+
+fulfill the transfer NFT condition
+
+_Fulfill method transfer a certain amount of NFTs 
+      to the _nftReceiver address in the DIDRegistry contract. 
+      When true then fulfill the condition_
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| _agreementId | bytes32 | agreement identifier |
+| _did | bytes32 | refers to the DID in which secret store will issue the decryption keys |
+| _nftHolder | address | is the address of the account to receive the NFT |
+| _nftReceiver | address | is the address of the account to receive the NFT |
+| _nftAmount | uint256 | amount of NFTs to transfer |
+| _lockPaymentCondition | bytes32 | lock payment condition identifier |
+| _nftContractAddress | address | the address of the ERC-721 NFT contract |
 | _transfer | bool | if yes it does a transfer if false it mints the NFT |
 
 | Name | Type | Description |
@@ -10938,6 +10517,11 @@ function supportsInterface(bytes4 interfaceId) public view virtual returns (bool
 function mint(address to, uint256 id, uint256 expirationBlock) public
 ```
 
+_This mint function allows to define when the NFT expires. 
+The minter should calculate this block number depending on the network velocity
+
+TransferNFT721Condition needs to have the `MINTER_ROLE`_
+
 ### balanceOf
 
 ```solidity
@@ -10950,10 +10534,10 @@ _See {IERC721-balanceOf}._
 
 _Implementation of the basic standard multi-token._
 
-### initialize
+### initializeWithName
 
 ```solidity
-function initialize(string name, string symbol) public virtual
+function initializeWithName(string name, string symbol) public virtual
 ```
 
 ### initialize
@@ -11049,10 +10633,10 @@ mapping(uint256 => uint256) _tokenEvent
 function initialize() public
 ```
 
-### initialize
+### initializeWithName
 
 ```solidity
-function initialize(string name, string symbol) public virtual
+function initializeWithName(string name, string symbol) public virtual
 ```
 
 ### mint
@@ -11107,5 +10691,475 @@ function isApprovedForAll(address account, address operator) public view returns
 
 ```solidity
 function supportsInterface(bytes4 interfaceId) public view virtual returns (bool)
+```
+
+## PlonkVerifier
+
+### n
+
+```solidity
+uint32 n
+```
+
+### nPublic
+
+```solidity
+uint16 nPublic
+```
+
+### nLagrange
+
+```solidity
+uint16 nLagrange
+```
+
+### Qmx
+
+```solidity
+uint256 Qmx
+```
+
+### Qmy
+
+```solidity
+uint256 Qmy
+```
+
+### Qlx
+
+```solidity
+uint256 Qlx
+```
+
+### Qly
+
+```solidity
+uint256 Qly
+```
+
+### Qrx
+
+```solidity
+uint256 Qrx
+```
+
+### Qry
+
+```solidity
+uint256 Qry
+```
+
+### Qox
+
+```solidity
+uint256 Qox
+```
+
+### Qoy
+
+```solidity
+uint256 Qoy
+```
+
+### Qcx
+
+```solidity
+uint256 Qcx
+```
+
+### Qcy
+
+```solidity
+uint256 Qcy
+```
+
+### S1x
+
+```solidity
+uint256 S1x
+```
+
+### S1y
+
+```solidity
+uint256 S1y
+```
+
+### S2x
+
+```solidity
+uint256 S2x
+```
+
+### S2y
+
+```solidity
+uint256 S2y
+```
+
+### S3x
+
+```solidity
+uint256 S3x
+```
+
+### S3y
+
+```solidity
+uint256 S3y
+```
+
+### k1
+
+```solidity
+uint256 k1
+```
+
+### k2
+
+```solidity
+uint256 k2
+```
+
+### X2x1
+
+```solidity
+uint256 X2x1
+```
+
+### X2x2
+
+```solidity
+uint256 X2x2
+```
+
+### X2y1
+
+```solidity
+uint256 X2y1
+```
+
+### X2y2
+
+```solidity
+uint256 X2y2
+```
+
+### q
+
+```solidity
+uint256 q
+```
+
+### qf
+
+```solidity
+uint256 qf
+```
+
+### w1
+
+```solidity
+uint256 w1
+```
+
+### G1x
+
+```solidity
+uint256 G1x
+```
+
+### G1y
+
+```solidity
+uint256 G1y
+```
+
+### G2x1
+
+```solidity
+uint256 G2x1
+```
+
+### G2x2
+
+```solidity
+uint256 G2x2
+```
+
+### G2y1
+
+```solidity
+uint256 G2y1
+```
+
+### G2y2
+
+```solidity
+uint256 G2y2
+```
+
+### pA
+
+```solidity
+uint16 pA
+```
+
+### pB
+
+```solidity
+uint16 pB
+```
+
+### pC
+
+```solidity
+uint16 pC
+```
+
+### pZ
+
+```solidity
+uint16 pZ
+```
+
+### pT1
+
+```solidity
+uint16 pT1
+```
+
+### pT2
+
+```solidity
+uint16 pT2
+```
+
+### pT3
+
+```solidity
+uint16 pT3
+```
+
+### pWxi
+
+```solidity
+uint16 pWxi
+```
+
+### pWxiw
+
+```solidity
+uint16 pWxiw
+```
+
+### pEval_a
+
+```solidity
+uint16 pEval_a
+```
+
+### pEval_b
+
+```solidity
+uint16 pEval_b
+```
+
+### pEval_c
+
+```solidity
+uint16 pEval_c
+```
+
+### pEval_s1
+
+```solidity
+uint16 pEval_s1
+```
+
+### pEval_s2
+
+```solidity
+uint16 pEval_s2
+```
+
+### pEval_zw
+
+```solidity
+uint16 pEval_zw
+```
+
+### pEval_r
+
+```solidity
+uint16 pEval_r
+```
+
+### pAlpha
+
+```solidity
+uint16 pAlpha
+```
+
+### pBeta
+
+```solidity
+uint16 pBeta
+```
+
+### pGamma
+
+```solidity
+uint16 pGamma
+```
+
+### pXi
+
+```solidity
+uint16 pXi
+```
+
+### pXin
+
+```solidity
+uint16 pXin
+```
+
+### pBetaXi
+
+```solidity
+uint16 pBetaXi
+```
+
+### pV1
+
+```solidity
+uint16 pV1
+```
+
+### pV2
+
+```solidity
+uint16 pV2
+```
+
+### pV3
+
+```solidity
+uint16 pV3
+```
+
+### pV4
+
+```solidity
+uint16 pV4
+```
+
+### pV5
+
+```solidity
+uint16 pV5
+```
+
+### pV6
+
+```solidity
+uint16 pV6
+```
+
+### pU
+
+```solidity
+uint16 pU
+```
+
+### pPl
+
+```solidity
+uint16 pPl
+```
+
+### pEval_t
+
+```solidity
+uint16 pEval_t
+```
+
+### pA1
+
+```solidity
+uint16 pA1
+```
+
+### pB1
+
+```solidity
+uint16 pB1
+```
+
+### pZh
+
+```solidity
+uint16 pZh
+```
+
+### pZhInv
+
+```solidity
+uint16 pZhInv
+```
+
+### pEval_l1
+
+```solidity
+uint16 pEval_l1
+```
+
+### pEval_l2
+
+```solidity
+uint16 pEval_l2
+```
+
+### pEval_l3
+
+```solidity
+uint16 pEval_l3
+```
+
+### pEval_l4
+
+```solidity
+uint16 pEval_l4
+```
+
+### pEval_l5
+
+```solidity
+uint16 pEval_l5
+```
+
+### pEval_l6
+
+```solidity
+uint16 pEval_l6
+```
+
+### pEval_l7
+
+```solidity
+uint16 pEval_l7
+```
+
+### lastMem
+
+```solidity
+uint16 lastMem
+```
+
+### verifyProof
+
+```solidity
+function verifyProof(bytes proof, uint256[] pubSignals) public view returns (bool)
 ```
 
