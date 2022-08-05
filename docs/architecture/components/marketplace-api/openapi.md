@@ -3913,7 +3913,6 @@ This operation does not require authentication
 # Schemas
 
 <h2 id="tocS_AuthenticationDto">AuthenticationDto</h2>
-<!-- backwards compatibility -->
 <a id="schemaauthenticationdto"></a>
 <a id="schema_AuthenticationDto"></a>
 <a id="tocSauthenticationdto"></a>
@@ -3935,7 +3934,6 @@ This operation does not require authentication
 |type|string|true|none|Type of the signature|
 
 <h2 id="tocS_ProofDto">ProofDto</h2>
-<!-- backwards compatibility -->
 <a id="schemaproofdto"></a>
 <a id="schema_ProofDto"></a>
 <a id="tocSproofdto"></a>
@@ -3961,7 +3959,6 @@ This operation does not require authentication
 |type|string|true|none|Type of the proof|
 
 <h2 id="tocS_PublicKeyDto">PublicKeyDto</h2>
-<!-- backwards compatibility -->
 <a id="schemapublickeydto"></a>
 <a id="schema_PublicKeyDto"></a>
 <a id="tocSpublickeydto"></a>
@@ -3985,7 +3982,6 @@ This operation does not require authentication
 |type|string|true|none|Type of the public key|
 
 <h2 id="tocS_CurationDto">CurationDto</h2>
-<!-- backwards compatibility -->
 <a id="schemacurationdto"></a>
 <a id="schema_CurationDto"></a>
 <a id="tocScurationdto"></a>
@@ -4011,7 +4007,6 @@ This operation does not require authentication
 |isListed|boolean|false|none|Flag unsuitable content. False by default. If it's true, the content must not be returned|
 
 <h2 id="tocS_FileDto">FileDto</h2>
-<!-- backwards compatibility -->
 <a id="schemafiledto"></a>
 <a id="schema_FileDto"></a>
 <a id="tocSfiledto"></a>
@@ -4053,7 +4048,6 @@ This operation does not require authentication
 |encryptionMode|string|false|none|Encryption mode used. Just valid if encrypted=true|
 
 <h2 id="tocS_ContainerDto">ContainerDto</h2>
-<!-- backwards compatibility -->
 <a id="schemacontainerdto"></a>
 <a id="schema_ContainerDto"></a>
 <a id="tocScontainerdto"></a>
@@ -4077,7 +4071,6 @@ This operation does not require authentication
 |tag|string|false|none|Tag of the Docker image|
 
 <h2 id="tocS_AlgorithmDto">AlgorithmDto</h2>
-<!-- backwards compatibility -->
 <a id="schemaalgorithmdto"></a>
 <a id="schema_AlgorithmDto"></a>
 <a id="tocSalgorithmdto"></a>
@@ -4109,7 +4102,6 @@ This operation does not require authentication
 |container|[[ContainerDto](#schemacontainerdto)]|true|none|Object describing the Docker container image|
 
 <h2 id="tocS_MainDto">MainDto</h2>
-<!-- backwards compatibility -->
 <a id="schemamaindto"></a>
 <a id="schema_MainDto"></a>
 <a id="tocSmaindto"></a>
@@ -4173,7 +4165,6 @@ This operation does not require authentication
 |algorithm|[AlgorithmDto](#schemaalgorithmdto)|true|none|Algorithm used in the asset|
 
 <h2 id="tocS_ConditionDependencyDto">ConditionDependencyDto</h2>
-<!-- backwards compatibility -->
 <a id="schemaconditiondependencydto"></a>
 <a id="schema_ConditionDependencyDto"></a>
 <a id="tocSconditiondependencydto"></a>
@@ -4202,7 +4193,6 @@ This operation does not require authentication
 |lockPayment|[string]|true|none|Lock Payment|
 
 <h2 id="tocS_HandlerDto">HandlerDto</h2>
-<!-- backwards compatibility -->
 <a id="schemahandlerdto"></a>
 <a id="schema_HandlerDto"></a>
 <a id="tocShandlerdto"></a>
@@ -4226,7 +4216,6 @@ This operation does not require authentication
 |version|string|true|none|Version of the handler|
 
 <h2 id="tocS_EventDto">EventDto</h2>
-<!-- backwards compatibility -->
 <a id="schemaeventdto"></a>
 <a id="schema_EventDto"></a>
 <a id="tocSeventdto"></a>
@@ -4254,7 +4243,6 @@ This operation does not require authentication
 |name|string|true|none|Name of the event|
 
 <h2 id="tocS_ParameterDto">ParameterDto</h2>
-<!-- backwards compatibility -->
 <a id="schemaparameterdto"></a>
 <a id="schema_ParameterDto"></a>
 <a id="tocSparameterdto"></a>
@@ -4278,7 +4266,6 @@ This operation does not require authentication
 |value|object|true|none|Parameter value|
 
 <h2 id="tocS_ConditionDto">ConditionDto</h2>
-<!-- backwards compatibility -->
 <a id="schemaconditiondto"></a>
 <a id="schema_ConditionDto"></a>
 <a id="tocSconditiondto"></a>
@@ -4326,7 +4313,6 @@ This operation does not require authentication
 |timeout|number|true|none|Time out|
 
 <h2 id="tocS_ServiceAgreementTemplateDto">ServiceAgreementTemplateDto</h2>
-<!-- backwards compatibility -->
 <a id="schemaserviceagreementtemplatedto"></a>
 <a id="schema_ServiceAgreementTemplateDto"></a>
 <a id="tocSserviceagreementtemplatedto"></a>
@@ -4404,7 +4390,6 @@ This operation does not require authentication
 |fulfillmentOrder|string|false|none|Fulfillment order|
 
 <h2 id="tocS_AttributesDto">AttributesDto</h2>
-<!-- backwards compatibility -->
 <a id="schemaattributesdto"></a>
 <a id="schema_AttributesDto"></a>
 <a id="tocSattributesdto"></a>
@@ -4528,7 +4513,6 @@ This operation does not require authentication
 |serviceAgreementTemplate|[ServiceAgreementTemplateDto](#schemaserviceagreementtemplatedto)|false|none|Service agreement template|
 
 <h2 id="tocS_ServiceDto">ServiceDto</h2>
-<!-- backwards compatibility -->
 <a id="schemaservicedto"></a>
 <a id="schema_ServiceDto"></a>
 <a id="tocSservicedto"></a>
@@ -4661,7 +4645,6 @@ This operation does not require authentication
 |attributes|[AttributesDto](#schemaattributesdto)|false|none|Attribute of the metadata|
 
 <h2 id="tocS_CreateAssetDto">CreateAssetDto</h2>
-<!-- backwards compatibility -->
 <a id="schemacreateassetdto"></a>
 <a id="schema_CreateAssetDto"></a>
 <a id="tocScreateassetdto"></a>
@@ -4775,7 +4758,6 @@ This operation does not require authentication
 |service|[[ServiceDto](#schemaservicedto)]|true|none|Services that contains the asset|
 
 <h2 id="tocS_GetAssetDto">GetAssetDto</h2>
-<!-- backwards compatibility -->
 <a id="schemagetassetdto"></a>
 <a id="schema_GetAssetDto"></a>
 <a id="tocSgetassetdto"></a>
@@ -4889,7 +4871,6 @@ This operation does not require authentication
 |service|[[ServiceDto](#schemaservicedto)]|true|none|Services that contains the asset|
 
 <h2 id="tocS_QueryBodyDDOdto">QueryBodyDDOdto</h2>
-<!-- backwards compatibility -->
 <a id="schemaquerybodyddodto"></a>
 <a id="schema_QueryBodyDDOdto"></a>
 <a id="tocSquerybodyddodto"></a>
@@ -4921,7 +4902,6 @@ This operation does not require authentication
 |sort|object|false|none|sort the response by specified parameter|
 
 <h2 id="tocS_UpdateAssetDto">UpdateAssetDto</h2>
-<!-- backwards compatibility -->
 <a id="schemaupdateassetdto"></a>
 <a id="schema_UpdateAssetDto"></a>
 <a id="tocSupdateassetdto"></a>
@@ -5031,7 +5011,6 @@ This operation does not require authentication
 |service|[[ServiceDto](#schemaservicedto)]|true|none|Services that contains the asset|
 
 <h2 id="tocS_CreateBookmarkDto">CreateBookmarkDto</h2>
-<!-- backwards compatibility -->
 <a id="schemacreatebookmarkdto"></a>
 <a id="schema_CreateBookmarkDto"></a>
 <a id="tocScreatebookmarkdto"></a>
@@ -5055,7 +5034,6 @@ This operation does not require authentication
 |description|string|true|none|Description given by the user|
 
 <h2 id="tocS_GetBookmarkDto">GetBookmarkDto</h2>
-<!-- backwards compatibility -->
 <a id="schemagetbookmarkdto"></a>
 <a id="schema_GetBookmarkDto"></a>
 <a id="tocSgetbookmarkdto"></a>
@@ -5083,7 +5061,6 @@ This operation does not require authentication
 |createdAt|string(date-time)|true|none|When the UGC was created|
 
 <h2 id="tocS_UpdateBookmarkDto">UpdateBookmarkDto</h2>
-<!-- backwards compatibility -->
 <a id="schemaupdatebookmarkdto"></a>
 <a id="schema_UpdateBookmarkDto"></a>
 <a id="tocSupdatebookmarkdto"></a>
