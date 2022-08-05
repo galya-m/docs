@@ -20,7 +20,7 @@ The Native token being used is **ETH**. This environment is having the network n
  The Nevermined contracts deployed have the version: **undefined**  The Nevermined contracts are labeled with the tag name: **undefined** 
 The Marketplace API used can be found on http://172.17.0.1:3100. <br/>
 The Gateway can be found on http://localhost:8030 and uses the public address **0x068ed00cf0441e4829d9784fcbe7b9e26d4bd8d0**.<br/>
- There is deployed a faucet on http://localhost:3001 .<br/> The subgraphs to fetch contracts events can be found on http://localhost:9000/subgraphs/name/neverminedio .<br/>
+ There is deployed a faucet on http://localhost:3001 .<br/> The subgraphs to fetch contracts events can be found on http://localhost:9000/subgraphs/name/nevermined-io/development .<br/>
 
 ## testnet
 Public testnet environment where users can interact with Nevermined protocol.<br/>
@@ -33,7 +33,7 @@ The Native token being used is **MATIC**. This environment is having the network
  The Nevermined contracts deployed have the version: **2.0.0**  The Nevermined contracts are labeled with the tag name: **public** 
 The Marketplace API used can be found on https://marketplace-api.mumbai.public.nevermined.rocks. <br/>
 The Gateway can be found on https://gateway.mumbai.public.nevermined.rocks and uses the public address **0xB82dc620BB4dE6712376055a5cfc0DF11112D442**.<br/>
- There is deployed a faucet on https://faucet.mumbai.public.nevermined.rocks .<br/> The subgraphs to fetch contracts events can be found on https://graph-node.defi.mumbai.nevermined.rocks .<br/>
+ There is deployed a faucet on https://faucet.mumbai.public.nevermined.rocks .<br/> The subgraphs to fetch contracts events can be found on https://api.thegraph.com/subgraphs/name/nevermined-io/public .<br/>
 
 ## defiMumbai
 Testnet environment for the DeFi Marketplace.<br/>
@@ -46,7 +46,7 @@ The Native token being used is **MATIC**. This environment is having the network
  The Nevermined contracts deployed have the version: **2.0.0**  The Nevermined contracts are labeled with the tag name: **common** 
 The Marketplace API used can be found on https://defi.v2.marketplace-api.mumbai.nevermined.rocks. <br/>
 The Gateway can be found on https://defi.v2.gateway.mumbai.nevermined.rocks and uses the public address **0x7DFa856BC27b67bfA83F190755D6C7D0A0D7BBC0**.<br/>
- There is deployed a faucet on https://faucet.mumbai.public.nevermined.rocks .<br/> The subgraphs to fetch contracts events can be found on https://graph-node.defi.mumbai.nevermined.rocks .<br/>
+ There is deployed a faucet on https://faucet.mumbai.public.nevermined.rocks .<br/> The subgraphs to fetch contracts events can be found on https://api.thegraph.com/subgraphs/name/nevermined-io/common .<br/>
 
 ## autonomiesMumbai
 Testnet environment for the Autonomies Marketplace.<br/>
@@ -59,7 +59,7 @@ The Native token being used is **MATIC**. This environment is having the network
  The Nevermined contracts deployed have the version: **2.0.0**  The Nevermined contracts are labeled with the tag name: **common** 
 The Marketplace API used can be found on https://marketplace-api.autonomies.test.nevermined.rocks. <br/>
 The Gateway can be found on https://gateway.autonomies.test.nevermined.rocks and uses the public address **0xe11A86849d99F524cAC3E7A0Ec1241828e332C62**.<br/>
- There is deployed a faucet on https://faucet.mumbai.public.nevermined.rocks .<br/> The subgraphs to fetch contracts events can be found on https://graph-node.defi.mumbai.nevermined.rocks .<br/>
+ There is deployed a faucet on https://faucet.mumbai.public.nevermined.rocks .<br/> The subgraphs to fetch contracts events can be found on https://api.thegraph.com/subgraphs/name/nevermined-io/common .<br/>
 
 ## alitiesAlfajores
 Testnet environment for the Alities Marketplace.<br/>
