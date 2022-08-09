@@ -11169,26 +11169,6 @@ function verifyProof(bytes proof, uint256[] pubSignals) public view returns (boo
 
 # Solidity API
 
-## TestDisputeManager
-
-### accept
-
-```solidity
-mapping(bytes32 => bool) accept
-```
-
-### accepted
-
-```solidity
-function accepted(address provider, address buyer, bytes32 orig, bytes32 crypted) public view returns (bool)
-```
-
-### setAccepted
-
-```solidity
-function setAccepted(bytes32 orig, bytes32 crypted, address provider, address buyer) public
-```
-
 ## Common
 
 ### getCurrentBlockNumber
@@ -21860,6 +21840,26 @@ function isApprovedForAll(address account, address operator) public view returns
 
 ```solidity
 function supportsInterface(bytes4 interfaceId) public view virtual returns (bool)
+```
+
+## TestDisputeManager
+
+### accept
+
+```solidity
+mapping(bytes32 => bool) accept
+```
+
+### accepted
+
+```solidity
+function accepted(address provider, address buyer, bytes32 orig, bytes32 crypted) public view returns (bool)
+```
+
+### setAccepted
+
+```solidity
+function setAccepted(bytes32 orig, bytes32 crypted, address provider, address buyer) public
 ```
 
 ## PlonkVerifier
