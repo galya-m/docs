@@ -22,6 +22,19 @@ The Marketplace API used can be found on http://172.17.0.1:3100. <br/>
 The Gateway can be found on http://localhost:8030 and uses the public address **0x068ed00cf0441e4829d9784fcbe7b9e26d4bd8d0**.<br/>
  There is deployed a faucet on http://localhost:3001 .<br/> The subgraphs to fetch contracts events can be found on http://localhost:9000/subgraphs/name/nevermined-io/development .<br/>
 
+## polygon-localnet
+This environment is used for local development. If you want to have a fully functional environment running in your computer, please visit https://github.com/nevermined-io/tools/<br/>
+
+ **Testnet** 
+The Native token being used is **MATIC**. This environment is having the network name **polygon-localnet** and the chain id/network id **8997**. <br/>
+
+### Nevermined configuration 
+
+ The Nevermined contracts deployed have the version: **undefined**  The Nevermined contracts are labeled with the tag name: **undefined** 
+The Marketplace API used can be found on http://172.17.0.1:3100. <br/>
+The Gateway can be found on http://localhost:8030 and uses the public address **0x068ed00cf0441e4829d9784fcbe7b9e26d4bd8d0**.<br/>
+ There is deployed a faucet on http://localhost:3001 .<br/> The subgraphs to fetch contracts events can be found on http://localhost:9000/subgraphs/name/nevermined-io/development .<br/>
+
 ## testnet
 Public testnet environment where users can interact with Nevermined protocol.<br/>
 
@@ -30,7 +43,7 @@ The Native token being used is **MATIC**. This environment is having the network
 
 ### Nevermined configuration 
 
- The Nevermined contracts deployed have the version: **2.0.0**  The Nevermined contracts are labeled with the tag name: **public** 
+ The Nevermined contracts deployed have the version: **2.0.3**  The Nevermined contracts are labeled with the tag name: **public** 
 The Marketplace API used can be found on https://marketplace-api.mumbai.public.nevermined.rocks. <br/>
 The Gateway can be found on https://gateway.mumbai.public.nevermined.rocks and uses the public address **0xB82dc620BB4dE6712376055a5cfc0DF11112D442**.<br/>
  There is deployed a faucet on https://faucet.mumbai.public.nevermined.rocks .<br/> The subgraphs to fetch contracts events can be found on https://api.thegraph.com/subgraphs/name/nevermined-io/public .<br/>
