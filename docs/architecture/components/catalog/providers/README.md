@@ -15,11 +15,9 @@ import { MetaMask } from "@nevermined-io/catalog-providers";
 import App from "app";
 import { chainConfig, nodeUri, correctNetworkId }  from "./config";
 import { Config } from "@nevermined-io/nevermined-sdk-js";
-
 const appConfig: Config = {
     nodeUri,
 };
-
 ReactDOM.render(
     <div>
         <MetaMask.WalletProvider
@@ -37,7 +35,6 @@ ReactDOM.render(
 #### 3.
 ```typescript
 import { MetaMask } from "@nevermined-io/catalog-providers";
-
 const MMWallet = () => {
   const { loginMetamask, walletAddress } = MetaMask.useWallet();
   return (
