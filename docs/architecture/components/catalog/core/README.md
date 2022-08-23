@@ -8,6 +8,7 @@ import ReactDOM from 'react-dom';
 import { Config, DDO } from '@nevermined-io/nevermined-sdk-js';
 import Catalog from '@nevermined-io/catalog-core';
 import App from 'app';
+
 export const appConfig: Config = {
   web3Provider: new Web3(window.ethereum),
   nodeUri,
@@ -21,6 +22,7 @@ export const appConfig: Config = {
   marketplaceUri,
   artifactsFolder: `${rootUri}/contracts`
 };
+
 const query = {
   offset: 2, // limit response to 2 items
   page: 1,
@@ -29,10 +31,12 @@ const query = {
     created: -1
   }
 };
+
 const App = () => {
   const { sdk } = Catalog.useNevermined();
   const response = Catalog.useAssets(query);
   console.log(response);
+
   return (
     <>
       <div>Is SDK Avaialable:</div>
@@ -40,6 +44,7 @@ const App = () => {
     </>
   );
 };
+
 ReactDOM.render(
   <div>
     <Catalog.NeverminedProvider config={appConfig}>
@@ -60,6 +65,7 @@ For example:
       const { assets, sdk } = useContext(NeverminedContext);
       const did = '123';
       const { ddo, metadata, error, isLoading, nftDetails } = assets.useAsset(did);
+
       return (
         ...
       )

@@ -2,7 +2,7 @@
 sidebar_position: 6
 ---
 
-# Getting started with providers
+# Catalog Providers
 
 The Catalog exposes a package facilitating the interaction with Web3 providers like Metamask.
 
