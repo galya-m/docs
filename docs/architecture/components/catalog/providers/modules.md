@@ -7,3 +7,27 @@
 ### Namespaces
 
 - [MetaMask](modules/MetaMask.md)
+
+### Functions
+
+- [zeroX](modules.md#zerox)
+
+## Functions
+
+### zeroX
+
+▸ **zeroX**(`input?`): `string`
+
+#### Parameters
+
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `input` | `string` | `""` |
+
+#### Returns
+
+`string`
+
+#### Defined in
+
+[utils/index.ts:1](https://github.com/nevermined-io/components-catalog/blob/098eedb/providers/src/utils/index.ts#L1)
