@@ -15,24 +15,23 @@
 
 ### getAssetRegisterEvent
 
-▸ **getAssetRegisterEvent**(`did`, `graphUrl`): `Promise`<[`RegisterEvent`](../interfaces/RegisterEvent.md)[]\>
+▸ **getAssetRegisterEvent**(`sdk`, `did`): `Promise`<[`RegisterEvent`](../interfaces/RegisterEvent.md)[]\>
 
 Get asset registering event
 
 **`Example`**
 
 ```tsx
-import Catalog from "@nevermined-io/catalog-core";
+import { Catalog, EventService } from "@nevermined-io/catalog-core";
 import { useState } from "react";
 
 const MyComponent = () => {
  const [events, setEvents] = useState<Transfer[]>([]);
- const { getAssetRegisterEvent } = Catalog;
  const { sdk } = Catalog.useNevermined();
 
  useEffect(() => {
      const handler = async () => {
-          const t: Transfer[] = await getAssetRegisterEvent(sdk, receiverAddress)          
+          const t: Transfer[] = await EventService.getAssetRegisterEvent(sdk, receiverAddress)          
           setTransfers(t)
      }
  }, [setEvents, sdk]);
@@ -58,8 +57,8 @@ const MyComponent = () => {
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
+| `sdk` | `Nevermined` | Nevermined instance |
 | `did` | `string` | assets did |
-| `graphUrl` | `string` | - |
 
 #### Returns
 
@@ -67,30 +66,29 @@ const MyComponent = () => {
 
 #### Defined in
 
-[src/services/event.ts:245](https://github.com/nevermined-io/components-catalog/blob/e8c3c72/lib/src/services/event.ts#L245)
+[src/services/event.ts:254](https://github.com/nevermined-io/components-catalog/blob/58f6e93/lib/src/services/event.ts#L254)
 
 ___
 
 ### getTransfers
 
-▸ **getTransfers**(`sdk`, `receiver`): `Promise`<[`Transfer`](../interfaces/Transfer.md)[]\>
+▸ **getTransfers**(`sdk`, `receiver`, `nftType?`): `Promise`<[`Transfer`](../interfaces/Transfer.md)[]\>
 
-Get recieved transfers  by address
+Get recieved transfers by address and nft type
 
 **`Example`**
 
 ```tsx
-import Catalog from "@nevermined-io/catalog-core";
+import { Catalog, EventService } from "@nevermined-io/catalog-core";
 import { useState } from "react";
 
 const MyComponent = () => {
  const [transfers, setTransfers] = useState<Transfer[]>([]);
- const { getTransfers } = Catalog;
  const { sdk } = Catalog.useNevermined();
 
  useEffect(() => {
      const handler = async () => {
-          const t: Transfer[] = await getTransfers(sdk, receiverAddress)          
+          const t: Transfer[] = await EventService.getTransfers(sdk, receiverAddress)          
           setTransfers(t)
      }
  }, [receiverAddress, sdk]);
@@ -114,10 +112,11 @@ const MyComponent = () => {
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `sdk` | `Nevermined` | Nevermined instance |
-| `receiver` | `string` | transfers receiver address |
+| Name | Type | Default value | Description |
+| :------ | :------ | :------ | :------ |
+| `sdk` | `Nevermined` | `undefined` | Nevermined instance |
+| `receiver` | `string` | `undefined` | Transfers receiver address |
+| `nftType` | [`NftTypes`](../modules.md#nfttypes) | `1155` | Choose the NFT type. Default value 1155 |
 
 #### Returns
 
@@ -125,13 +124,13 @@ const MyComponent = () => {
 
 #### Defined in
 
-[src/services/event.ts:43](https://github.com/nevermined-io/components-catalog/blob/e8c3c72/lib/src/services/event.ts#L43)
+[src/services/event.ts:43](https://github.com/nevermined-io/components-catalog/blob/58f6e93/lib/src/services/event.ts#L43)
 
 ___
 
 ### getUserFulfilledEvents
 
-▸ **getUserFulfilledEvents**(`sdk`, `account`): `Promise`<[`FullfilledOrders`](../interfaces/FullfilledOrders.md)[]\>
+▸ **getUserFulfilledEvents**(`sdk`, `account`): `Promise`<[`FulfilledOrders`](../interfaces/FulfilledOrders.md)[]\>
 
 Get fullfilled nft transfer events by user address
 
@@ -177,11 +176,11 @@ const MyComponent = () => {
 
 #### Returns
 
-`Promise`<[`FullfilledOrders`](../interfaces/FullfilledOrders.md)[]\>
+`Promise`<[`FulfilledOrders`](../interfaces/FulfilledOrders.md)[]\>
 
 #### Defined in
 
-[src/services/event.ts:107](https://github.com/nevermined-io/components-catalog/blob/e8c3c72/lib/src/services/event.ts#L107)
+[src/services/event.ts:114](https://github.com/nevermined-io/components-catalog/blob/58f6e93/lib/src/services/event.ts#L114)
 
 ___
 
@@ -194,17 +193,16 @@ Get nft creating events registered by user
 **`Example`**
 
 ```tsx
-import Catalog from "@nevermined-io/catalog-core";
+import { Catalog, EventService } from "@nevermined-io/catalog-core";
 import { useState } from "react";
 
 const MyComponent = () => {
  const [events, setEvents] = useState<Transfer[]>([]);
- const { getUserRegisterEvents } = Catalog;
  const { sdk } = Catalog.useNevermined();
 
  useEffect(() => {
      const handler = async () => {
-          const t: Transfer[] = await getUserRegisterEvents(sdk, receiverAddress)          
+          const t: Transfer[] = await EventService.getUserRegisterEvents(sdk, receiverAddress)          
           setTransfers(t)
      }
  }, [setEvents, sdk]);
@@ -240,4 +238,4 @@ const MyComponent = () => {
 
 #### Defined in
 
-[src/services/event.ts:175](https://github.com/nevermined-io/components-catalog/blob/e8c3c72/lib/src/services/event.ts#L175)
+[src/services/event.ts:183](https://github.com/nevermined-io/components-catalog/blob/58f6e93/lib/src/services/event.ts#L183)

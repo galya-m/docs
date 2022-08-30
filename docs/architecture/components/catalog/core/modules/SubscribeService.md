@@ -21,7 +21,7 @@ Subscribe to payment events
 
 ```typescript
 const MyComponent = () => {
- const { paymentEvents } = useSubscribeToPaymentEvents();
+ const { paymentEvents } = SubscribeService.useSubscribeToPaymentEvents();
 
  return (
   <>
@@ -44,19 +44,21 @@ const MyComponent = () => {
 
 `Object`
 
+Array of events with method `unsubscribe` in order to stop listening specific event
+
 | Name | Type |
 | :------ | :------ |
 | `paymentEvents` | [`EventResult`](../modules.md#eventresult)[] |
 
 #### Defined in
 
-[src/services/subscribe.ts:33](https://github.com/nevermined-io/components-catalog/blob/e8c3c72/lib/src/services/subscribe.ts#L33)
+[src/services/subscribe.ts:35](https://github.com/nevermined-io/components-catalog/blob/58f6e93/lib/src/services/subscribe.ts#L35)
 
 ___
 
 ### useSubscribeToTransferEvents
 
-▸ **useSubscribeToTransferEvents**(): `Object`
+▸ **useSubscribeToTransferEvents**(`nftType?`): `Object`
 
 Subscribe to nft transfer events
 
@@ -64,7 +66,7 @@ Subscribe to nft transfer events
 
 ```tsx
 const MyComponent = () => {
- const { transferEvents } = useSubscribeToTransferEvents();
+ const { transferEvents } = SubscribeService.useSubscribeToTransferEvents();
 
  return (
   <>
@@ -83,9 +85,17 @@ const MyComponent = () => {
 }
 ```
 
+#### Parameters
+
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `nftType` | [`NftTypes`](../modules.md#nfttypes) | `1155` |
+
 #### Returns
 
 `Object`
+
+Array of events with method `unsubscribe` in order to stop listening specific event
 
 | Name | Type |
 | :------ | :------ |
@@ -93,4 +103,4 @@ const MyComponent = () => {
 
 #### Defined in
 
-[src/services/subscribe.ts:89](https://github.com/nevermined-io/components-catalog/blob/e8c3c72/lib/src/services/subscribe.ts#L89)
+[src/services/subscribe.ts:93](https://github.com/nevermined-io/components-catalog/blob/58f6e93/lib/src/services/subscribe.ts#L93)

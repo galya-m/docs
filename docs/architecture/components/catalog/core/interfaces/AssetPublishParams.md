@@ -30,7 +30,7 @@ Files to download after buy the asset
 
 #### Defined in
 
-[src/types/index.ts:703](https://github.com/nevermined-io/components-catalog/blob/e8c3c72/lib/src/types/index.ts#L703)
+[src/types/index.ts:709](https://github.com/nevermined-io/components-catalog/blob/58f6e93/lib/src/types/index.ts#L709)
 
 ___
 
@@ -42,7 +42,7 @@ Who create the asset
 
 #### Defined in
 
-[src/types/index.ts:693](https://github.com/nevermined-io/components-catalog/blob/e8c3c72/lib/src/types/index.ts#L693)
+[src/types/index.ts:699](https://github.com/nevermined-io/components-catalog/blob/58f6e93/lib/src/types/index.ts#L699)
 
 ___
 
@@ -54,7 +54,7 @@ The category that belong the asset
 
 #### Defined in
 
-[src/types/index.ts:699](https://github.com/nevermined-io/components-catalog/blob/e8c3c72/lib/src/types/index.ts#L699)
+[src/types/index.ts:705](https://github.com/nevermined-io/components-catalog/blob/58f6e93/lib/src/types/index.ts#L705)
 
 ___
 
@@ -66,7 +66,7 @@ Description about what is the utility of the asset
 
 #### Defined in
 
-[src/types/index.ts:695](https://github.com/nevermined-io/components-catalog/blob/e8c3c72/lib/src/types/index.ts#L695)
+[src/types/index.ts:701](https://github.com/nevermined-io/components-catalog/blob/58f6e93/lib/src/types/index.ts#L701)
 
 ___
 
@@ -78,7 +78,7 @@ Name of the asset
 
 #### Defined in
 
-[src/types/index.ts:691](https://github.com/nevermined-io/components-catalog/blob/e8c3c72/lib/src/types/index.ts#L691)
+[src/types/index.ts:697](https://github.com/nevermined-io/components-catalog/blob/58f6e93/lib/src/types/index.ts#L697)
 
 ___
 
@@ -90,7 +90,7 @@ Price of the asset
 
 #### Defined in
 
-[src/types/index.ts:701](https://github.com/nevermined-io/components-catalog/blob/e8c3c72/lib/src/types/index.ts#L701)
+[src/types/index.ts:707](https://github.com/nevermined-io/components-catalog/blob/58f6e93/lib/src/types/index.ts#L707)
 
 ___
 
@@ -102,4 +102,4 @@ The type of the asset
 
 #### Defined in
 
-[src/types/index.ts:697](https://github.com/nevermined-io/components-catalog/blob/e8c3c72/lib/src/types/index.ts#L697)
+[src/types/index.ts:703](https://github.com/nevermined-io/components-catalog/blob/58f6e93/lib/src/types/index.ts#L703)

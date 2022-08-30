@@ -11,6 +11,7 @@
 ### Functions
 
 - [NeverminedProvider](Catalog.md#neverminedprovider)
+- [initializeNevermined](Catalog.md#initializenevermined)
 - [useNevermined](Catalog.md#usenevermined)
 
 ## Variables
@@ -21,7 +22,7 @@
 
 #### Defined in
 
-[src/catalog.tsx:557](https://github.com/nevermined-io/components-catalog/blob/e8c3c72/lib/src/catalog.tsx#L557)
+[src/catalog.tsx:560](https://github.com/nevermined-io/components-catalog/blob/58f6e93/lib/src/catalog.tsx#L560)
 
 ## Functions
 
@@ -37,7 +38,7 @@ Initialize NeverminedProvider:
 ```tsx
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Catalog from 'test-catalog-core';
+import { Catalog } from 'test-catalog-core';
 import { appConfig } from './config';
 import Example from 'examples';
 import { MetaMask } from '@nevermined-io/catalog-providers';
@@ -87,7 +88,27 @@ const SDKInstance = () => {
 
 #### Defined in
 
-[src/catalog.tsx:120](https://github.com/nevermined-io/components-catalog/blob/e8c3c72/lib/src/catalog.tsx#L120)
+[src/catalog.tsx:121](https://github.com/nevermined-io/components-catalog/blob/58f6e93/lib/src/catalog.tsx#L121)
+
+___
+
+### initializeNevermined
+
+▸ **initializeNevermined**(`config`): `Promise`<[`GenericOutput`](../interfaces/GenericOutput.md)<`Nevermined`, `any`\>\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `config` | `Config` |
+
+#### Returns
+
+`Promise`<[`GenericOutput`](../interfaces/GenericOutput.md)<`Nevermined`, `any`\>\>
+
+#### Defined in
+
+[src/catalog.tsx:54](https://github.com/nevermined-io/components-catalog/blob/58f6e93/lib/src/catalog.tsx#L54)
 
 ___
 
@@ -101,4 +122,4 @@ ___
 
 #### Defined in
 
-[src/catalog.tsx:559](https://github.com/nevermined-io/components-catalog/blob/e8c3c72/lib/src/catalog.tsx#L559)
+[src/catalog.tsx:562](https://github.com/nevermined-io/components-catalog/blob/58f6e93/lib/src/catalog.tsx#L562)

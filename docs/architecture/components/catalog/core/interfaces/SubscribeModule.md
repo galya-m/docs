@@ -83,17 +83,17 @@ return the `payment` event with a functionality to unsubscribe
 
 #### Defined in
 
-[src/types/index.ts:612](https://github.com/nevermined-io/components-catalog/blob/e8c3c72/lib/src/types/index.ts#L612)
+[src/types/index.ts:617](https://github.com/nevermined-io/components-catalog/blob/58f6e93/lib/src/types/index.ts#L617)
 
 ___
 
 ### transferEvents
 
-• **transferEvents**: (`cb`: (`events`: [`EventResult`](../modules.md#eventresult)[]) => `void`) => [`ContractEventSubscription`](ContractEventSubscription.md)
+• **transferEvents**: (`cb`: (`events`: [`EventResult`](../modules.md#eventresult)[]) => `void`, `nftType?`: [`NftTypes`](../modules.md#nfttypes)) => [`ContractEventSubscription`](ContractEventSubscription.md)
 
 #### Type declaration
 
-▸ (`cb`): [`ContractEventSubscription`](ContractEventSubscription.md)
+▸ (`cb`, `nftType?`): [`ContractEventSubscription`](ContractEventSubscription.md)
 
 Subscribe a `transfer` event and execute callbacks once that this event is listened
 
@@ -102,6 +102,7 @@ Subscribe a `transfer` event and execute callbacks once that this event is liste
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `cb` | (`events`: [`EventResult`](../modules.md#eventresult)[]) => `void` | Callback to execute |
+| `nftType?` | [`NftTypes`](../modules.md#nfttypes) | NFT asset type which can be 721 or 1155 |
 
 ##### Returns
 
@@ -111,4 +112,4 @@ return the `transfer` event with a functionality to unsubscribe
 
 #### Defined in
 
-[src/types/index.ts:618](https://github.com/nevermined-io/components-catalog/blob/e8c3c72/lib/src/types/index.ts#L618)
+[src/types/index.ts:624](https://github.com/nevermined-io/components-catalog/blob/58f6e93/lib/src/types/index.ts#L624)

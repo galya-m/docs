@@ -38,4 +38,4 @@ It is true if the subscription was successfully completed
 
 #### Defined in
 
-[src/types/index.ts:762](https://github.com/nevermined-io/components-catalog/blob/e8c3c72/lib/src/types/index.ts#L762)
+[src/types/index.ts:768](https://github.com/nevermined-io/components-catalog/blob/58f6e93/lib/src/types/index.ts#L768)
