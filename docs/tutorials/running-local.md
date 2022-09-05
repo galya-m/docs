@@ -39,7 +39,7 @@ For the `REACT_APP_NODE_URI` you can connect to a [QuickNode](https://www.quickn
 
 :::
 
-```
+```ts
 import { Config } from '@nevermined-io/nevermined-sdk-js';
 
 // URL where run the app
@@ -78,7 +78,7 @@ export const appConfig: Config = {
 
 3. Go to `index.tsx` and add the `NeverminedProvider`
 
-```
+```tsx
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
@@ -103,7 +103,7 @@ reportWebVitals();
 
 4. After that you will be able to iteract with the Nevermined ecosystem. List did assets deployed updating your `App.tsx`
 
-```
+```tsx
 import Catalog from '@nevermined-io/catalog-core'
 import React, { useEffect, useState } from 'react'
 
@@ -177,17 +177,21 @@ Metamask is a popular cryptowallet that is easy to integrate with a plugin in yo
 
 2. As before, add the WalletProvider in `index.tsx`.
 
-```import ChainConfig from './ChainConfig';
+```tsx
+import ChainConfig from './ChainConfig';
 
 ...
-      <MetaMask.WalletProvider nodeUri={appConfig.nodeUri!} correctNetworkId='0x13881' chainConfig={ChainConfig}>
+      <MetaMask.WalletProvider nodeUri={appConfig.nodeUri!} correctNetworkId='0x13881' externalChainConfig={ChainConfig}>
         <App />
       </MetaMask.WalletProvider>
 ```
 
+*Note - `externalChainConfig` is optional, if you don't provide it the component will set a default chain configuration. In case that you don't need a specific configuration and your dapp will work only in Polygon network you can jump the next step*
+
 3. Copy and paste this in `ChainConfig.ts` in your `src` folder. It contains blockchain networks information:
 
-```import { zeroX } from '@nevermined-io/nevermined-sdk-js/dist/node/utils'
+```ts
+import { zeroX } from '@nevermined-io/nevermined-sdk-js/dist/node/utils'
 
 const spreeChainId = zeroX((1337).toString(16))
 const polygonLocalnetChainId = zeroX((8997).toString(16))
@@ -253,7 +257,8 @@ export default ChainConfig
 
 4. Modify `App.tsx` to create a login button.
 
-```import { MetaMask } from '@nevermined-io/catalog-providers'
+```tsx
+import { MetaMask } from '@nevermined-io/catalog-providers'
 import React from 'react'
 
 function App() {
