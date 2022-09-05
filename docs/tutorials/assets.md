@@ -419,7 +419,7 @@ const Consumer = ({ddo}: {ddo: DDO}) => {
         }
 
         const currentAccount = await getCurrentAccount(sdk);
-        const response = await subscription.buySubscription(ddo.id, currentAccount, owner, 1, 1155);
+        const response = await subscription.buySubscription(ddo.id, currentAccount, owner, 1, 721);
         setIsBought(Boolean(response));
     };
 
@@ -429,7 +429,7 @@ const Consumer = ({ddo}: {ddo: DDO}) => {
 
     return (
         <div>
-        {ownNFT1155 ? (
+        {ownNFT721 ? (
             <button onClick={download} disabled={isLoadingSDK}>
             Download NFT
             </button>
@@ -538,7 +538,7 @@ const Publisher = () => {
 
 ```
 
-### How to consue an NFT ERC1155
+### How to consume an NFT ERC1155
 
 This section will show how to consume an NFT1155 already published using Nevermined.
 
@@ -591,4 +591,55 @@ changes the account and when the NFT1155 is bought in order to avoid buy again
     const download = async () => {
         await assets.downloadNFT(ddo.id);
     };
+```
+
+#### The compleate example
+
+#### The complete example
+
+```tsx
+const Consumer = ({ddo}: {ddo: DDO}) => {
+    const { assets, account, isLoadingSDK, subscription, sdk } = Catalog.useNevermined();
+    const { walletAddress } = MetaMask.useWallet();
+    const [ownNFT1155, setOwnNF1155] = useState(false);
+    const [isBought, setIsBought] = useState(false);
+    const [owner, setOwner] = useState('');
+    
+    useEffect(() => {
+    (async () => {
+        setOwnNFT1155(await account.isNFT1155Holder(ddo.id, walletAddress));
+        setOwner(await sdk.assets.owner(ddo.id))
+    })()
+    }, [walletAddress, isBought])
+
+    const buy = async () => {
+        if (!account.isTokenValid()) {
+        await account.generateToken();
+        }
+
+        const currentAccount = await getCurrentAccount(sdk);
+        const response = await subscription.buySubscription(ddo.id, currentAccount, owner, 1, 1155);
+        setIsBought(Boolean(response));
+    };
+
+    const download = async () => {
+        await assets.downloadNFT(ddo.id);
+    };
+
+    return (
+        <div>
+        {ownNFT1155 ? (
+            <button onClick={download} disabled={isLoadingSDK}>
+            Download NFT
+            </button>
+        ) : (
+            owner !== walletAddress ?
+            <button onClick={buy} disabled={isLoadingSDK}>
+            buy
+            </button>
+            : <span>The owner cannot buy, please change the account to buy the NFT asset</span>
+        )}
+        </div>
+    );
+};    
 ```
