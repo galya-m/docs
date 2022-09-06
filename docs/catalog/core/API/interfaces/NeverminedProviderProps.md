@@ -20,7 +20,7 @@ This provider require children elements
 
 #### Defined in
 
-[src/types/index.ts:322](https://github.com/nevermined-io/components-catalog/blob/658432b/lib/src/types/index.ts#L322)
+[src/types/index.ts:322](https://github.com/nevermined-io/components-catalog/blob/633edfb/lib/src/types/index.ts#L322)
 
 ___
 
@@ -32,7 +32,7 @@ Show Catalog logs in console logs if it sets to `true`
 
 #### Defined in
 
-[src/types/index.ts:326](https://github.com/nevermined-io/components-catalog/blob/658432b/lib/src/types/index.ts#L326)
+[src/types/index.ts:326](https://github.com/nevermined-io/components-catalog/blob/633edfb/lib/src/types/index.ts#L326)
 
 ___
 
@@ -44,4 +44,4 @@ The config needed to build Nevermined SDK
 
 #### Defined in
 
-[src/types/index.ts:324](https://github.com/nevermined-io/components-catalog/blob/658432b/lib/src/types/index.ts#L324)
+[src/types/index.ts:324](https://github.com/nevermined-io/components-catalog/blob/633edfb/lib/src/types/index.ts#L324)

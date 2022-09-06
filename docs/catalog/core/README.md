@@ -7,9 +7,9 @@ title: Getting started
 
 **Catalog core** includes all the Nevermined functionalities splitted in the `Catalog provider` and `Services`.
 
-### Nevermined provider
+### Catalog provider
 
-Nevermined provider loads the **Nevermined sdk** in the context of a **React application** and provides some parametes
+Catalog provider loads the **Nevermined sdk** in the context of a **React application** and provides some parametes
 and objects to handle it:
 
 * account - contains all the functionalities to handle authentications and collections belonged to an account

@@ -55,7 +55,7 @@ const MyComponent = () => {
 
 #### Defined in
 
-[src/services/account.ts:76](https://github.com/nevermined-io/components-catalog/blob/658432b/lib/src/services/account.ts#L76)
+[src/services/account.ts:76](https://github.com/nevermined-io/components-catalog/blob/633edfb/lib/src/services/account.ts#L76)
 
 ___
 
@@ -102,7 +102,7 @@ const MyComponent = () => {
 
 #### Defined in
 
-[src/services/account.ts:32](https://github.com/nevermined-io/components-catalog/blob/658432b/lib/src/services/account.ts#L32)
+[src/services/account.ts:32](https://github.com/nevermined-io/components-catalog/blob/633edfb/lib/src/services/account.ts#L32)
 
 ___
 
@@ -324,7 +324,7 @@ export const UserProfile: NextPage = () => {
 
 #### Defined in
 
-[src/services/account.ts:287](https://github.com/nevermined-io/components-catalog/blob/658432b/lib/src/services/account.ts#L287)
+[src/services/account.ts:287](https://github.com/nevermined-io/components-catalog/blob/633edfb/lib/src/services/account.ts#L287)
 
 ___
 
@@ -355,7 +355,7 @@ true if the user owns at least one edition of the NFT
 
 #### Defined in
 
-[src/services/account.ts:460](https://github.com/nevermined-io/components-catalog/blob/658432b/lib/src/services/account.ts#L460)
+[src/services/account.ts:460](https://github.com/nevermined-io/components-catalog/blob/633edfb/lib/src/services/account.ts#L460)
 
 ___
 
@@ -386,4 +386,4 @@ true if the user holds the NFT
 
 #### Defined in
 
-[src/services/account.ts:499](https://github.com/nevermined-io/components-catalog/blob/658432b/lib/src/services/account.ts#L499)
+[src/services/account.ts:499](https://github.com/nevermined-io/components-catalog/blob/633edfb/lib/src/services/account.ts#L499)
