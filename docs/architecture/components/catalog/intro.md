@@ -14,6 +14,13 @@ The main intention of this project is provide the building blocks to create thes
 
 Some important characteristic of the Nevermined and by extension by the Catalog is you always own your keys/credentials. So with Nevermined you can implement fully functional use cases totally decentralized. This means the use cases that can be built via the Catalog allow the peer to peer interaction between content providers/producers and final users without a central entity.
 
+The Catalog is splitted currently in two modules:
+
+### [Core](./core/README.md)
+Includes all the Nevermined functionalities splitted in the `Catalog provider` and `Services`. 
+
+### [Providers](./providers/README.md)
+The Catalog exposes a package facilitating the interaction with Web3 providers like Metamask.
 
 ## React Framework
 
