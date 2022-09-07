@@ -34,7 +34,7 @@ The new generated token
 
 #### Defined in
 
-[src/types/index.ts:440](https://github.com/nevermined-io/components-catalog/blob/633edfb/lib/src/types/index.ts#L440)
+[src/types/index.ts:440](https://github.com/nevermined-io/components-catalog/blob/7619102/lib/src/types/index.ts#L440)
 
 ___
 
@@ -62,7 +62,7 @@ List of assets which was bought by the address given as argument
 
 #### Defined in
 
-[src/types/index.ts:435](https://github.com/nevermined-io/components-catalog/blob/633edfb/lib/src/types/index.ts#L435)
+[src/types/index.ts:435](https://github.com/nevermined-io/components-catalog/blob/7619102/lib/src/types/index.ts#L435)
 
 ___
 
@@ -90,7 +90,7 @@ List of assets which was published by the address given
 
 #### Defined in
 
-[src/types/index.ts:429](https://github.com/nevermined-io/components-catalog/blob/633edfb/lib/src/types/index.ts#L429)
+[src/types/index.ts:429](https://github.com/nevermined-io/components-catalog/blob/7619102/lib/src/types/index.ts#L429)
 
 ___
 
@@ -121,7 +121,7 @@ true if the user owns at least one edition of the NFT
 
 #### Defined in
 
-[src/types/index.ts:455](https://github.com/nevermined-io/components-catalog/blob/633edfb/lib/src/types/index.ts#L455)
+[src/types/index.ts:455](https://github.com/nevermined-io/components-catalog/blob/7619102/lib/src/types/index.ts#L455)
 
 ___
 
@@ -152,7 +152,7 @@ true if the user holds the NFT
 
 #### Defined in
 
-[src/types/index.ts:465](https://github.com/nevermined-io/components-catalog/blob/633edfb/lib/src/types/index.ts#L465)
+[src/types/index.ts:465](https://github.com/nevermined-io/components-catalog/blob/7619102/lib/src/types/index.ts#L465)
 
 ___
 
@@ -174,4 +174,4 @@ if token is valid it will return true
 
 #### Defined in
 
-[src/types/index.ts:445](https://github.com/nevermined-io/components-catalog/blob/633edfb/lib/src/types/index.ts#L445)
+[src/types/index.ts:445](https://github.com/nevermined-io/components-catalog/blob/7619102/lib/src/types/index.ts#L445)

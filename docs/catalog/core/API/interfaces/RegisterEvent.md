@@ -21,7 +21,7 @@ The block number of the blockchain which the asset was updated
 
 #### Defined in
 
-[src/types/index.ts:742](https://github.com/nevermined-io/components-catalog/blob/633edfb/lib/src/types/index.ts#L742)
+[src/types/index.ts:742](https://github.com/nevermined-io/components-catalog/blob/7619102/lib/src/types/index.ts#L742)
 
 ___
 
@@ -33,7 +33,7 @@ Id of the asset
 
 #### Defined in
 
-[src/types/index.ts:736](https://github.com/nevermined-io/components-catalog/blob/633edfb/lib/src/types/index.ts#L736)
+[src/types/index.ts:736](https://github.com/nevermined-io/components-catalog/blob/7619102/lib/src/types/index.ts#L736)
 
 ___
 
@@ -45,7 +45,7 @@ The last modification of the asset
 
 #### Defined in
 
-[src/types/index.ts:740](https://github.com/nevermined-io/components-catalog/blob/633edfb/lib/src/types/index.ts#L740)
+[src/types/index.ts:740](https://github.com/nevermined-io/components-catalog/blob/7619102/lib/src/types/index.ts#L740)
 
 ___
 
@@ -57,4 +57,4 @@ Owner of the asset
 
 #### Defined in
 
-[src/types/index.ts:738](https://github.com/nevermined-io/components-catalog/blob/633edfb/lib/src/types/index.ts#L738)
+[src/types/index.ts:738](https://github.com/nevermined-io/components-catalog/blob/7619102/lib/src/types/index.ts#L738)

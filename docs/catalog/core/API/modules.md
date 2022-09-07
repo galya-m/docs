@@ -67,7 +67,7 @@ Id of the asset
 
 #### Defined in
 
-[src/types/index.ts:342](https://github.com/nevermined-io/components-catalog/blob/633edfb/lib/src/types/index.ts#L342)
+[src/types/index.ts:342](https://github.com/nevermined-io/components-catalog/blob/7619102/lib/src/types/index.ts#L342)
 
 ___
 
@@ -115,7 +115,7 @@ Agreement id generated after order an asset
 
 #### Defined in
 
-[src/utils/index.ts:42](https://github.com/nevermined-io/components-catalog/blob/633edfb/lib/src/utils/index.ts#L42)
+[src/utils/index.ts:42](https://github.com/nevermined-io/components-catalog/blob/7619102/lib/src/utils/index.ts#L42)
 
 ___
 
@@ -141,7 +141,7 @@ Agreement id generated after order an asset
 
 #### Defined in
 
-[src/utils/index.ts:110](https://github.com/nevermined-io/components-catalog/blob/633edfb/lib/src/utils/index.ts#L110)
+[src/utils/index.ts:110](https://github.com/nevermined-io/components-catalog/blob/7619102/lib/src/utils/index.ts#L110)
 
 ___
 
@@ -163,7 +163,7 @@ Returns current account registered in SDK
 
 #### Defined in
 
-[src/utils/index.ts:17](https://github.com/nevermined-io/components-catalog/blob/633edfb/lib/src/utils/index.ts#L17)
+[src/utils/index.ts:17](https://github.com/nevermined-io/components-catalog/blob/7619102/lib/src/utils/index.ts#L17)
 
 ___
 
@@ -189,7 +189,7 @@ Return the result data of the request
 
 #### Defined in
 
-[src/utils/index.ts:139](https://github.com/nevermined-io/components-catalog/blob/633edfb/lib/src/utils/index.ts#L139)
+[src/utils/index.ts:139](https://github.com/nevermined-io/components-catalog/blob/7619102/lib/src/utils/index.ts#L139)
 
 ___
 
@@ -213,7 +213,7 @@ Checks if object is empty
 
 #### Defined in
 
-[src/utils/index.ts:10](https://github.com/nevermined-io/components-catalog/blob/633edfb/lib/src/utils/index.ts#L10)
+[src/utils/index.ts:10](https://github.com/nevermined-io/components-catalog/blob/7619102/lib/src/utils/index.ts#L10)
 
 ___
 
@@ -239,7 +239,7 @@ Array of object with the document id of each fullfilled events
 
 #### Defined in
 
-[src/utils/index.ts:81](https://github.com/nevermined-io/components-catalog/blob/633edfb/lib/src/utils/index.ts#L81)
+[src/utils/index.ts:81](https://github.com/nevermined-io/components-catalog/blob/7619102/lib/src/utils/index.ts#L81)
 
 ___
 
