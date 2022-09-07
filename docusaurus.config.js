@@ -30,9 +30,13 @@ const config = {
 
   presets: [
     [
-      'classic',
-      /** @type {import('@docusaurus/preset-classic').Options} */
+      'classic',      
+      /** @type {import('@docusaurus/preset-classic').Options} */        
       ({
+        googleAnalytics: {
+          trackingID: 'G-S70X8HQFLP',
+          anonymizeIP: true,
+        },               
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
@@ -60,6 +64,11 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      docs: {
+        sidebar: {
+          autoCollapseCategories: true,
+        },
+      },
       navbar: {
         style: 'dark',
         title: 'Nevermined Docs',
@@ -70,19 +79,19 @@ const config = {
         items: [        
           {
             type: 'doc',
-            docId: 'getting-started/what-is-nvm',
+            docId: 'getting-started/index',
             position: 'left',
             label: 'Getting Started',
           },
           {
             type: 'doc',
-            docId: 'architecture/overview',
+            docId: 'architecture/index',
             position: 'left',
             label: 'Architecture',
           },
           {
             type: 'doc',
-            docId: 'tutorials/getting-started',
+            docId: 'tutorials/index',
             position: 'left',
             label: 'Tutorials',
           }, 
@@ -106,15 +115,15 @@ const config = {
             items: [
               {
                 label: 'Getting Started',
-                to: '/docs/getting-started/what-is-nvm',
+                to: '/docs/getting-started/index',
               },
               {
                 label: 'Architecture',
-                to: '/docs/architecture/overview',
+                to: '/docs/architecture/index',
               },
               {
                 label: 'Tutorials',
-                to: 'docs/tutorials/getting-started'
+                to: 'docs/tutorials/index'
               }
             ],
           },
