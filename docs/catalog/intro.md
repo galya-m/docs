@@ -1,6 +1,5 @@
 ---
 sidebar_position: 1
-description: Nevermined React components catalog,
 ---
 
 # What is the Nevermined Catalog?
@@ -26,7 +25,3 @@ The Catalog exposes a package facilitating the interaction with Web3 providers l
 ## React Framework
 
 Nevermined is framework agnostic, but we created this catalog on top of React to facilitate the integration of Nevermined to React builders. The same level of use cases/applications can be delivered in any other framework using the [Nevermined SDK](https://nvm-docs.nevermined.io/docs/nevermined-sdk/).
-
-import DocCardList from '@theme/DocCardList';
-
-<DocCardList />
