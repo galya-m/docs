@@ -8,51 +8,47 @@ description: Nevermined Testnet Environments
 Testnet environments are public nevermined environments deployed in public EVM-compatible testnet networks. Typically we use Polygon Mumbai.
 Use [Alchemy's Mumbai Faucet](https://mumbaifaucet.com/) or [Polygon's Mumbai faucet](https://faucet.polygon.technology/) for requesting MATIC.
 
-## Public Mumbai (Shared environment)
+## Network Fee
 
-- *`public-nvm-v2-mumbai`*: Public environment in Mumbai. Using `public` contract tag. Use this if you want to integrate with Nevermined in Mumbai/Testnet.
+The usage of a Nevermined environment requires to pay a fee when a payment is being done through the Smart Contracts. This needs to be configured by the content publisher. You can find more information in the [Network Fees section](network-fees.mdx).
 
-| Environment | Network | Contracts Version | Tag | Component | URL | Comments |
-|-------------|---------|-------------------|-----|-----------|-----|----------|
-| public-nvm-v2-mumbai | Mumbai | 2.0.5 | public | Gateway | https://gateway.mumbai.public.nevermined.rocks | |
-| public-nvm-v2-mumbai | Mumbai | 2.0.5 | public | Marketplace API | https://marketplace-api.mumbai.public.nevermined.rocks | |
-| public-nvm-v2-mumbai | Mumbai | 2.0.5 | public | Faucet | https://faucet.mumbai.public.nevermined.rocks | |
-| public-nvm-v2-mumbai | Mumbai | 2.0.5 | public | GraphNode | https://api.thegraph.com/subgraphs/name/nevermined-io/public | Use with sdk >= 0.21.0 |
+:::info
 
-## DefiMarketplace Mumbai (Application environment)
+The network fee in Nevermined testnets is **1%** and the receiver of that fee is the **0x309039F6A4e876bE0a3FCA8c1e32292358D7f07c** address.
 
-- *`defi-marketplace-v2-mumbai`*: DefiMarketplace developlment environment for Autonomies. Using `common` contract tag.
+:::
 
-| Environment | Network | Contracts Version | Tag | Component | URL | Comments |
-|-------------|---------|-------------------|-----|-----------|-----|----------|
-| autonomies-v2-mumbai | Mumbai | 2.0.5 | common | Gateway | https://defi.v2.gateway.mumbai.nevermined.rocks | |
-| autonomies-v2-mumbai | Mumbai | 2.0.5 | common | Marketplace API | https://defi.v2.marketplace-api.mumbai.nevermined.rocks | |
-| autonomies-v2-mumbai | Mumbai | 2.0.5 | common | Marketplace frontend | https://defi.v2.portal.mumbai.nevermined.rocks | |
-| autonomies-v2-mumbai | Mumbai | 2.0.5 | common | Marketplace bundler | https://defi.v2.bundler.mumbai.nevermined.rocks | |
-| autonomies-v2-mumbai | Mumbai | 2.0.5 | common | GraphNode | https://api.thegraph.com/subgraphs/name/nevermined-io/common | Use with sdk >= 0.21.0 |
 
-## Autonomies testing Mumbai (Application environment)
+## Polygon - Mumbai
 
-- *`autonomies-v2-mumbai`*: Test(dev) environment for Autonomies. Using `common` contract tag.
+- *`public-nvm-v2-mumbai`*: Polygon public testing environment (`mumbai`). Using `public` contract tag. Use this if you want to integrate with Nevermined in a Polygon Testnet.
 
 | Environment | Network | Contracts Version | Tag | Component | URL | Comments |
 |-------------|---------|-------------------|-----|-----------|-----|----------|
-| autonomies-v2-mumbai | Mumbai | 2.0.5 | common | Gateway | https://gateway.autonomies.test.nevermined.rocks | |
-| autonomies-v2-mumbai | Mumbai | 2.0.5 | common | Marketplace API | https://marketplace-api.autonomies.test.nevermined.rocks | |
-| autonomies-v2-mumbai | Mumbai | 2.0.5 | common | Autonomies frontend | https://portal.autonomies.test.nevermined.rocks | |
-| autonomies-v2-mumbai | Mumbai | 2.0.5 | common | Autonomies backend | https://backend.autonomies.test.nevermined.rocks | |
-| autonomies-v2-mumbai | Mumbai | 2.0.5 | common | Autonomies profile service | https://auto-profile-service.autonomies.test.nevermined.rocks | |
-| autonomies-v2-mumbai | Mumbai | 2.0.5 | common | GraphNode | https://api.thegraph.com/subgraphs/name/nevermined-io/common | Use with sdk >= 0.21.0 |
+| public-nvm-v2-mumbai | Mumbai | 2.0.5 & 2.1.0 | public | Gateway | https://gateway.mumbai.public.nevermined.rocks | |
+| public-nvm-v2-mumbai | Mumbai | 2.0.5 & 2.1.0 | public | Marketplace API | https://marketplace-api.mumbai.public.nevermined.rocks | |
+| public-nvm-v2-mumbai | Mumbai | 2.0.5 & 2.1.0 | public | Faucet | https://faucet.mumbai.public.nevermined.rocks | |
+| public-nvm-v2-mumbai | Mumbai | 2.0.5 & 2.1.0 | public | GraphNode | https://api.thegraph.com/subgraphs/name/nevermined-io/public | Use with sdk >= 0.21.0 |
 
-## Autonomies Pre Mumbai (Application environment)
+## Ethereum - Goerli
 
-- *`autonomies-v2-mumbai-pre`*: Preproduction(QA) environment for Autonomies. Using `common` contract tag.
+- *`public-nvm-v2-goerli`*: Ethereum testing environment (`goerli`). Using `public` contract tag. Use this if you want to integrate with Nevermined in a Ethereum Testnet.
 
 | Environment | Network | Contracts Version | Tag | Component | URL | Comments |
 |-------------|---------|-------------------|-----|-----------|-----|----------|
-| autonomies-v2-mumbai-pre | Mumbai | 2.0.5 | common | Gateway | https://gateway.autonomies.pre.nevermined.rocks | |
-| autonomies-v2-mumbai-pre | Mumbai | 2.0.5 | common | Marketplace API | https://marketplace-api.autonomies.pre.nevermined.rocks | |
-| autonomies-v2-mumbai-pre | Mumbai | 2.0.5 | common | Autonomies frontend | https://portal.autonomies.pre.nevermined.rocks | |
-| autonomies-v2-mumbai-pre | Mumbai | 2.0.5 | common | Autonomies backend | https://backend.autonomies.pre.nevermined.rocks | |
-| autonomies-v2-mumbai-pre | Mumbai | 2.0.5 | common | Autonomies profile service | https://auto-profile-service.autonomies.pre.nevermined.rocks | |
-| autonomies-v2-mumbai-pre | Mumbai | 2.0.5 | common | GraphNode | https://api.thegraph.com/subgraphs/name/nevermined-io/common | Use with sdk >= 0.21.0 |
+| public-nvm-v2-goerli | Goerli | 2.1.0 | public | Gateway | https://gateway.goerli.public.nevermined.rocks | |
+| public-nvm-v2-goerli | Goerli | 2.1.0 | public | Marketplace API | https://marketplace-api.goerli.public.nevermined.rocks | |
+| public-nvm-v2-goerli | Goerli | 2.1.0 | public | Faucet | https://faucet.goerli.public.nevermined.rocks | |
+| public-nvm-v2-goerli | Goerli | 2.1.0 | public | GraphNode | https://api.thegraph.com/subgraphs/name/nevermined-io/public | Use with sdk >= 0.21.0 |
+
+
+## Arbitrum - Goerli
+
+- *`public-nvm-v2-arbitrum-goerli`*: Arbitrum testing environment (`arbitrum-goerli`). Using `public` contract tag. Use this if you want to integrate with Nevermined in a Arbitrum Testnet.
+
+| Environment | Network | Contracts Version | Tag | Component | URL | Comments |
+|-------------|---------|-------------------|-----|-----------|-----|----------|
+| public-nvm-v2-arbitrum-goerli | Arbitrum Goerli | 2.1.0 | public | Gateway | https://gateway.arbitrum-goerli.public.nevermined.rocks | |
+| public-nvm-v2-arbitrum-goerli | Arbitrum Goerli | 2.1.0 | public | Marketplace API | https://marketplace-api.arbitrum-goerli.public.nevermined.rocks | |
+| public-nvm-v2-arbitrum-goerli | Arbitrum Goerli | 2.1.0 | public | Faucet | https://faucet.arbitrum-goerli.public.nevermined.rocks | |
+| public-nvm-v2-arbitrum-goerli | Arbitrum Goerli | 2.1.0 | public | GraphNode | https://api.thegraph.com/subgraphs/name/nevermined-io/public | Use with sdk >= 0.21.0 |
