@@ -32,6 +32,7 @@ Nevermined Keeper implementation where we put the following modules together:
 - [instances](Keeper.md#instances)
 - [network](Keeper.md#network)
 - [nftUpgradeable](Keeper.md#nftupgradeable)
+- [nvmConfig](Keeper.md#nvmconfig)
 - [rewardsDistributor](Keeper.md#rewardsdistributor)
 - [royalties](Keeper.md#royalties)
 - [templateList](Keeper.md#templatelist)
@@ -90,7 +91,7 @@ Template store manager smart contract instance.
 
 #### Defined in
 
-[src/keeper/Keeper.ts:316](https://github.com/nevermined-io/sdk-js/blob/25074de/src/keeper/Keeper.ts#L316)
+[src/keeper/Keeper.ts:325](https://github.com/nevermined-io/sdk-js/blob/9b831f0/src/keeper/Keeper.ts#L325)
 
 ___
 
@@ -102,7 +103,7 @@ Template store manager smart contract instance.
 
 #### Defined in
 
-[src/keeper/Keeper.ts:322](https://github.com/nevermined-io/sdk-js/blob/25074de/src/keeper/Keeper.ts#L322)
+[src/keeper/Keeper.ts:331](https://github.com/nevermined-io/sdk-js/blob/9b831f0/src/keeper/Keeper.ts#L331)
 
 ___
 
@@ -136,7 +137,7 @@ Conditions instances.
 
 #### Defined in
 
-[src/keeper/Keeper.ts:327](https://github.com/nevermined-io/sdk-js/blob/25074de/src/keeper/Keeper.ts#L327)
+[src/keeper/Keeper.ts:336](https://github.com/nevermined-io/sdk-js/blob/9b831f0/src/keeper/Keeper.ts#L336)
 
 ___
 
@@ -146,7 +147,7 @@ ___
 
 #### Defined in
 
-[src/keeper/Keeper.ts:347](https://github.com/nevermined-io/sdk-js/blob/25074de/src/keeper/Keeper.ts#L347)
+[src/keeper/Keeper.ts:356](https://github.com/nevermined-io/sdk-js/blob/9b831f0/src/keeper/Keeper.ts#L356)
 
 ___
 
@@ -158,7 +159,7 @@ Is connected to the correct network or not.
 
 #### Defined in
 
-[src/keeper/Keeper.ts:280](https://github.com/nevermined-io/sdk-js/blob/25074de/src/keeper/Keeper.ts#L280)
+[src/keeper/Keeper.ts:283](https://github.com/nevermined-io/sdk-js/blob/9b831f0/src/keeper/Keeper.ts#L283)
 
 ___
 
@@ -170,7 +171,7 @@ DID registry smart contract instance.
 
 #### Defined in
 
-[src/keeper/Keeper.ts:298](https://github.com/nevermined-io/sdk-js/blob/25074de/src/keeper/Keeper.ts#L298)
+[src/keeper/Keeper.ts:307](https://github.com/nevermined-io/sdk-js/blob/9b831f0/src/keeper/Keeper.ts#L307)
 
 ___
 
@@ -182,7 +183,7 @@ Market smart contract instance.
 
 #### Defined in
 
-[src/keeper/Keeper.ts:292](https://github.com/nevermined-io/sdk-js/blob/25074de/src/keeper/Keeper.ts#L292)
+[src/keeper/Keeper.ts:295](https://github.com/nevermined-io/sdk-js/blob/9b831f0/src/keeper/Keeper.ts#L295)
 
 ___
 
@@ -196,7 +197,7 @@ ___
 
 #### Defined in
 
-[src/keeper/Keeper.ts:394](https://github.com/nevermined-io/sdk-js/blob/25074de/src/keeper/Keeper.ts#L394)
+[src/keeper/Keeper.ts:403](https://github.com/nevermined-io/sdk-js/blob/9b831f0/src/keeper/Keeper.ts#L403)
 
 ___
 
@@ -215,7 +216,7 @@ Network id loaded from web3
 
 #### Defined in
 
-[src/keeper/Keeper.ts:387](https://github.com/nevermined-io/sdk-js/blob/25074de/src/keeper/Keeper.ts#L387)
+[src/keeper/Keeper.ts:396](https://github.com/nevermined-io/sdk-js/blob/9b831f0/src/keeper/Keeper.ts#L396)
 
 ___
 
@@ -227,7 +228,19 @@ NFT upgradeable smart contract instance.
 
 #### Defined in
 
-[src/keeper/Keeper.ts:304](https://github.com/nevermined-io/sdk-js/blob/25074de/src/keeper/Keeper.ts#L304)
+[src/keeper/Keeper.ts:313](https://github.com/nevermined-io/sdk-js/blob/9b831f0/src/keeper/Keeper.ts#L313)
+
+___
+
+### nvmConfig
+
+• **nvmConfig**: `default`
+
+Nevermined Config smart contract instance.
+
+#### Defined in
+
+[src/keeper/Keeper.ts:301](https://github.com/nevermined-io/sdk-js/blob/9b831f0/src/keeper/Keeper.ts#L301)
 
 ___
 
@@ -237,7 +250,7 @@ ___
 
 #### Defined in
 
-[src/keeper/Keeper.ts:369](https://github.com/nevermined-io/sdk-js/blob/25074de/src/keeper/Keeper.ts#L369)
+[src/keeper/Keeper.ts:378](https://github.com/nevermined-io/sdk-js/blob/9b831f0/src/keeper/Keeper.ts#L378)
 
 ___
 
@@ -254,7 +267,7 @@ ___
 
 #### Defined in
 
-[src/keeper/Keeper.ts:364](https://github.com/nevermined-io/sdk-js/blob/25074de/src/keeper/Keeper.ts#L364)
+[src/keeper/Keeper.ts:373](https://github.com/nevermined-io/sdk-js/blob/9b831f0/src/keeper/Keeper.ts#L373)
 
 ___
 
@@ -264,7 +277,7 @@ ___
 
 #### Defined in
 
-[src/keeper/Keeper.ts:348](https://github.com/nevermined-io/sdk-js/blob/25074de/src/keeper/Keeper.ts#L348)
+[src/keeper/Keeper.ts:357](https://github.com/nevermined-io/sdk-js/blob/9b831f0/src/keeper/Keeper.ts#L357)
 
 ___
 
@@ -276,7 +289,7 @@ Template store manager smart contract instance.
 
 #### Defined in
 
-[src/keeper/Keeper.ts:310](https://github.com/nevermined-io/sdk-js/blob/25074de/src/keeper/Keeper.ts#L310)
+[src/keeper/Keeper.ts:319](https://github.com/nevermined-io/sdk-js/blob/9b831f0/src/keeper/Keeper.ts#L319)
 
 ___
 
@@ -301,7 +314,7 @@ Templates instances.
 
 #### Defined in
 
-[src/keeper/Keeper.ts:353](https://github.com/nevermined-io/sdk-js/blob/25074de/src/keeper/Keeper.ts#L353)
+[src/keeper/Keeper.ts:362](https://github.com/nevermined-io/sdk-js/blob/9b831f0/src/keeper/Keeper.ts#L362)
 
 ___
 
@@ -313,7 +326,7 @@ Nevermined Token smart contract instance.
 
 #### Defined in
 
-[src/keeper/Keeper.ts:286](https://github.com/nevermined-io/sdk-js/blob/25074de/src/keeper/Keeper.ts#L286)
+[src/keeper/Keeper.ts:289](https://github.com/nevermined-io/sdk-js/blob/9b831f0/src/keeper/Keeper.ts#L289)
 
 ___
 
@@ -331,7 +344,7 @@ Helpers for contracts.
 
 #### Defined in
 
-[src/keeper/Keeper.ts:374](https://github.com/nevermined-io/sdk-js/blob/25074de/src/keeper/Keeper.ts#L374)
+[src/keeper/Keeper.ts:383](https://github.com/nevermined-io/sdk-js/blob/9b831f0/src/keeper/Keeper.ts#L383)
 
 ___
 
@@ -343,7 +356,7 @@ Version of the artifacts in use
 
 #### Defined in
 
-[src/keeper/Keeper.ts:381](https://github.com/nevermined-io/sdk-js/blob/25074de/src/keeper/Keeper.ts#L381)
+[src/keeper/Keeper.ts:390](https://github.com/nevermined-io/sdk-js/blob/9b831f0/src/keeper/Keeper.ts#L390)
 
 ## Accessors
 
@@ -361,7 +374,7 @@ Instantiable.artifactsFolder
 
 #### Defined in
 
-[src/Instantiable.abstract.ts:96](https://github.com/nevermined-io/sdk-js/blob/25074de/src/Instantiable.abstract.ts#L96)
+[src/Instantiable.abstract.ts:96](https://github.com/nevermined-io/sdk-js/blob/9b831f0/src/Instantiable.abstract.ts#L96)
 
 ___
 
@@ -379,7 +392,7 @@ Instantiable.config
 
 #### Defined in
 
-[src/Instantiable.abstract.ts:80](https://github.com/nevermined-io/sdk-js/blob/25074de/src/Instantiable.abstract.ts#L80)
+[src/Instantiable.abstract.ts:80](https://github.com/nevermined-io/sdk-js/blob/9b831f0/src/Instantiable.abstract.ts#L80)
 
 ___
 
@@ -397,7 +410,7 @@ Instantiable.instanceConfig
 
 #### Defined in
 
-[src/Instantiable.abstract.ts:100](https://github.com/nevermined-io/sdk-js/blob/25074de/src/Instantiable.abstract.ts#L100)
+[src/Instantiable.abstract.ts:100](https://github.com/nevermined-io/sdk-js/blob/9b831f0/src/Instantiable.abstract.ts#L100)
 
 ___
 
@@ -415,7 +428,7 @@ Instantiable.instantiableConfig
 
 #### Defined in
 
-[src/Instantiable.abstract.ts:73](https://github.com/nevermined-io/sdk-js/blob/25074de/src/Instantiable.abstract.ts#L73)
+[src/Instantiable.abstract.ts:73](https://github.com/nevermined-io/sdk-js/blob/9b831f0/src/Instantiable.abstract.ts#L73)
 
 ___
 
@@ -433,7 +446,7 @@ Instantiable.logger
 
 #### Defined in
 
-[src/Instantiable.abstract.ts:87](https://github.com/nevermined-io/sdk-js/blob/25074de/src/Instantiable.abstract.ts#L87)
+[src/Instantiable.abstract.ts:87](https://github.com/nevermined-io/sdk-js/blob/9b831f0/src/Instantiable.abstract.ts#L87)
 
 ___
 
@@ -451,7 +464,7 @@ Instantiable.nevermined
 
 #### Defined in
 
-[src/Instantiable.abstract.ts:33](https://github.com/nevermined-io/sdk-js/blob/25074de/src/Instantiable.abstract.ts#L33)
+[src/Instantiable.abstract.ts:33](https://github.com/nevermined-io/sdk-js/blob/9b831f0/src/Instantiable.abstract.ts#L33)
 
 ___
 
@@ -469,7 +482,7 @@ Instantiable.web3
 
 #### Defined in
 
-[src/Instantiable.abstract.ts:63](https://github.com/nevermined-io/sdk-js/blob/25074de/src/Instantiable.abstract.ts#L63)
+[src/Instantiable.abstract.ts:63](https://github.com/nevermined-io/sdk-js/blob/9b831f0/src/Instantiable.abstract.ts#L63)
 
 ## Methods
 
@@ -487,7 +500,7 @@ Instantiable.addresses
 
 #### Defined in
 
-[src/Instantiable.abstract.ts:129](https://github.com/nevermined-io/sdk-js/blob/25074de/src/Instantiable.abstract.ts#L129)
+[src/Instantiable.abstract.ts:129](https://github.com/nevermined-io/sdk-js/blob/9b831f0/src/Instantiable.abstract.ts#L129)
 
 ___
 
@@ -515,7 +528,7 @@ Instantiable.checkExists
 
 #### Defined in
 
-[src/Instantiable.abstract.ts:44](https://github.com/nevermined-io/sdk-js/blob/25074de/src/Instantiable.abstract.ts#L44)
+[src/Instantiable.abstract.ts:44](https://github.com/nevermined-io/sdk-js/blob/9b831f0/src/Instantiable.abstract.ts#L44)
 
 ___
 
@@ -539,7 +552,7 @@ Instantiable.findSigner
 
 #### Defined in
 
-[src/Instantiable.abstract.ts:105](https://github.com/nevermined-io/sdk-js/blob/25074de/src/Instantiable.abstract.ts#L105)
+[src/Instantiable.abstract.ts:105](https://github.com/nevermined-io/sdk-js/blob/9b831f0/src/Instantiable.abstract.ts#L105)
 
 ___
 
@@ -563,7 +576,7 @@ Agreement template instance.
 
 #### Defined in
 
-[src/keeper/Keeper.ts:421](https://github.com/nevermined-io/sdk-js/blob/25074de/src/keeper/Keeper.ts#L421)
+[src/keeper/Keeper.ts:430](https://github.com/nevermined-io/sdk-js/blob/9b831f0/src/keeper/Keeper.ts#L430)
 
 ___
 
@@ -577,7 +590,7 @@ ___
 
 #### Defined in
 
-[src/keeper/Keeper.ts:461](https://github.com/nevermined-io/sdk-js/blob/25074de/src/keeper/Keeper.ts#L461)
+[src/keeper/Keeper.ts:470](https://github.com/nevermined-io/sdk-js/blob/9b831f0/src/keeper/Keeper.ts#L470)
 
 ___
 
@@ -601,7 +614,7 @@ Condition instance.
 
 #### Defined in
 
-[src/keeper/Keeper.ts:401](https://github.com/nevermined-io/sdk-js/blob/25074de/src/keeper/Keeper.ts#L401)
+[src/keeper/Keeper.ts:410](https://github.com/nevermined-io/sdk-js/blob/9b831f0/src/keeper/Keeper.ts#L410)
 
 ___
 
@@ -619,7 +632,7 @@ Network ID.
 
 #### Defined in
 
-[src/keeper/Keeper.ts:448](https://github.com/nevermined-io/sdk-js/blob/25074de/src/keeper/Keeper.ts#L448)
+[src/keeper/Keeper.ts:457](https://github.com/nevermined-io/sdk-js/blob/9b831f0/src/keeper/Keeper.ts#L457)
 
 ___
 
@@ -637,7 +650,7 @@ Network name.
 
 #### Defined in
 
-[src/keeper/Keeper.ts:440](https://github.com/nevermined-io/sdk-js/blob/25074de/src/keeper/Keeper.ts#L440)
+[src/keeper/Keeper.ts:449](https://github.com/nevermined-io/sdk-js/blob/9b831f0/src/keeper/Keeper.ts#L449)
 
 ___
 
@@ -661,7 +674,7 @@ Agreement template instance.
 
 #### Defined in
 
-[src/keeper/Keeper.ts:430](https://github.com/nevermined-io/sdk-js/blob/25074de/src/keeper/Keeper.ts#L430)
+[src/keeper/Keeper.ts:439](https://github.com/nevermined-io/sdk-js/blob/9b831f0/src/keeper/Keeper.ts#L439)
 
 ___
 
@@ -685,7 +698,7 @@ Agreement template instance.
 
 #### Defined in
 
-[src/keeper/Keeper.ts:410](https://github.com/nevermined-io/sdk-js/blob/25074de/src/keeper/Keeper.ts#L410)
+[src/keeper/Keeper.ts:419](https://github.com/nevermined-io/sdk-js/blob/9b831f0/src/keeper/Keeper.ts#L419)
 
 ___
 
@@ -699,7 +712,7 @@ ___
 
 #### Defined in
 
-[src/keeper/Keeper.ts:74](https://github.com/nevermined-io/sdk-js/blob/25074de/src/keeper/Keeper.ts#L74)
+[src/keeper/Keeper.ts:75](https://github.com/nevermined-io/sdk-js/blob/9b831f0/src/keeper/Keeper.ts#L75)
 
 ___
 
@@ -723,7 +736,7 @@ Instantiable.setInstanceConfig
 
 #### Defined in
 
-[src/Instantiable.abstract.ts:171](https://github.com/nevermined-io/sdk-js/blob/25074de/src/Instantiable.abstract.ts#L171)
+[src/Instantiable.abstract.ts:171](https://github.com/nevermined-io/sdk-js/blob/9b831f0/src/Instantiable.abstract.ts#L171)
 
 ___
 
@@ -748,7 +761,7 @@ Instantiable.addressesStatic
 
 #### Defined in
 
-[src/Instantiable.abstract.ts:142](https://github.com/nevermined-io/sdk-js/blob/25074de/src/Instantiable.abstract.ts#L142)
+[src/Instantiable.abstract.ts:142](https://github.com/nevermined-io/sdk-js/blob/9b831f0/src/Instantiable.abstract.ts#L142)
 
 ___
 
@@ -774,7 +787,7 @@ Instantiable.findSignerStatic
 
 #### Defined in
 
-[src/Instantiable.abstract.ts:115](https://github.com/nevermined-io/sdk-js/blob/25074de/src/Instantiable.abstract.ts#L115)
+[src/Instantiable.abstract.ts:115](https://github.com/nevermined-io/sdk-js/blob/9b831f0/src/Instantiable.abstract.ts#L115)
 
 ___
 
@@ -800,7 +813,7 @@ Instantiable.getInstance
 
 #### Defined in
 
-[src/keeper/Keeper.ts:68](https://github.com/nevermined-io/sdk-js/blob/25074de/src/keeper/Keeper.ts#L68)
+[src/keeper/Keeper.ts:69](https://github.com/nevermined-io/sdk-js/blob/9b831f0/src/keeper/Keeper.ts#L69)
 
 ___
 
@@ -831,4 +844,4 @@ Instantiable.setInstanceConfig
 
 #### Defined in
 
-[src/Instantiable.abstract.ts:162](https://github.com/nevermined-io/sdk-js/blob/25074de/src/Instantiable.abstract.ts#L162)
+[src/Instantiable.abstract.ts:162](https://github.com/nevermined-io/sdk-js/blob/9b831f0/src/Instantiable.abstract.ts#L162)
