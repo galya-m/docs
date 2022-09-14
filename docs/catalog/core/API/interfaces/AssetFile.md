@@ -23,7 +23,7 @@ File title
 
 #### Defined in
 
-[src/types/index.ts:688](https://github.com/nevermined-io/components-catalog/blob/7619102/lib/src/types/index.ts#L688)
+[types/index.ts:661](https://github.com/nevermined-io/components-catalog/blob/19ccca5/lib/src/types/index.ts#L661)
 
 ___
 
@@ -35,4 +35,4 @@ File type: json, txt, etc...
 
 #### Defined in
 
-[src/types/index.ts:686](https://github.com/nevermined-io/components-catalog/blob/7619102/lib/src/types/index.ts#L686)
+[types/index.ts:659](https://github.com/nevermined-io/components-catalog/blob/19ccca5/lib/src/types/index.ts#L659)

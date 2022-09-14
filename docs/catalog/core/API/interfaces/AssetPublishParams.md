@@ -28,7 +28,7 @@ Files to download after buy the asset
 
 #### Defined in
 
-[src/types/index.ts:708](https://github.com/nevermined-io/components-catalog/blob/7619102/lib/src/types/index.ts#L708)
+[types/index.ts:681](https://github.com/nevermined-io/components-catalog/blob/19ccca5/lib/src/types/index.ts#L681)
 
 ___
 
@@ -40,7 +40,7 @@ Who create the asset
 
 #### Defined in
 
-[src/types/index.ts:698](https://github.com/nevermined-io/components-catalog/blob/7619102/lib/src/types/index.ts#L698)
+[types/index.ts:671](https://github.com/nevermined-io/components-catalog/blob/19ccca5/lib/src/types/index.ts#L671)
 
 ___
 
@@ -52,7 +52,7 @@ The category that belong the asset
 
 #### Defined in
 
-[src/types/index.ts:704](https://github.com/nevermined-io/components-catalog/blob/7619102/lib/src/types/index.ts#L704)
+[types/index.ts:677](https://github.com/nevermined-io/components-catalog/blob/19ccca5/lib/src/types/index.ts#L677)
 
 ___
 
@@ -64,7 +64,7 @@ Description about what is the utility of the asset
 
 #### Defined in
 
-[src/types/index.ts:700](https://github.com/nevermined-io/components-catalog/blob/7619102/lib/src/types/index.ts#L700)
+[types/index.ts:673](https://github.com/nevermined-io/components-catalog/blob/19ccca5/lib/src/types/index.ts#L673)
 
 ___
 
@@ -76,7 +76,7 @@ Name of the asset
 
 #### Defined in
 
-[src/types/index.ts:696](https://github.com/nevermined-io/components-catalog/blob/7619102/lib/src/types/index.ts#L696)
+[types/index.ts:669](https://github.com/nevermined-io/components-catalog/blob/19ccca5/lib/src/types/index.ts#L669)
 
 ___
 
@@ -88,7 +88,7 @@ Price of the asset
 
 #### Defined in
 
-[src/types/index.ts:706](https://github.com/nevermined-io/components-catalog/blob/7619102/lib/src/types/index.ts#L706)
+[types/index.ts:679](https://github.com/nevermined-io/components-catalog/blob/19ccca5/lib/src/types/index.ts#L679)
 
 ___
 
@@ -100,4 +100,4 @@ The type of the asset
 
 #### Defined in
 
-[src/types/index.ts:702](https://github.com/nevermined-io/components-catalog/blob/7619102/lib/src/types/index.ts#L702)
+[types/index.ts:675](https://github.com/nevermined-io/components-catalog/blob/19ccca5/lib/src/types/index.ts#L675)
