@@ -299,8 +299,6 @@ The main information that needs to be provided is:
         "main": {
           "creator": "0x00Bd138aBD70e2F00903268F3Db08f2D25677C9e",
           "datePublished": "2019-04-09T19:02:11Z",
-          "price": "10",
-          "timeout": 86400,
           "provider": {
             "type": "Azure",
             "description": "",
@@ -605,7 +603,6 @@ The main information that needs to be provided is:
             "datePublished": "2019-05-08T08:13:49Z",
             "license": "CC-BY",
             "name": "My workflow",
-            "price": "1",
             "type": "workflow",
             "workflow": {
               "stages": [

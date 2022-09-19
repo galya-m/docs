@@ -52,8 +52,7 @@
       "main": {
         "ercType": 721,
         "name": "nft721SalesAgreement",
-        "creator": "0x73943d14131268F23b721E668911bCDDEcA9da62",
-        "timeout": 86400
+        "creator": "0x73943d14131268F23b721E668911bCDDEcA9da62"
       },
       "additionalInformation": {
         "description": "NFT721 Sales Service Definition"
@@ -219,8 +218,7 @@
       "main": {
         "ercType": 721,
         "name": "nft721AccessAgreement",
-        "creator": "0x73943d14131268F23b721E668911bCDDEcA9da62",
-        "timeout": 86400
+        "creator": "0x73943d14131268F23b721E668911bCDDEcA9da62"
       },
       "additionalInformation": {
         "description": "NFT721 Access Service Definition"

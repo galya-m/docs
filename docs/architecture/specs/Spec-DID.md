@@ -11,7 +11,7 @@ shortname:      DID
 name:           Decentralized Identifiers
 type:           Standard
 status:         Valid
-version:        0.3
+version:        0.4
 editor:         Aitor Argomaniz <aitor@nevermined.io>
 contributors:   
 ```
@@ -116,8 +116,105 @@ A DDO document is composed of standard DDO attributes:
 * `proof`
 * `verifiableCredential`
 * `service`
+* `_nvm`
 
 Asset metadata can be included as one of the objects inside the `"service"` array, with type `"metadata"`.
+
+
+#### Nevermined internal attributes
+
+Nevermined registers some internal attributes in the asset metadata. They allow to store information that makes easier to understand the meaning of an asset, their life-cycle and where they can be used. The internal attributes are recorded under the `_nvm` section located at the root of the DDO.
+
+The attributes included at that section are:
+
+* `userId` - The unique identifier of the user owning the DDO. This attribute will be used to authorize metadata changes.
+* `appId` - The unique identifier of the application where this DDO has a meaning.
+* `networks` - Array of the network ids (ethereum blockchains) where the asset is registered.
+* `versions` - Array representing the list of changes made to the DDO
+
+##### User Id
+
+It's stored under the attribute `userId`. It's the unique identifier representing an user. The user authorization of Metadata documents is built around that attribute and only the user authenticated with that `userId` will be able to modify the metadata
+
+The `userId` will be a `string` storing an identifier in `UUID` format.
+
+```json
+{
+	"userId": "dff40170-37fc-11ed-be5b-9984d9f9ec35"
+}
+```
+
+##### Application Id
+
+It's stored under the attribute `appId`. The application Id identifies an unique application. It helps to refer to the specific domain/application where the DDO belongs to. Specifying that attribute will allow to have the same metadata storage providing service for different applications, and each application will be able to filter by that `appId`.
+
+The `appId` will be a `string` storing an identifier in `UUID` format. 
+
+```json
+{
+	"appId": "acde070d-8c4c-4f0d-9d8a-162843c10333"
+}
+```
+
+##### Networks
+
+It's stored under the attribute `networks`. The `networks` list represents all the different Ethereum based networks where the `DID` referring to the `DDO` is registered too. This allows that the same Metadata/DDO can be stored in a Marketplace API and be used in different networks allowing to have 1 marketplace api supporting the metadata for many blockchain networks.
+
+The `networks` attribute will be an array of numbers storing a list of all the different `networkIds` where the DID is registered.
+
+```json
+{
+	"networks": [1, 5, 137]
+}
+```
+
+##### Versions
+
+It's stored under the attribute `versions`. The `versions` list stores the reference to all the changes done to the Metadata document.
+
+The `versions` attribute will be an array of objects storing the sorted list of all the different changes.
+
+```json
+{
+	"versions": {
+		"1": {
+			"updated": "2020-01-01T19:13:24Z",
+			"checksum": "89328493849328493284932"
+		},
+		"2": {
+			"updated": "2021-02-21T20:13:24Z",
+			"checksum": "045328094852309483203443"
+		}
+	}
+}
+```
+
+##### Nevermined Config section Example
+
+Here we put together all the changes included at the `_nvm` section:
+
+```json
+{
+	"@context": "https://w3id.org/did/v1",
+	"id": "did:nv:0c184915b07b44c888d468be85a9b28253e80070e5294b1aaed81c2f0264e429",
+	"_nvm": {
+		"userId": "dff40170-37fc-11ed-be5b-9984d9f9ec35",
+		"appId": "acde070d-8c4c-4f0d-9d8a-162843c10333",
+		"networks": [1, 5, 137],
+		"versions": {
+			"1": {
+				"updated": "2020-01-01T19:13:24Z",
+				"checksum": "89328493849328493284932"
+			},
+			"2": {
+				"updated": "2021-02-21T20:13:24Z",
+				"checksum": "045328094852309483203443"
+			}
+		}
+	}
+}
+```
+
 
 #### DDO Services
 

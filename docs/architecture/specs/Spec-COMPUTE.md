@@ -295,8 +295,6 @@ Below you can find a small fraction of this:
 
 			"creator": "0x00Bd138aBD70e2F00903268F3Db08f2D25677C9e",
 			"datePublished": "2019-04-09T19:02:11Z",
-			"price": "10",
-			"timeout": 86400,
 			"provider": {
 				"type": "Azure",
 				"description": "",

@@ -98,7 +98,6 @@ Attribute       |   Type        |   Required    | Description
 **`datePublished`** | DateTime      | (remote)   | The date on which the asset DDO is registered into the metadata store (Metadata API)
 **`author`**      | Text          | Yes           | Name of the entity generating this data (e.g. Tfl, Disney Corp, etc.).
 **`license`**     | Text          | Yes           | Short name referencing the license of the asset (e.g. Public Domain, CC-0, CC-BY, No License Specified, etc. ). If it's not specified, the following value will be added: "No License Specified".
-**`price`**       | String        | Yes           | Price of the asset. It must be an integer encoded as a string, e.g. `"123000000000000000000"`.
 **`files`**       | Array of files object | Yes     | Array of `File` objects including the encrypted file urls. Further metadata about each file is stored, see [File Attributes](#file-attributes)
 
 
@@ -179,7 +178,6 @@ Attribute       |   Type           |   Required    | Description
     "author": "Norwegian Meteorological Institute",
     "type": "dataset",
     "license": "Public Domain",
-    "price": "123000000000000000000",
     "files": [  
       {
         "index": 0,
@@ -222,7 +220,6 @@ Note that `url` is removed from all objects in the `files` array, and `encrypted
           "dateCreated": "2019-05-16T12:36:14.535Z",
           "author": "Norwegian Meteorological Institute",
           "license": "Public Domain",
-          "price": "123000000000000000000",
           "files":[  
             {  
               "contentLength": "0",
@@ -290,7 +287,6 @@ The `container` object has the following attributes:
           "dateCreated": "2019-02-08T08:13:49Z",
           "license": "CC-BY",
           "name": "My super algorithm",
-          "price": "1",
           "type": "algorithm",
           "algorithm": {
             "language": "scala",
