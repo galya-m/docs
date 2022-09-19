@@ -123,7 +123,7 @@ Asset metadata can be included as one of the objects inside the `"service"` arra
 
 #### Nevermined internal attributes
 
-Nevermined registers some internal attributes in the asset metadata. They allow to store information that makes easier to understand the meaning of an asset, their life-cycle and where they can be used. The internal attributes are recorded under the `_nvm` section located at the root of the DDO.
+Nevermined registers some internal attributes in the asset metadata. They allow to store information that makes easier to understand the meaning of an asset, their life-cycle and where they can be used. The internal attributes are recorded under the `_nvm` section located at the root of the DDO. The `_nvm` section is internal to Nevermined and cannot be changed by the user.
 
 The attributes included at that section are:
 
@@ -153,18 +153,6 @@ The `appId` will be a `string` storing an identifier in `UUID` format.
 ```json
 {
 	"appId": "acde070d-8c4c-4f0d-9d8a-162843c10333"
-}
-```
-
-##### Networks
-
-It's stored under the attribute `networks`. The `networks` list represents all the different Ethereum based networks where the `DID` referring to the `DDO` is registered too. This allows that the same Metadata/DDO can be stored in a Marketplace API and be used in different networks allowing to have 1 marketplace api supporting the metadata for many blockchain networks.
-
-The `networks` attribute will be an array of numbers storing a list of all the different `networkIds` where the DID is registered.
-
-```json
-{
-	"networks": [1, 5, 137]
 }
 ```
 
@@ -200,7 +188,6 @@ Here we put together all the changes included at the `_nvm` section:
 	"_nvm": {
 		"userId": "dff40170-37fc-11ed-be5b-9984d9f9ec35",
 		"appId": "acde070d-8c4c-4f0d-9d8a-162843c10333",
-		"networks": [1, 5, 137],
 		"versions": {
 			"1": {
 				"updated": "2020-01-01T19:13:24Z",
@@ -279,53 +266,6 @@ Example:
 - You can find a complete [real world example of a DDO](https://w3c-ccg.github.io/did-spec/#real-world-example)
 with extended services added, as part of the W3C DID spec.
 
-### DDO Meta information
-
-This section (named `meta`) provides additional information about the DDO itself including versions, and networks where this DDO is valid.
-It will include 2 main blocks of information:
-
-#### Versions
-
-Allows to register the different linear versions of the DDO created. It is an array sorted by version creation including the following information:
-
-* Version Id (`_id`) - Unique identifier of the version, it could be a DID
-* Tag or Version number (`tag`)
-* Created date time - Datetime refereing when it was created without sub-second decimal precision
-* Change checksum (`checksum`) - Optional attribute with a checksum of the metadata change compared with the previous version  
-
-#### Networks
-
-Identify in which networks is the DDO valid. It is an unsorted array including the `chainId` of the network where this DID is available.
-
-#### Example
-
-Here an example of the `meta` section of a DDO:
-
-```json
-
-"meta": {
-  "versions": [
-    {
-      "_id": "dsadsa",
-      "tag": "v0.1",
-      "createdAt": "2016-02-08T16:02:20Z",
-      "checksum": "4329042309a02394032"
-    },
-    {
-      "_id": "ccacd",
-      "tag": "v0.2",
-      "createdAt": "2018-02-08T16:02:20Z",
-      "checksum": "0000010992349"
-    }    
-  ],
-  "networks": [
-    { "chainId": 1},
-    { "chainId": 23},
-    { "chainId": 8001}
-  ]
-}
-
-```
 
 
 ### Integrity
