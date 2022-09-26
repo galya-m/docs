@@ -129,7 +129,6 @@ The attributes included at that section are:
 
 * `userId` - The unique identifier of the user owning the DDO. This attribute will be used to authorize metadata changes.
 * `appId` - The unique identifier of the application where this DDO has a meaning.
-* `networks` - Array of the network ids (ethereum blockchains) where the asset is registered.
 * `versions` - Array representing the list of changes made to the DDO
 
 ##### User Id
