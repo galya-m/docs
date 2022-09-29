@@ -3,7 +3,6 @@ sidebar_position: 1
 description: Decentralized Identifiers
 ---
 
-
 # Decentralized Identifiers
 
 ```
@@ -13,9 +12,8 @@ type:           Standard
 status:         Valid
 version:        0.4
 editor:         Aitor Argomaniz <aitor@nevermined.io>
-contributors:   
+contributors:
 ```
-
 
 This specification is based on the [W3C DID specification](https://w3c-ccg.github.io/did-spec/), which was at version
 0.11 as of August 2018.
@@ -24,42 +22,42 @@ This specification is based on the [W3C DID specification](https://w3c-ccg.githu
 
 The main motivations of this SPEC are:
 
-* Design a solution to extend the current architecture to use **Decentralized Identifiers (DIDs)** and **DID Documents
-(DDOs)**
-* Understand how to register information on-chain with off-chain integrity associated
-* Understand how to resolve DIDs into DDOs
-* Design a solution facilitating alignment of on-chain and off-chain information
-* Establishing the mechanism to know if the DDO associated with a DID was modified
-* Defining the common mechanisms, interfaces and APIs to implemented the designed solution
-* Define how Nevermined assets can be modeled with a DID/DDO data model
-* Understand how DID hubs are formed, and how they integrate a business and storage layer
+- Design a solution to extend the current architecture to use **Decentralized Identifiers (DIDs)** and **DID Documents
+  (DDOs)**
+- Understand how to register information on-chain with off-chain integrity associated
+- Understand how to resolve DIDs into DDOs
+- Design a solution facilitating alignment of on-chain and off-chain information
+- Establishing the mechanism to know if the DDO associated with a DID was modified
+- Defining the common mechanisms, interfaces and APIs to implemented the designed solution
+- Define how Nevermined assets can be modeled with a DID/DDO data model
+- Understand how DID hubs are formed, and how they integrate a business and storage layer
 
 ## Specification
 
 Requirements are:
 
-* The DID resolving capabilities MUST be exposed in the client libraries, enabling to resolve a DDO directly in a
-totally transparent way
-* ASSETS are DATA objects describing RESOURCES under control of a PUBLISHER
-* DLT stores on-chain only the essential information about ASSETS
-* PROVIDERS store the ASSET metadata off-chain
-* DLT doesn't store any ASSET metadata
-* Nevermined doesn't store ASSET contents (e.g. files)
-* An ASSET is modeled in Nevermined as on-chain information stored in the DLT and metadata stored in METADATA API
-* ASSETS on-chain information only can be modified by OWNERS or DELEGATED USERS
-* ASSETS can be resolved using a Decentralized ID (DID) included on-chain and off-chain
-* A DID Document (DDO) should include the ASSET metadata
-* Any kind of object registered in Nevermined MUST have a DID allowing one to uniquely identify that object in the system
-* ASSET DDO (and the metadata included as part of the DDO) is associated to the ASSET information stored on-chain using
-a common DID
-* A DID can be resolved to get access to a DDO
-* ASSET DDOs can be updated without updating the on-chain information
-* ASSET information stored in the DLT will include a checksum attribute
-* The ASSET on-chain checksum attribute SHOULD include a one-way HASH calculated using the DDO content
-* After the DDO resolving, the DDO HASH can be calculated off-chain to validate if the on-chain and off-chain
-information is aligned
-* A HASH not matching with the checksum on-chain means the DDO was modified without the on-chain update
-* The function to calculate the hash MUST BE standard
+- The DID resolving capabilities MUST be exposed in the client libraries, enabling to resolve a DDO directly in a
+  totally transparent way
+- ASSETS are DATA objects describing RESOURCES under control of a PUBLISHER
+- DLT stores on-chain only the essential information about ASSETS
+- PROVIDERS store the ASSET metadata off-chain
+- DLT doesn't store any ASSET metadata
+- Nevermined doesn't store ASSET contents (e.g. files)
+- An ASSET is modeled in Nevermined as on-chain information stored in the DLT and metadata stored in METADATA API
+- ASSETS on-chain information only can be modified by OWNERS or DELEGATED USERS
+- ASSETS can be resolved using a Decentralized ID (DID) included on-chain and off-chain
+- A DID Document (DDO) should include the ASSET metadata
+- Any kind of object registered in Nevermined MUST have a DID allowing one to uniquely identify that object in the system
+- ASSET DDO (and the metadata included as part of the DDO) is associated to the ASSET information stored on-chain using
+  a common DID
+- A DID can be resolved to get access to a DDO
+- ASSET DDOs can be updated without updating the on-chain information
+- ASSET information stored in the DLT will include a checksum attribute
+- The ASSET on-chain checksum attribute SHOULD include a one-way HASH calculated using the DDO content
+- After the DDO resolving, the DDO HASH can be calculated off-chain to validate if the on-chain and off-chain
+  information is aligned
+- A HASH not matching with the checksum on-chain means the DDO was modified without the on-chain update
+- The function to calculate the hash MUST BE standard
 
 ## Proposed Solution
 
@@ -90,15 +88,14 @@ Here you have the complete flow using as example a new ASSET:
 Steps:
 
 1. A Data Publisher, using the Smart Contracts, register the new Resource (ie. ASSET) providing the DID and the DID of the
-Provider acting as Public service returning the DDO of the Resource (ASSET)
+   Provider acting as Public service returning the DDO of the Resource (ASSET)
 2. The DLT register the Resource using the Service Agreement Smart Contract and after of that register the identity
-using the DidRegistry Smart Contract. In this point, the attribute is raised as a new event
+   using the DidRegistry Smart Contract. In this point, the attribute is raised as a new event
 3. The Data Publisher publishes the DDO in the Metadata api
 4. A Data Consumer (it could be a frontend application or a backend software), having a DID and using a client library
-(Python, Javascript, Java, etc) get the **service-ddo** attribute associated to the DID directly from the Smart
-Contracts
+   (Python, Javascript, Java, etc) get the **service-ddo** attribute associated to the DID directly from the Smart
+   Contracts
 5. The Data Consumer, using the provider public url, query directly to the provider passing the DID to obtain the DDO
-
 
 ### DID Documents (DDOs)
 
@@ -107,19 +104,18 @@ The combination of a DID and its associated DID Document forms the root record f
 
 A DDO document is composed of standard DDO attributes:
 
-* `@context`
-* `id`
-* `created`
-* `updated`
-* `publicKey`
-* `authentication`
-* `proof`
-* `verifiableCredential`
-* `service`
-* `_nvm`
+- `@context`
+- `id`
+- `created`
+- `updated`
+- `publicKey`
+- `authentication`
+- `proof`
+- `verifiableCredential`
+- `service`
+- `_nvm`
 
 Asset metadata can be included as one of the objects inside the `"service"` array, with type `"metadata"`.
-
 
 #### Nevermined internal attributes
 
@@ -139,7 +135,7 @@ The `userId` will be a `string` storing an identifier in `UUID` format.
 
 ```json
 {
-	"userId": "dff40170-37fc-11ed-be5b-9984d9f9ec35"
+  "userId": "dff40170-37fc-11ed-be5b-9984d9f9ec35"
 }
 ```
 
@@ -147,11 +143,11 @@ The `userId` will be a `string` storing an identifier in `UUID` format.
 
 It's stored under the attribute `appId`. The application Id identifies an unique application. It helps to refer to the specific domain/application where the DDO belongs to. Specifying that attribute will allow to have the same metadata storage providing service for different applications, and each application will be able to filter by that `appId`.
 
-The `appId` will be a `string` storing an identifier in `UUID` format. 
+The `appId` will be a `string` storing an identifier in `UUID` format.
 
 ```json
 {
-	"appId": "acde070d-8c4c-4f0d-9d8a-162843c10333"
+  "appId": "acde070d-8c4c-4f0d-9d8a-162843c10333"
 }
 ```
 
@@ -163,16 +159,18 @@ The `versions` attribute will be an array of objects storing the sorted list of 
 
 ```json
 {
-	"versions": {
-		"1": {
-			"updated": "2020-01-01T19:13:24Z",
-			"checksum": "89328493849328493284932"
-		},
-		"2": {
-			"updated": "2021-02-21T20:13:24Z",
-			"checksum": "045328094852309483203443"
-		}
-	}
+  "versions": [
+    {
+      "id": 1,
+      "updated": "2020-01-01T19:13:24Z",
+      "checksum": "89328493849328493284932"
+    },
+    {
+      "id": 2,
+      "updated": "2021-02-21T20:13:24Z",
+      "checksum": "045328094852309483203443"
+    }
+  ]
 }
 ```
 
@@ -182,36 +180,37 @@ Here we put together all the changes included at the `_nvm` section:
 
 ```json
 {
-	"@context": "https://w3id.org/did/v1",
-	"id": "did:nv:0c184915b07b44c888d468be85a9b28253e80070e5294b1aaed81c2f0264e429",
-	"_nvm": {
-		"userId": "dff40170-37fc-11ed-be5b-9984d9f9ec35",
-		"appId": "acde070d-8c4c-4f0d-9d8a-162843c10333",
-		"versions": {
-			"1": {
-				"updated": "2020-01-01T19:13:24Z",
-				"checksum": "89328493849328493284932"
-			},
-			"2": {
-				"updated": "2021-02-21T20:13:24Z",
-				"checksum": "045328094852309483203443"
-			}
-		}
-	}
+  "@context": "https://w3id.org/did/v1",
+  "id": "did:nv:0c184915b07b44c888d468be85a9b28253e80070e5294b1aaed81c2f0264e429",
+  "_nvm": {
+    "userId": "dff40170-37fc-11ed-be5b-9984d9f9ec35",
+    "appId": "acde070d-8c4c-4f0d-9d8a-162843c10333",
+    "versions": [
+      {
+        "id": 1,
+        "updated": "2020-01-01T19:13:24Z",
+        "checksum": "89328493849328493284932"
+      },
+      {
+        "id": 2,
+        "updated": "2021-02-21T20:13:24Z",
+        "checksum": "045328094852309483203443"
+      }
+    ]
+  }
 }
 ```
-
 
 #### DDO Services
 
 Each type of asset (dataset, algorithm, workflow, etc, ..) typically will have associated different kind of services.
 There are 2 type of services that are commonly added to all the assets:
 
-* metadata - describing the asset
-* provenance - describing the asset provenance
+- metadata - describing the asset
+- provenance - describing the asset provenance
 
 Each service include a `serviceEndpoint` attribute with a URL to the server or document completing that service.
-Optionally, the service can include a `immutableServiceEndpoint` attribute with a URL to a repository/service where 
+Optionally, the service can include a `immutableServiceEndpoint` attribute with a URL to a repository/service where
 additional information is stored in an immutable way (i.e IPFS, Filecoin, Arweave, etc).
 
 Each service is distinguished by the `DDO.service.type` attribute.
@@ -227,32 +226,32 @@ A part of the `attributes.main` sub-section, other optional sub-sections can be 
 Example:
 
 ```json
-"service": [  
-  {  
+"service": [
+  {
     "index": 0,
     "type": "metadata",
     "serviceEndpoint": "https://service/api/v1/metadata/assets/ddo/did:nv:0ebed8226ada17fde24b6bf2b95d27f8f05fcce09139ff5cec31f6d81a7cd2ea",
     "immutableServiceEndpoint": "cid://QmVT3wfySvZJqAvkBCyxoz3EvD3yeLqf3cvAssFDpFFXNm",
-    "attributes": {  
+    "attributes": {
       "main": {},
       "additionalInformation": {},
       "curation": {}
     }
   },
-  {  
+  {
     "index": 1,
     "type": "provenance",
     "serviceEndpoint": "https://service/api/v1/provenance/assets/ddo/did:nv:0ebed8226ada17fde24b6bf2b95d27f8f05fcce09139ff5cec31f6d81a7cd2ea",
-    "attributes": {  
+    "attributes": {
       "main": {},
       "additionalInformation": {}
     }
   },
-  {  
+  {
     "index": 2,
     "type": "access",
     "serviceEndpoint": "https://service/api/v1/access/assets/ddo/did:nv:0ebed8226ada17fde24b6bf2b95d27f8f05fcce09139ff5cec31f6d81a7cd2ea",
-    "attributes": {  
+    "attributes": {
       "main": {},
       "additionalInformation": {}
     }
@@ -263,9 +262,7 @@ Example:
 - You can find a [complete example of a DDO](https://github.com/nevermined-docs/tree/master/architecture/specs/did/examples/ddo-example.json).
 - You can find a complete reference of the asset metadata in [METADATA SPEC](Spec-METADATA.md).
 - You can find a complete [real world example of a DDO](https://w3c-ccg.github.io/did-spec/#real-world-example)
-with extended services added, as part of the W3C DID spec.
-
-
+  with extended services added, as part of the W3C DID spec.
 
 ### Integrity
 
@@ -286,21 +283,21 @@ modified after a previous agreement.
 This hash composing the **integrity checksum** is calculated in the following way:
 
 - The complete content of the `service[index].attributes.main` is serialized in a common string
-- The string generated is is Hashed using SHA3-256 algorithm  (You might have to convert the string to bytes first.)
+- The string generated is is Hashed using SHA3-256 algorithm (You might have to convert the string to bytes first.)
 - The hash generated as a result of this process is stored in the `proof.checksum[index].checksum` attribute
 - The previous 3 steps are repeated for every individual service include in the `service` array. The hash generated is
-always stored in the `proof.checksum` array using as key the `index` of the service computed
+  always stored in the `proof.checksum` array using as key the `index` of the service computed
 - During the serialization process, the objects to serialize (`service[index].attributes.main` are prepared using the
-following process:
-  * The object is sorted alphabetically independently of the existing nested levels
-  * In the JSON generated, all the characters between entries are removed (`\n`, `\t`, `\r`, whitespaces, etc.)
-  * As a result must be generated a string of only one line
+  following process:
+  - The object is sorted alphabetically independently of the existing nested levels
+  - In the JSON generated, all the characters between entries are removed (`\n`, `\t`, `\r`, whitespaces, etc.)
+  - As a result must be generated a string of only one line
 - After hashing, in the DDO, the checksums should be represented as a hex string beginning with `0x` and ending with
-64 hex characters (e.g. `0x52b5c93b82dd9e7ecc3d9fdf4755f7f69a54484941897dc517b4adfe3bbc3377`)
+  64 hex characters (e.g. `0x52b5c93b82dd9e7ecc3d9fdf4755f7f69a54484941897dc517b4adfe3bbc3377`)
 - After generating each individual checksum the complete `proof.checksum` entry is sorted, serialized and hashed as
-previously described in the other checksums
+  previously described in the other checksums
 - The final hash generated as a result of hashing the checksums (DID CHECKSUM or DID HASH) will be the ID part of the
-DID (the string after the prefix `did:nv:`)
+  DID (the string after the prefix `did:nv:`)
 
 Because this DID HASH will be stored on-chain and emitted as an event, a validator could use this information to check
 if something changed regarding the initial registration.
@@ -314,17 +311,17 @@ some Asset attributes.
 The information to sign by the owner is the **integrity checksum** defined in the above section.
 
 ```js
-const signature = Sign.signMessage(DID)
+const signature = Sign.signMessage(DID);
 ```
 
 The DID Document (DDO) SHOULD include the following `proof` information:
 
-* `type` - Type of proof, in our case `"DDOIntegritySignature"`
-* `created` - Date and time when the proof was created
-* `creator` - Address of the user providing the proof
-* `signatureValue` - Result of the signature given by the creator
-* `checksum` - Checksums of the individual services included in the DDO
-* `inmutableUrl` - Url to a copy of the DDO in an inmutable repository like IPFS, Arweave, etc.
+- `type` - Type of proof, in our case `"DDOIntegritySignature"`
+- `created` - Date and time when the proof was created
+- `creator` - Address of the user providing the proof
+- `signatureValue` - Result of the signature given by the creator
+- `checksum` - Checksums of the individual services included in the DDO
+- `inmutableUrl` - Url to a copy of the DDO in an inmutable repository like IPFS, Arweave, etc.
 
 Here is an example `proof` section to add in the DDO:
 
@@ -338,7 +335,7 @@ Here is an example `proof` section to add in the DDO:
     "checksum": {
         "0": "0x52b5c93b82dd9e7ecc3d9fdf4755f7f69a54484941897dc517b4adfe3bbc3377",
         "1": "0x999999952b5c93b82dd9e7ecc3d9fdf4755f7f69a54484941897dc517b4adfe3"
-    }    
+    }
 }
 ```
 
@@ -378,8 +375,8 @@ One of those can be used to related with the public service returning the DDO of
 
 Applied to Assets, typically are part of a Service Agreement. The suggested approach to implement this is:
 
-* Associate the Resource (ie. Asset DID) to the Provider DID
-* Each Provider will have associated a Public URL where the provider is exposing the DDOs
+- Associate the Resource (ie. Asset DID) to the Provider DID
+- Each Provider will have associated a Public URL where the provider is exposing the DDOs
 
 Here is a draft **DidRegistry** implementation:
 
@@ -444,8 +441,8 @@ This is an example in JavaScript using web3.js:
 
 ```js
 const event = contractInstance.DidAttributeRegistered(
-    { did: '21tDAKCERh95uGgKbJNHYp' },
-    { fromBlock: 0, toBlock: 'latest' }
+  { did: "21tDAKCERh95uGgKbJNHYp" },
+  { fromBlock: 0, toBlock: "latest" }
 );
 ```
 
@@ -460,7 +457,6 @@ applications to get the attributes enabling to resolve the DDO associated to the
 
 Using this information a consumer can query directly to the provider able to return the DDO.
 
-
 ## References
 
-* [DID Spec from the W3C Credentials Community Group](https://w3c-ccg.github.io/did-spec/)
+- [DID Spec from the W3C Credentials Community Group](https://w3c-ccg.github.io/did-spec/)

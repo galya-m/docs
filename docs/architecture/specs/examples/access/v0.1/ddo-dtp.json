@@ -60,7 +60,9 @@
 						"contentLength": "4535431",
 						"contentType": "text/csv",
 						"encoding": "UTF-8",
-						"compression": "zip"
+						"compression": "zip",
+						"encrypted": true,
+						"encryptionMode": "dtp"						
 					}],
 					"license": "CC-BY",
 					"name": "UK Weather information 2011",
@@ -115,9 +117,7 @@
 				"main": {					
 					"name": "dataAssetAccessServiceAgreement",
 					"creator": "",
-					"datePublished": "2019-02-08T08:13:49Z",
-					"encrypted": true,
-					"encryptionMode": "dtp"
+					"datePublished": "2019-02-08T08:13:49Z"
 				},
 				"additionalInformation": {					
 					"description": "",

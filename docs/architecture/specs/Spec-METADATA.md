@@ -90,16 +90,15 @@ The `main` object has the following attributes, not all are required. Some are r
 (_remote_) and others are mandatory for _local_ metadata only. If required or not by both, they are marked with _Yes/No_
  in the _Required_ column.
 
-Attribute       |   Type        |   Required    | Description
-----------------|---------------|---------------|----------------------
-**`name`**        | Text          | Yes           | Descriptive name or title of the asset.
-**`type`**        | Text          | Yes            | Type of the asset. Helps to filter by the type of asset. It could be for example ("dataset", "algorithm").
-**`dateCreated`** | DateTime      | Yes   | The date on which the asset was created by the originator. ISO 8601 format, Coordinated Universal Time, e.g. `2019-01-31T08:38:32Z`.
-**`datePublished`** | DateTime      | (remote)   | The date on which the asset DDO is registered into the metadata store (Metadata API)
-**`author`**      | Text          | Yes           | Name of the entity generating this data (e.g. Tfl, Disney Corp, etc.).
-**`license`**     | Text          | Yes           | Short name referencing the license of the asset (e.g. Public Domain, CC-0, CC-BY, No License Specified, etc. ). If it's not specified, the following value will be added: "No License Specified".
-**`files`**       | Array of files object | Yes     | Array of `File` objects including the encrypted file urls. Further metadata about each file is stored, see [File Attributes](#file-attributes)
-
+| Attribute       |   Type        |   Required    | Description
+| ----------------|---------------|---------------|----------------------
+| **`name`**        | Text          | Yes           | Descriptive name or title of the asset.
+| **`type`**        | Text          | Yes            | Type of the asset. Helps to filter by the type of asset. It could be for example ("dataset", "algorithm").
+| **`dateCreated`** | DateTime      | Yes   | The date on which the asset was created by the originator. ISO 8601 format, Coordinated Universal Time, e.g. `2019-01-31T08:38:32Z`.
+| **`datePublished`** | DateTime      | (remote)   | The date on which the asset DDO is registered into the metadata store (Metadata API)
+| **`author`**      | Text          | Yes           | Name of the entity generating this data (e.g. Tfl, Disney Corp, etc.).
+| **`license`**     | Text          | Yes           | Short name referencing the license of the asset (e.g. Public Domain, CC-0, CC-BY, No License Specified, etc. ). If it's not specified, the following value will be added: "No License Specified".
+| **`files`**       | Array of files object | Yes     | Array of `File` objects including the encrypted file urls. Further metadata about each file is stored, see [File Attributes](#file-attributes)
 
 #### File Attributes
 
@@ -118,11 +117,11 @@ A file object has the following attributes, with the details necessary to consum
 | **`contentLength`** | no       | Size of the file in bytes.                        |
 | **`encoding`**      | no       | File encoding (e.g. UTF-8). |
 | **`compression`**   | no       | File compression (e.g. no, gzip, bzip2, etc). |
-| **`encrypted`**     | no       | Boolean. Is the file encrypted? If is not set is assumed the file is not encrypted |
-| **`encryptionMode`**| no       | Encryption mode used. Just valid if `encrypted=true`. Currently only `dtp` is implemented |
 | **`resourceId`**    | no       | Remote identifier of the file in the external provider. It is typically the remote id in the cloud provider. |
 | **`attributes`**    | no       | Key-Value hash map with additional attributes describing the asset file. It could include details like the Amazon S3 bucket, region, etc. |
-| **`ercType`**       | no       | If the service refers to a NFT (ERC-721 or ERC-1155), this will store a `721` or `1155` values |
+| **`encrypted`**     | Boolean  | No    |Is the file encrypted? If is not set is assumed the file is not encrypted |
+| **`encryptionMode`**| Text     | No    | Encryption mode used. Just valid if `encrypted=true`. Currently only `dtp` is implemented |
+
 
 ### Additional Attributes
 
@@ -156,6 +155,7 @@ These are examples of attributes that can enhance the discoverability of a resou
 | **`structuredMarkup`** | A link to machine-readable structured markup (such as ttl/json-ld/rdf) describing the dataset.                                |
 
 The publisher of a DDO MAY add additional attributes or change the above object definition.
+
 
 ### Curation Attributes
 
@@ -252,7 +252,21 @@ Note that `url` is removed from all objects in the `files` array, and `encrypted
 }
 ```
 
-### Specific attributes per asset type
+### Specific attributes per Service Type
+
+A DDO includes different services attached to the asset. They are offered from the asset owner/provider to the rest of the users.
+Each of these services can have some metadata describing the specific of that service offered. For example `price`. The attributes going in each individual service and not in the `metadata` attributes sections are because they apply only to a specific service and not to the whole asset.
+
+The `main` object has the following attributes, not all are required. 
+
+| Attribute       |   Type        |   Related to Service | Required    | Description
+| ----------------|---------------|----------------------|-------------|---------
+| **`price`**     | Text          | nft-sales & access    | No         | Price of the service. The token to use and the distribution of payments (`receivers` and `amounts`) will be part of the condition parameters
+| **`timeout`**   | Text          | all    | Yes         | Default `0` if not give. The number of blocks the service is valid
+| **`ercType`**   | Number      | nft-sales & nft-access | No    | If the service refers to a NFT (ERC-721 or ERC-1155), this will store a `721` or `1155` values
+
+
+### Specific attributes per Asset Type
 
 Depending on the asset type (dataset, algorithm), there are different metadata attributes supported:
 
