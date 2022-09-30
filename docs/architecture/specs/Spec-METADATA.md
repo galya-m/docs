@@ -119,8 +119,7 @@ A file object has the following attributes, with the details necessary to consum
 | **`compression`**   | no       | File compression (e.g. no, gzip, bzip2, etc). |
 | **`resourceId`**    | no       | Remote identifier of the file in the external provider. It is typically the remote id in the cloud provider. |
 | **`attributes`**    | no       | Key-Value hash map with additional attributes describing the asset file. It could include details like the Amazon S3 bucket, region, etc. |
-| **`encrypted`**     | Boolean  | No    |Is the file encrypted? If is not set is assumed the file is not encrypted |
-| **`encryptionMode`**| Text     | No    | Encryption mode used. Just valid if `encrypted=true`. Currently only `dtp` is implemented |
+| **`encryption`**| Text     | No    | Encryption mode used. If not provided is assumed the files are not encrypted. Currently only `dtp` is implemented |
 
 
 ### Additional Attributes
@@ -263,7 +262,7 @@ The `main` object has the following attributes, not all are required.
 | ----------------|---------------|----------------------|-------------|---------
 | **`price`**     | Text          | nft-sales & access    | No         | Price of the service. The token to use and the distribution of payments (`receivers` and `amounts`) will be part of the condition parameters
 | **`timeout`**   | Text          | all    | Yes         | Default `0` if not give. The number of blocks the service is valid
-| **`ercType`**   | Number      | nft-sales & nft-access | No    | If the service refers to a NFT (ERC-721 or ERC-1155), this will store a `721` or `1155` values
+| **`nftType`**   | String      | nft-sales & nft-access | No    | If the service refers to a NFT (ERC-721 or ERC-1155), this will store a `erc-721` or `erc-1155` values. This will be open to additional NFT standards or variations of the current ERCs
 
 
 ### Specific attributes per Asset Type

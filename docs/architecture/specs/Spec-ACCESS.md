@@ -57,7 +57,7 @@ The following technical components are involved with the publishing flow or the 
   asset URL by the CONSUMER.
 * [GATEWAY](https://github.com/nevermined-io/gateway) - Microservice to be executed by PUBLISHERS. It exposes an
   HTTP REST API permitting access to PUBLISHER assets or additional services such as computation.
-* [METADATA-API](https://github.com/nevermined-io/metadata-api) - Microservice to be executed by MARKETPLACES.
+* [MARKETPLACE-API](https://github.com/nevermined-io/marketplace-api) - Microservice to be executed by MARKETPLACES.
   Facilitates   creating, updating, deleting and searching the asset metadata registered by the PUBLISHERS.
   This metadata is included as part of a DDO (see [DID SPEC](Spec-DID.md) and
   [METADATA SPEC](Spec-METADATA.md)) and also includes the services associated with the asset (consumption,

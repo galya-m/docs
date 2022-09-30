@@ -61,8 +61,7 @@
 						"contentType": "text/csv",
 						"encoding": "UTF-8",
 						"compression": "zip",
-						"encrypted": true,
-						"encryptionMode": "dtp"						
+						"encryption": "dtp"						
 					}],
 					"license": "CC-BY",
 					"name": "UK Weather information 2011",
