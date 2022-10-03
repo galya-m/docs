@@ -1,39 +1,36 @@
 .blog {
-    &__content{
-        margin-bottom: 100px;
-    }
-    margin-bottom: 100 px;
-    &__title {
-        color: #000;
-        font-weight: bold;
-        display: block;
-    }
-    &__content {
-        color: #000;
-        
-        img {
-            margin-top: 30px;
-        }
+  &__title {
+    color: #000;
+    font-weight: bold;
+    display: block;
+  }
 
-        a {
-            color: #57A7DE;
-        }
+  &__content {
+    color: #000;
 
-        strong {
-            font-weight: bold; 
-        }
-
-        figcaption {
-            font-size: small;
-            margin-bottom: 30px;
-        }
-
-        img {
-            margin-bottom: 10px;
-        }
-    }
-    &__pub-data {
-        color: #000;
+    img {
+      margin-top: 30px;
     }
 
+    a {
+      color: var(--ifm-color-primary);
+    }
+
+    strong {
+      font-weight: bold;
+    }
+
+    figcaption {
+      font-size: small;
+      margin-bottom: 30px;
+    }
+
+    img {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__pub-data {
+    color: #000;
+  }
 }
