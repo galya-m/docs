@@ -199,7 +199,7 @@ const QuerySearchByPriceRange = () => {
       return;
     }
 
-    if(gte <= 0) {
+    if(gte < 0) {
       setGteRequired('gte input cannot be less than 0');
       setDdos([]);
 
@@ -220,16 +220,28 @@ const QuerySearchByPriceRange = () => {
     setDdos(response.results || []);
   };
 
+  const getValue = (value: string) => {
+    if(value) {
+      return parseInt(value, 10);
+    }
+
+    return value as undefined;
+  };
+
   return (
     <>
       <UiForm>
         <UiText>Set the price range:</UiText>
         <UiFormInput 
           label='gte: '
+          value={gte}
+          type='number'
           onChange={(e) => setGte(e.target.value)}
           inputError={gteRequired}/>
         <UiFormInput 
           label='lte: '
+          value={lte}
+          type='number'
           onChange={(e) => setLte(e.target.value)}
           inputError={lteRequired}/>
         
@@ -249,6 +261,10 @@ const QuerySearchByPriceRange = () => {
           <UiLayout>
             <UiText>Creator id: </UiText>
             <UiText>{ ddo.proof.creator }</UiText>
+          </UiLayout>
+          <UiLayout>
+            <UiText>Price: </UiText>
+            <UiText>{ddo.service[0].attributes.main.price }</UiText>
           </UiLayout>
         </UiLayout>
       )}

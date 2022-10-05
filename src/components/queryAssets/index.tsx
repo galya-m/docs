@@ -172,7 +172,7 @@ const QuerySearchByPriceRange = ({ assetsModule }: { assetsModule: AssetsModule}
       return;
     }
 
-    if(gte <= 0) {
+    if(gte < 0) {
       setGteRequired('gte input cannot be less than 0');
       setDdos([]);
 
