@@ -48,22 +48,22 @@ const QuerySearchByName = (): => {
       </UiForm>
 
       {ddos.map(ddo =>
-        <div key={ddo.id}>
+        <UiLayout key={ddo.id}>
           <UiLayout>
-            <UiLayout>
-              <UiText>Asset id: </UiText>
-              <UiText>{ddo.id}</UiText>
-            </UiLayout>
-            <UiLayout>
-              <UiText>Creator id: </UiText>
-              <UiText>{ ddo.proof.creator }</UiText>
-            </UiLayout>
+            <UiText>Asset name: </UiText>
+            <UiText>{ddo.service[0].attributes.main.name }</UiText>
           </UiLayout>
-        </div>
+          <UiLayout>
+            <UiText>Asset id: </UiText>
+            <UiText>{ddo.id}</UiText>
+          </UiLayout>
+          <UiLayout>
+            <UiText>Creator id: </UiText>
+            <UiText>{ ddo.proof.creator }</UiText>
+          </UiLayout>
+        </UiLayout>
       )}
     </>
-
-
   )
 }
 ```
@@ -131,18 +131,20 @@ const QuerySearchByAdditionalInfo = () => {
       </UiForm>
 
       {ddos.slice(0,3).map(ddo =>
-        <div key={ddo.id}>
+        <UiLayout key={ddo.id}>
           <UiLayout>
-            <UiLayout>
-              <UiText>Asset id: </UiText>
-              <UiText>{ddo.id}</UiText>
-            </UiLayout>
-            <UiLayout>
-              <UiText>Creator id: </UiText>
-              <UiText>{ ddo.proof.creator }</UiText>
-            </UiLayout>
+            <UiText>Asset name: </UiText>
+            <UiText>{ddo.service[0].attributes.main.name }</UiText>
           </UiLayout>
-        </div>
+          <UiLayout>
+            <UiText>Asset id: </UiText>
+            <UiText>{ddo.id}</UiText>
+          </UiLayout>
+          <UiLayout>
+            <UiText>Creator id: </UiText>
+            <UiText>{ ddo.proof.creator }</UiText>
+          </UiLayout>
+        </UiLayout>
       )}
     </>
   )
@@ -180,23 +182,34 @@ const QuerySearchByPriceRange = () => {
   }, [gteRequired, lteRequired]);
 
   const onSearchByPriceRange = async() => {
-    if(!gte || !lte) {
+    if((!gte && gte !==0 ) || (!lte && lte !==0 )) {
       setGteRequired(!gte ? 'gte input is required' : '');
       setLteRequired(!lte ? 'lte input is required' : '');
+      setDdos([]);
+
       return;
     }
 
-    if(gte >= lte && gte) {
+    if(gte >= lte) {
       setGteRequired('gte input cannot be greater than lte input');
+      setDdos([]);
+
       return;
     }
 
-    const response = await assets.query({
+    if(gte < 0) {
+      setGteRequired('gte input cannot be less than 0');
+      setDdos([]);
+
+      return;
+    } 
+
+    const response = await assetsModule.query({
       query: {
         range: {
           "service.attributes.main.price": {
             gte,
-            lte,
+            lte
           }
         }
       },
@@ -205,16 +218,28 @@ const QuerySearchByPriceRange = () => {
     setDdos(response.results || []);
   };
 
+  const getValue = (value: string) => {
+    if(value) {
+      return parseInt(value, 10);
+    }
+
+    return value as undefined;
+  };
+
   return (
     <>
       <UiForm>
         <UiText>Set the price range:</UiText>
         <UiFormInput 
           label='gte: '
+          value={gte}
+          type='number'
           onChange={(e) => setGte(e.target.value)}
           inputError={gteRequired}/>
         <UiFormInput 
           label='lte: '
+          value={lte}
+          type='number'
           onChange={(e) => setLte(e.target.value)}
           inputError={lteRequired}/>
         
@@ -222,18 +247,24 @@ const QuerySearchByPriceRange = () => {
       </UiForm>
 
       {ddos.slice(0,3).map(ddo =>
-        <div key={ddo.id}>
+        <UiLayout key={ddo.id}>
           <UiLayout>
-            <UiLayout>
-              <UiText>Asset id: </UiText>
-              <UiText>{ddo.id}</UiText>
-            </UiLayout>
-            <UiLayout>
-              <UiText>Creator id: </UiText>
-              <UiText>{ ddo.proof.creator }</UiText>
-            </UiLayout>
+            <UiText>Asset name: </UiText>
+            <UiText>{ddo.service[0].attributes.main.name }</UiText>
           </UiLayout>
-        </div>
+          <UiLayout>
+            <UiText>Asset id: </UiText>
+            <UiText>{ddo.id}</UiText>
+          </UiLayout>
+          <UiLayout>
+            <UiText>Creator id: </UiText>
+            <UiText>{ ddo.proof.creator }</UiText>
+          </UiLayout>
+          <UiLayout>
+            <UiText>Price: </UiText>
+            <UiText>{ddo.service[0].attributes.main.price }</UiText>
+          </UiLayout>
+        </UiLayout>
       )}
     </>
   )
@@ -283,6 +314,7 @@ const QuerySearchByFilters = () => {
       setNameRequired(!name ? 'name input is required' : '');
       setPageRequired(!page || page <= 0 ? setMessage('page', page): '');
       setSizeRequired(!size || size <= 0 ? setMessage('size', size): '');
+      setDdos([]);
 
       return;
     }
@@ -341,18 +373,20 @@ const QuerySearchByFilters = () => {
       </UiForm>
 
       {ddos.map(ddo =>
-        <div key={ddo.id}>
+        <UiLayout key={ddo.id}>
           <UiLayout>
-            <UiLayout>
-              <UiText>Asset id: </UiText>
-              <UiText>{ddo.id}</UiText>
-            </UiLayout>
-            <UiLayout>
-              <UiText>Creator id: </UiText>
-              <UiText>{ ddo.proof.creator }</UiText>
-            </UiLayout>
+            <UiText>Asset name: </UiText>
+            <UiText>{ddo.service[0].attributes.main.name }</UiText>
           </UiLayout>
-        </div>
+          <UiLayout>
+            <UiText>Asset id: </UiText>
+            <UiText>{ddo.id}</UiText>
+          </UiLayout>
+          <UiLayout>
+            <UiText>Creator id: </UiText>
+            <UiText>{ ddo.proof.creator }</UiText>
+          </UiLayout>
+        </UiLayout>
       )}
     </>
   )
