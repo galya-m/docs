@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { AssetsModule, Catalog, DDO, AuthToken } from '@nevermined-io/catalog-core';
-import { UiForm, UiFormInput, UiText, UiLayout, UiDivider, UiFormSelect, UiButton, BEM } from '@nevermined-io/styles';
+import { UiForm, UiFormInput, UiText, UiLayout, UiFormSelect, UiButton, BEM } from '@nevermined-io/styles';
 import { ethers } from 'ethers';
 import styles from './styles.module.scss';
 
@@ -46,6 +46,10 @@ const QuerySearchByName = ({ assetsModule }: { assetsModule: AssetsModule}) => {
         <div key={ddo.id} className={b('item')}>
           <UiLayout>
             <UiLayout>
+              <UiText>Asset name: </UiText>
+              <UiText>{ddo.service[0].attributes.main.name }</UiText>
+            </UiLayout>
+            <UiLayout>
               <UiText>Asset id: </UiText>
               <UiText>{ddo.id}</UiText>
             </UiLayout>
@@ -67,7 +71,6 @@ const QuerySearchByAdditionalInfo = ({ assetsModule }: { assetsModule: AssetsMod
   const options = [{
     label: 'Categories:',
     value: ''
-
   }, {
     label: 'Lending',
     value: 'ProtocolType:Lending',
@@ -113,6 +116,10 @@ const QuerySearchByAdditionalInfo = ({ assetsModule }: { assetsModule: AssetsMod
         <div key={ddo.id} className={b('item')}>
           <UiLayout>
             <UiLayout>
+              <UiText>Asset name: </UiText>
+              <UiText>{ddo.service[0].attributes.main.name }</UiText>
+            </UiLayout>
+            <UiLayout>
               <UiText>Asset id: </UiText>
               <UiText>{ddo.id}</UiText>
             </UiLayout>
@@ -129,8 +136,8 @@ const QuerySearchByAdditionalInfo = ({ assetsModule }: { assetsModule: AssetsMod
 
 const QuerySearchByPriceRange = ({ assetsModule }: { assetsModule: AssetsModule}) => {
   const [ ddos, setDdos ] = useState<DDO[]>([]);
-  const [ gte, setGte ] = useState('');
-  const [ lte, setLte ] = useState('');
+  const [ gte, setGte ] = useState('0');
+  const [ lte, setLte ] = useState('100');
   const [ gteRequired, setGteRequired ] = useState('');
   const [ lteRequired, setLteRequired ] = useState('');
 
@@ -175,10 +182,12 @@ const QuerySearchByPriceRange = ({ assetsModule }: { assetsModule: AssetsModule}
         <UiText>Set the price range:</UiText>
         <UiFormInput 
           label='gte: '
+          value={gte}
           onChange={(e) => setGte(e.target.value)}
           inputError={gteRequired}/>
         <UiFormInput 
           label='lte: '
+          value={lte}
           onChange={(e) => setLte(e.target.value)}
           inputError={lteRequired}/>
         
@@ -188,6 +197,10 @@ const QuerySearchByPriceRange = ({ assetsModule }: { assetsModule: AssetsModule}
       {ddos.slice(0,3).map(ddo =>
         <div key={ddo.id} className={b('item')}>
           <UiLayout>
+            <UiLayout>
+              <UiText>Asset name: </UiText>
+              <UiText>{ddo.service[0].attributes.main.name }</UiText>
+            </UiLayout>
             <UiLayout>
               <UiText>Asset id: </UiText>
               <UiText>{ddo.id}</UiText>
@@ -292,6 +305,10 @@ const QuerySearchByFilters = ({ assetsModule }: { assetsModule: AssetsModule}) =
       {ddos.map(ddo =>
         <div key={ddo.id} className={b('item')}>
           <UiLayout>
+            <UiLayout>
+              <UiText>Asset name: </UiText>
+              <UiText>{ddo.service[0].attributes.main.name }</UiText>
+            </UiLayout>
             <UiLayout>
               <UiText>Asset id: </UiText>
               <UiText>{ddo.id}</UiText>
