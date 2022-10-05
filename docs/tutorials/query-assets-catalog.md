@@ -64,8 +64,6 @@ const QuerySearchByName = (): => {
         </UiLayout>
       )}
     </>
-
-
   )
 }
 ```
