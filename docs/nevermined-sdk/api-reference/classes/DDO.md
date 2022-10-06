@@ -14,6 +14,7 @@ Contains all the data related to an asset.
 ### Properties
 
 - [@context](DDO.md#@context)
+- [\_nvm](DDO.md#_nvm)
 - [authentication](DDO.md#authentication)
 - [created](DDO.md#created)
 - [didSeed](DDO.md#didseed)
@@ -21,7 +22,6 @@ Contains all the data related to an asset.
 - [proof](DDO.md#proof)
 - [publicKey](DDO.md#publickey)
 - [service](DDO.md#service)
-- [userId](DDO.md#userid)
 
 ### Methods
 
@@ -55,7 +55,7 @@ Contains all the data related to an asset.
 
 #### Defined in
 
-[src/ddo/DDO.ts:58](https://github.com/nevermined-io/sdk-js/blob/cd1bab2/src/ddo/DDO.ts#L58)
+[src/ddo/DDO.ts:60](https://github.com/nevermined-io/sdk-js/blob/3db3d52/src/ddo/DDO.ts#L60)
 
 ## Properties
 
@@ -65,7 +65,17 @@ Contains all the data related to an asset.
 
 #### Defined in
 
-[src/ddo/DDO.ts:37](https://github.com/nevermined-io/sdk-js/blob/cd1bab2/src/ddo/DDO.ts#L37)
+[src/ddo/DDO.ts:39](https://github.com/nevermined-io/sdk-js/blob/3db3d52/src/ddo/DDO.ts#L39)
+
+___
+
+### \_nvm
+
+• **\_nvm**: `NvmConfig`
+
+#### Defined in
+
+[src/ddo/DDO.ts:48](https://github.com/nevermined-io/sdk-js/blob/3db3d52/src/ddo/DDO.ts#L48)
 
 ___
 
@@ -75,7 +85,7 @@ ___
 
 #### Defined in
 
-[src/ddo/DDO.ts:52](https://github.com/nevermined-io/sdk-js/blob/cd1bab2/src/ddo/DDO.ts#L52)
+[src/ddo/DDO.ts:54](https://github.com/nevermined-io/sdk-js/blob/3db3d52/src/ddo/DDO.ts#L54)
 
 ___
 
@@ -85,7 +95,7 @@ ___
 
 #### Defined in
 
-[src/ddo/DDO.ts:48](https://github.com/nevermined-io/sdk-js/blob/cd1bab2/src/ddo/DDO.ts#L48)
+[src/ddo/DDO.ts:50](https://github.com/nevermined-io/sdk-js/blob/3db3d52/src/ddo/DDO.ts#L50)
 
 ___
 
@@ -95,7 +105,7 @@ ___
 
 #### Defined in
 
-[src/ddo/DDO.ts:44](https://github.com/nevermined-io/sdk-js/blob/cd1bab2/src/ddo/DDO.ts#L44)
+[src/ddo/DDO.ts:46](https://github.com/nevermined-io/sdk-js/blob/3db3d52/src/ddo/DDO.ts#L46)
 
 ___
 
@@ -107,7 +117,7 @@ DID, decentralizes ID.
 
 #### Defined in
 
-[src/ddo/DDO.ts:42](https://github.com/nevermined-io/sdk-js/blob/cd1bab2/src/ddo/DDO.ts#L42)
+[src/ddo/DDO.ts:44](https://github.com/nevermined-io/sdk-js/blob/3db3d52/src/ddo/DDO.ts#L44)
 
 ___
 
@@ -117,7 +127,7 @@ ___
 
 #### Defined in
 
-[src/ddo/DDO.ts:56](https://github.com/nevermined-io/sdk-js/blob/cd1bab2/src/ddo/DDO.ts#L56)
+[src/ddo/DDO.ts:58](https://github.com/nevermined-io/sdk-js/blob/3db3d52/src/ddo/DDO.ts#L58)
 
 ___
 
@@ -127,7 +137,7 @@ ___
 
 #### Defined in
 
-[src/ddo/DDO.ts:50](https://github.com/nevermined-io/sdk-js/blob/cd1bab2/src/ddo/DDO.ts#L50)
+[src/ddo/DDO.ts:52](https://github.com/nevermined-io/sdk-js/blob/3db3d52/src/ddo/DDO.ts#L52)
 
 ___
 
@@ -137,37 +147,28 @@ ___
 
 #### Defined in
 
-[src/ddo/DDO.ts:54](https://github.com/nevermined-io/sdk-js/blob/cd1bab2/src/ddo/DDO.ts#L54)
-
-___
-
-### userId
-
-• **userId**: `string`
-
-#### Defined in
-
-[src/ddo/DDO.ts:46](https://github.com/nevermined-io/sdk-js/blob/cd1bab2/src/ddo/DDO.ts#L46)
+[src/ddo/DDO.ts:56](https://github.com/nevermined-io/sdk-js/blob/3db3d52/src/ddo/DDO.ts#L56)
 
 ## Methods
 
 ### addDefaultMetadataService
 
-▸ **addDefaultMetadataService**(`metadata`): `Promise`<`void`\>
+▸ **addDefaultMetadataService**(`metadata`, `nftAttributes?`): `Promise`<[`MetaDataMain`](../interfaces/MetaDataMain.md)\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `metadata` | [`MetaData`](../interfaces/MetaData.md) |
+| `nftAttributes?` | `NFTAttributes` |
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`<[`MetaDataMain`](../interfaces/MetaDataMain.md)\>
 
 #### Defined in
 
-[src/ddo/DDO.ts:163](https://github.com/nevermined-io/sdk-js/blob/cd1bab2/src/ddo/DDO.ts#L163)
+[src/ddo/DDO.ts:173](https://github.com/nevermined-io/sdk-js/blob/3db3d52/src/ddo/DDO.ts#L173)
 
 ___
 
@@ -191,7 +192,7 @@ Proof object.
 
 #### Defined in
 
-[src/ddo/DDO.ts:152](https://github.com/nevermined-io/sdk-js/blob/cd1bab2/src/ddo/DDO.ts#L152)
+[src/ddo/DDO.ts:162](https://github.com/nevermined-io/sdk-js/blob/3db3d52/src/ddo/DDO.ts#L162)
 
 ___
 
@@ -212,7 +213,7 @@ ___
 
 #### Defined in
 
-[src/ddo/DDO.ts:159](https://github.com/nevermined-io/sdk-js/blob/cd1bab2/src/ddo/DDO.ts#L159)
+[src/ddo/DDO.ts:169](https://github.com/nevermined-io/sdk-js/blob/3db3d52/src/ddo/DDO.ts#L169)
 
 ___
 
@@ -233,7 +234,7 @@ ___
 
 #### Defined in
 
-[src/ddo/DDO.ts:205](https://github.com/nevermined-io/sdk-js/blob/cd1bab2/src/ddo/DDO.ts#L205)
+[src/ddo/DDO.ts:224](https://github.com/nevermined-io/sdk-js/blob/3db3d52/src/ddo/DDO.ts#L224)
 
 ___
 
@@ -255,7 +256,7 @@ ___
 
 #### Defined in
 
-[src/ddo/DDO.ts:189](https://github.com/nevermined-io/sdk-js/blob/cd1bab2/src/ddo/DDO.ts#L189)
+[src/ddo/DDO.ts:208](https://github.com/nevermined-io/sdk-js/blob/3db3d52/src/ddo/DDO.ts#L208)
 
 ___
 
@@ -275,7 +276,7 @@ ___
 
 #### Defined in
 
-[src/ddo/DDO.ts:120](https://github.com/nevermined-io/sdk-js/blob/cd1bab2/src/ddo/DDO.ts#L120)
+[src/ddo/DDO.ts:130](https://github.com/nevermined-io/sdk-js/blob/3db3d52/src/ddo/DDO.ts#L130)
 
 ___
 
@@ -305,7 +306,7 @@ Service.
 
 #### Defined in
 
-[src/ddo/DDO.ts:94](https://github.com/nevermined-io/sdk-js/blob/cd1bab2/src/ddo/DDO.ts#L94)
+[src/ddo/DDO.ts:104](https://github.com/nevermined-io/sdk-js/blob/3db3d52/src/ddo/DDO.ts#L104)
 
 ___
 
@@ -335,7 +336,7 @@ Service.
 
 #### Defined in
 
-[src/ddo/DDO.ts:112](https://github.com/nevermined-io/sdk-js/blob/cd1bab2/src/ddo/DDO.ts#L112)
+[src/ddo/DDO.ts:122](https://github.com/nevermined-io/sdk-js/blob/3db3d52/src/ddo/DDO.ts#L122)
 
 ___
 
@@ -355,7 +356,7 @@ ___
 
 #### Defined in
 
-[src/ddo/DDO.ts:201](https://github.com/nevermined-io/sdk-js/blob/cd1bab2/src/ddo/DDO.ts#L201)
+[src/ddo/DDO.ts:220](https://github.com/nevermined-io/sdk-js/blob/3db3d52/src/ddo/DDO.ts#L220)
 
 ___
 
@@ -379,7 +380,7 @@ Proof object.
 
 #### Defined in
 
-[src/ddo/DDO.ts:131](https://github.com/nevermined-io/sdk-js/blob/cd1bab2/src/ddo/DDO.ts#L131)
+[src/ddo/DDO.ts:141](https://github.com/nevermined-io/sdk-js/blob/3db3d52/src/ddo/DDO.ts#L141)
 
 ___
 
@@ -393,7 +394,7 @@ ___
 
 #### Defined in
 
-[src/ddo/DDO.ts:85](https://github.com/nevermined-io/sdk-js/blob/cd1bab2/src/ddo/DDO.ts#L85)
+[src/ddo/DDO.ts:95](https://github.com/nevermined-io/sdk-js/blob/3db3d52/src/ddo/DDO.ts#L95)
 
 ___
 
@@ -414,7 +415,7 @@ ___
 
 #### Defined in
 
-[src/ddo/DDO.ts:185](https://github.com/nevermined-io/sdk-js/blob/cd1bab2/src/ddo/DDO.ts#L185)
+[src/ddo/DDO.ts:204](https://github.com/nevermined-io/sdk-js/blob/3db3d52/src/ddo/DDO.ts#L204)
 
 ___
 
@@ -438,13 +439,13 @@ The deserialized [DDO](DDO.md).
 
 #### Defined in
 
-[src/ddo/DDO.ts:31](https://github.com/nevermined-io/sdk-js/blob/cd1bab2/src/ddo/DDO.ts#L31)
+[src/ddo/DDO.ts:33](https://github.com/nevermined-io/sdk-js/blob/3db3d52/src/ddo/DDO.ts#L33)
 
 ___
 
 ### getInstance
 
-▸ `Static` **getInstance**(`userId`, `publisherAddress`): [`DDO`](DDO.md)
+▸ `Static` **getInstance**(`userId`, `publisherAddress`, `appId?`): [`DDO`](DDO.md)
 
 #### Parameters
 
@@ -452,6 +453,7 @@ ___
 | :------ | :------ |
 | `userId` | `string` |
 | `publisherAddress` | `string` |
+| `appId?` | `string` |
 
 #### Returns
 
@@ -459,7 +461,7 @@ ___
 
 #### Defined in
 
-[src/ddo/DDO.ts:65](https://github.com/nevermined-io/sdk-js/blob/cd1bab2/src/ddo/DDO.ts#L65)
+[src/ddo/DDO.ts:67](https://github.com/nevermined-io/sdk-js/blob/3db3d52/src/ddo/DDO.ts#L67)
 
 ___
 
@@ -483,4 +485,4 @@ DDO serialized.
 
 #### Defined in
 
-[src/ddo/DDO.ts:22](https://github.com/nevermined-io/sdk-js/blob/cd1bab2/src/ddo/DDO.ts#L22)
+[src/ddo/DDO.ts:24](https://github.com/nevermined-io/sdk-js/blob/3db3d52/src/ddo/DDO.ts#L24)
