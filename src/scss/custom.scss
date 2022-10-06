@@ -7,12 +7,15 @@
 @import './navbar.scss';
 @import './sidebar.scss';
 @import './fonts.scss';
+@import './doc-card.scss';
 
 :root {
   --ifm-background-color: var(--ifm-color-white);
 
   --ifm-breadcrumb-item-background-active: #efedfd;
   --ifm-breadcrumb-item-color-inactive: #bbbac2;
+  --ifm-breadcrumb-separator: url('/nevermined/breadcrumb-arrow.svg');
+  --ifm-breadcrumb-separator-size-multiplier: 2;
 
   --ifm-code-font-size: 14px;
 
@@ -36,6 +39,8 @@
 
   --ifm-menu-color-background-active: rgba(47, 19, 220, 0.08);
   --ifm-menu-color-background-hover: rgba(47, 19, 220, 0.08);
+  --ifm-menu-link-sublist-icon: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24"><path fill="rgba(0,0,0,1)" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path></svg>');
+  --ifm-menu-link-padding-horizontal: 0.5rem;
 
   --ifm-pre-line-height: 1.5rem;
   --ifm-pre-padding: 1.5rem;
@@ -197,6 +202,11 @@ code {
       font-size: 16px;
       line-height: 24px;
     }
+
+    &--error {
+      color: red;
+      display: block;
+    }
   }
 }
 
@@ -238,21 +248,18 @@ ul.breadcrumbs {
     }
   }
 
-  li:first-child {
-    a {
-      color: var(--ifm-color-primary);
+  .breadcrumbs__item {
+    &:first-child {
+      margin-left: 0;
 
-      &::before {
-        content: 'Nevermined SDK';
+      svg {
+        width: 24px;
+        height: 24px;
       }
     }
 
-    &::after {
-      display: none !important;
-    }
-
-    svg {
-      display: none;
+    &:not(:last-child):after {
+      background: var(--ifm-breadcrumb-separator) center no-repeat;
     }
   }
 }
