@@ -9,7 +9,6 @@
 - [accessProxyUrl](StageOutput.md#accessproxyurl)
 - [metadata](StageOutput.md#metadata)
 - [metadataUrl](StageOutput.md#metadataurl)
-- [secretStoreUrl](StageOutput.md#secretstoreurl)
 
 ## Properties
 
@@ -19,7 +18,7 @@
 
 #### Defined in
 
-[src/ddo/MetaData.ts:23](https://github.com/nevermined-io/sdk-js/blob/3db3d52/src/ddo/MetaData.ts#L23)
+[src/ddo/MetaData.ts:22](https://github.com/nevermined-io/sdk-js/blob/7d7cf7d/src/ddo/MetaData.ts#L22)
 
 ___
 
@@ -29,7 +28,7 @@ ___
 
 #### Defined in
 
-[src/ddo/MetaData.ts:24](https://github.com/nevermined-io/sdk-js/blob/3db3d52/src/ddo/MetaData.ts#L24)
+[src/ddo/MetaData.ts:23](https://github.com/nevermined-io/sdk-js/blob/7d7cf7d/src/ddo/MetaData.ts#L23)
 
 ___
 
@@ -39,14 +38,4 @@ ___
 
 #### Defined in
 
-[src/ddo/MetaData.ts:21](https://github.com/nevermined-io/sdk-js/blob/3db3d52/src/ddo/MetaData.ts#L21)
-
-___
-
-### secretStoreUrl
-
-• **secretStoreUrl**: `string`
-
-#### Defined in
-
-[src/ddo/MetaData.ts:22](https://github.com/nevermined-io/sdk-js/blob/3db3d52/src/ddo/MetaData.ts#L22)
+[src/ddo/MetaData.ts:21](https://github.com/nevermined-io/sdk-js/blob/7d7cf7d/src/ddo/MetaData.ts#L21)
