@@ -64,7 +64,6 @@
           "dateCreated": "2019-02-08T08:13:49Z",
           "license": "CC-BY",
           "name": "UK Weather information 2011",
-          "price": "1",
           "type": "service",
           "spec": "https://my.service.inet:8080/spec",
           "specChecksum": "859486596784567856758aaaa",
@@ -102,9 +101,7 @@
           "purchaseEndpoint": "http://localhost:8030/api/v1/gateway/services/access/initialize",
           "name": "dataAssetAccessServiceAgreement",
           "creator": "",
-          "datePublished": "2019-02-08T08:13:49Z",
-          "price": "10",
-          "timeout": 36000
+          "datePublished": "2019-02-08T08:13:49Z"
         },
         "additionalInformation": {
           "description": ""

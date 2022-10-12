@@ -60,14 +60,11 @@ The following technical components are involved in an end-to-end publishing and 
     integrated with front-end applications.
   - [nevermined-sdk-py](https://github.com/nevermined-io/sdk-py) - Python version of the Nevermined SDK to be
     integrated with back-end applications. The primary users are data scientists.
-  - [nevermined-sdk-java](https://github.com/nevermined-io/sdk-java) - Java version of the Nevermined SDK to be
-    integrated with [JVM](https://en.wikipedia.org/wiki/Java_virtual_machine) applications. The primary users are
-    data engineers.
 * [SMART CONTRACTS](https://github.com/nevermined-io/contracts) - Solidity Smart Contracts providing the Service
   Agreements business logic.
 * [GATEWAY](https://github.com/nevermined-io/gateway) - Microservice to be executed by PUBLISHERS. It exposes an
   HTTP REST API permitting access to PUBLISHER assets or additional services such as computation.
-* [METADATA-API](https://github.com/nevermined-io/metadata-api) - Microservice to be executed by MARKETPLACES.
+* [MARKETPLACE-API](https://github.com/nevermined-io/marketplace-api) - Microservice to be executed by MARKETPLACES.
   Facilitates   creating, updating, deleting and searching the asset metadata registered by the PUBLISHERS.
   This metadata is included as part of a DDO (see [DID SPEC](Spec-DID.md) and
   [METADATA SPEC](Spec-METADATA.md)) and also includes the services associated with the asset (consumption,
@@ -273,7 +270,7 @@ The complete flow of publishing an asset with a compute service attached is:
     An example of a complete DDO can be found [here](examples/compute/v0.1/ddo.workflow.json). Please do note that the condition's
     order in the DID document should reflect the same order in on-chain service agreement.
 
-1. PUBLISHER publishes the DDO in the [METADATA-API](https://github.com/nevermined-io/metadata).
+1. PUBLISHER publishes the DDO in the [MARKETPLACE-API](https://github.com/nevermined-io/marketplace-api).
    This DDO must include at least one service of type "compute".
 
 [here](examples/compute/v0.1/ddo.computing.json) you have an example of the DDO including a Compute service.
@@ -295,8 +292,6 @@ Below you can find a small fraction of this:
 
 			"creator": "0x00Bd138aBD70e2F00903268F3Db08f2D25677C9e",
 			"datePublished": "2019-04-09T19:02:11Z",
-			"price": "10",
-			"timeout": 86400,
 			"provider": {
 				"type": "Azure",
 				"description": "",

@@ -68,7 +68,6 @@
 					}],
 					"license": "CC-BY",
 					"name": "UK Weather information 2011",
-					"price": "1",
 					"type": "dataset"
 				}
 			},
@@ -114,7 +113,6 @@
 					"datePublished": "2020-09-03T13:35:42Z",
 					"files": [],
 					"name": "dataAssetComputeServiceAgreement",
-					"price": "1",
 					"provider": {
 						"description": "",
 						"environment": {

@@ -2913,8 +2913,7 @@ func main() {
         "encoding": "UTF-8",
         "index": 0,
         "resourceId": "access-log2018-02-13-15-17-29-18386C502CAEA932",
-        "encrypted": false,
-        "encryptionMode": "gpg"
+        "encryption": "dtp"
       }
     ],
     "license": "CC-BY",
@@ -4024,8 +4023,7 @@ This operation does not require authentication
   "encoding": "UTF-8",
   "index": 0,
   "resourceId": "access-log2018-02-13-15-17-29-18386C502CAEA932",
-  "encrypted": false,
-  "encryptionMode": "gpg"
+  "encryption": "dtp"
 }
 
 ```
@@ -4125,8 +4123,7 @@ This operation does not require authentication
       "encoding": "UTF-8",
       "index": 0,
       "resourceId": "access-log2018-02-13-15-17-29-18386C502CAEA932",
-      "encrypted": false,
-      "encryptionMode": "gpg"
+      "encryption": "dtp"
     }
   ],
   "license": "CC-BY",
@@ -4421,8 +4418,7 @@ This operation does not require authentication
         "encoding": "UTF-8",
         "index": 0,
         "resourceId": "access-log2018-02-13-15-17-29-18386C502CAEA932",
-        "encrypted": false,
-        "encryptionMode": "gpg"
+        "encryption": "dtp"
       }
     ],
     "license": "CC-BY",
@@ -4550,8 +4546,7 @@ This operation does not require authentication
           "encoding": "UTF-8",
           "index": 0,
           "resourceId": "access-log2018-02-13-15-17-29-18386C502CAEA932",
-          "encrypted": false,
-          "encryptionMode": "gpg"
+          "encryption": "dtp"
         }
       ],
       "license": "CC-BY",

@@ -375,7 +375,7 @@ The usage of different storage backends or a combination of both will depend on 
 
 All the documents stored in a regular database or search engine (like Elastic Search) will record the metadata in their current models are they are.
 In the case this document has a mirror copy into a inmutable data store (like IPFS), the document will include a reference to 
-this inmutable content via a full URL. This typically will be stored into the `proof.inmutableUrl` attribute.
+this inmutable content via a full URL. This typically will be stored into the `proof.immutableUrl` attribute.
 
 For example if an Asset DDO has a copy into IPFS, it will include an attribute like this:
 
@@ -385,7 +385,7 @@ For example if an Asset DDO has a copy into IPFS, it will include an attribute l
     "created": "2016-02-08T16:02:20Z",
     "creator": "0x00Bd138aBD70e2F00903268F3Db08f2D25677C9e",
     "signatureValue": "0xc9eeb2b8106e…6abfdc5d1192641b",
-    "inmutableUrl": "ipfs://QmPChd2hVbrJ6bfo3WBcTW4iZnpHm8TEzWkLHmLpXhF68A",
+    "immutableUrl": "ipfs://QmPChd2hVbrJ6bfo3WBcTW4iZnpHm8TEzWkLHmLpXhF68A",
     "checksum": {
         "0": "0x52b5c93b82dd9e7ecc3d9fdf4755f7f69a54484941897dc517b4adfe3bbc3377",
         "1": "0x999999952b5c93b82dd9e7ecc3d9fdf4755f7f69a54484941897dc517b4adfe3"
