@@ -5,13 +5,13 @@ sidebar_position: 3
 # Example
 
 ## Requirements
-Before to start with this demo you need:
+Before you start with this demo you require:
 
-* A extension of [Metamask](https://metamask.io/) installed in the browser
-* [node](https://nodejs.org/en/) and [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) need to be installed
+* An extension of [Metamask](https://metamask.io/) installed in your browser
+* [node](https://nodejs.org/en/) and [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) needs to be installed
 
 ## How to get the source of this example?
-You can even install the example in your local machine without setting anything, just ready to run it, you can find that [here](https://github.com/nevermined-io/create-nevermined-react)
+You can install the example in your local machine and run it without installing anything. Information for how to do this can be found here [here](https://github.com/nevermined-io/create-nevermined-react)
 
 ## Let's start with the app config file
 The first file that you need to create is the `config.ts` file which contains all the [options needed](../nevermined-sdk/api-reference/classes/Config.md) to initialize the [Catalog core](./core/README.md).
@@ -48,7 +48,7 @@ export const appConfig: Config = {
 ```
 
 ## Setting the networks for web3 providers
-At least that you need to set differents networks for your dapp than [polygon](https://polygon.technology/) this file is not needed, anyway it is part of this example and it has the networks settings for web3 providers
+The next step is setting differents networks for the dapp [polygon](https://polygon.technology/) which does not require this file. However, we have included it in the example as it contains the networks settings for web3 providers.
 
 ```ts
 import { zeroX } from '@nevermined-io/nevermined-sdk-js/dist/node/utils';
@@ -118,10 +118,10 @@ export default ChainConfig;
 ```
 
 ## The example file
-Now let's focus in the example file `src/example/index.tsx`, there you will find all the basic logic to handle a [NFT1155](../architecture/what-can-i-do.md#tokenization-of-assets-via-erc-1155-nfts-aka-nft-sales) as a component. Here you have a description for each functionality and component 
+The example file `src/example/index.tsx` contains all the basic logic to handle a [NFT1155](../architecture/what-can-i-do.md#tokenization-of-assets-via-erc-1155-nfts-aka-nft-sales) as a component. It outlines each functionality and component in detail.
 
 ### SDKInstance
-This component will check if [sdk](../nevermined-sdk/getting-started.mdx) is loaded or not and we show the state
+This component will check if [sdk](../nevermined-sdk/getting-started.mdx) is loaded or not and display the status
 
 ```tsx
 const SDKInstance = () => {
@@ -161,7 +161,7 @@ const SingleAsset = ({ddo}: {ddo: DDO}) => {
 ```
 
 ### constructRewardMap
-This function build the logic of the rewards which the owner will receive after selling the NFT1155
+This function builds the logic of the rewards which the owner will receive after selling the NFT1155
 
 ```tsx
 const constructRewardMap = (
@@ -217,7 +217,7 @@ const PublishAsset = ({onPublish}: {onPublish: () => void}) => {
 ```
 
 ### BuyAsset
-The `BuyAsset` component will show the button `buy` in order to buy the asset if the wallet account is not a NFT1155 holder yet or the owner otherwise will show a download button to download the NFT asset
+The `BuyAsset` component will display the button `buy` in order to buy the asset if the wallet account is not a NFT1155 holder. Otherwise, the owner will display a download button to download the NFT asset
 
 ```tsx
 const BuyAsset = ({ddo}: {ddo: DDO}) => {
@@ -267,7 +267,7 @@ const BuyAsset = ({ddo}: {ddo: DDO}) => {
 ```
 
 ### MMWallet
-Important component wich will allow to connect to the wallet, in case that it is connected, the app will show the address account otherwise will render a button to connect it.
+An important component for connecting to the wallet. Upon connecting, the app will display the address account. Otherwise it will render a button to connect to it.
 
 ```tsx
   const { loginMetamask, walletAddress } = MetaMask.useWallet();
@@ -283,7 +283,7 @@ Important component wich will allow to connect to the wallet, in case that it is
 
 
 ### App
-The main component of the example, it calls the rest of the components and also includes the function `onPublish` with the logic to publish a NFT1155 which is passed as parameter to the component [PublisAsset](#publishasset)
+The main component of the example, it pulls the rest of the components and also includes the function `onPublish` with the logic to publish a NFT1155 which is transferred as a parameter to the component [PublisAsset](#publishasset)
 
 ```tsx
 const App = () => {
