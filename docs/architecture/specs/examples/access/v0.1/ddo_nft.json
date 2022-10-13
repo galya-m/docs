@@ -7,6 +7,20 @@
 	"created": "2019-05-22T08:44:27Z",
 	"updated": "2019-03-08T08:13:49Z",
 	"id": "did:nv:0c184915b07b44c888d468be85a9b28253e80070e5294b1aaed81c2f0264e430",
+	"_nvm": {
+		"userId": "dff40170-37fc-11ed-be5b-9984d9f9ec35",
+		"appId": "acde070d-8c4c-4f0d-9d8a-162843c10333",
+		"versions": {
+			"1": {
+				"updated": "2020-01-01T19:13:24Z",
+				"checksum": "89328493849328493284932"
+			},
+			"2": {
+				"updated": "2021-02-21T20:13:24Z",
+				"checksum": "045328094852309483203443"
+			}
+		}
+	},
 	"proof": {
 		"type": "DDOIntegritySignature",
 		"created": "2019-05-22T08:44:27Z",
@@ -64,7 +78,6 @@
 					}],
 					"license": "CC-BY",
 					"name": "UK Weather information 2011",
-					"price": "1",
 					"type": "dataset"
 				},
 				"additionalInformation": {
@@ -114,12 +127,10 @@
 			"templateId": "0xaabb",
 			"attributes": {
 				"main": {
-					"ercType": 1155,
+					"nftType": "erc-1155",
 					"name": "nftSalesAgreement",
 					"creator": "",
-					"datePublished": "2019-02-08T08:13:49Z",
-					"price": "20",
-					"timeout": 36000
+					"datePublished": "2019-02-08T08:13:49Z"
 				},
 				"additionalInformation": {
 					"description": ""
@@ -310,12 +321,10 @@
 			"templateId": "0xccdd",
 			"attributes": {
 				"main": {
-					"ercType": 1155,
+					"nftType": "erc-1155",
 					"name": "nftAccessAgreement",
 					"creator": "",
-					"datePublished": "2019-02-08T08:13:49Z",
-					"price": "0",
-					"timeout": 0
+					"datePublished": "2019-02-08T08:13:49Z"
 				},
 				"additionalInformation": {
 					"description": ""
