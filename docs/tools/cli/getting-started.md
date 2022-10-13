@@ -4,9 +4,9 @@ sidebar_position: 2
 
 # Getting Started
 
-The Nevermined CLI (aka NVM CLI or `ncli`) allows to interact with a Nevermined deployment from the command line interface allowing to do everything is supported from a traditional Nevermined web environment like a Marketplace or similar DApp.
+The Nevermined CLI (aka NVM CLI or `ncli`) allows for deployment via the command line interface supporting everything from a traditional Nevermined web environment like a Marketplace to a DApp.
 
-The `ncli` allows to connect to a local Nevermined environment (see in the [Nevermined Tools tutorial](https://docs.nevermined.io/docs/tutorials/running-locally) how to do that) or with a remote one.
+The `ncli` facilitates the connection to a local Nevermined environment (see in the [Nevermined Tools tutorial](https://docs.nevermined.io/docs/tutorials/running-locally) how to do that) or with a remote one.
 
 This section provides links to information about how to get started with the Nevermined Command Line Interface (NVM CLI or `ncli`).
 
