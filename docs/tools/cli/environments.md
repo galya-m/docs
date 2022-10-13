@@ -4,7 +4,7 @@ sidebar_position: 5
 
 # Nevermined Environments
 
-Nevermined is a web3 developers framework that allows to deploy and use it in several networks to implement different use cases. This is a list of the most used environments publicly available that you can use via the Nevermined Command Line interface.
+Nevermined is a web3 developers framework that allows can be deployed and used across several networks to implement different use cases. This is a list of the most used environments publicly available that you can use via the Nevermined Command Line interface.
 
 ## Environments
 
@@ -44,7 +44,7 @@ The Gateway can be found on https://gateway.public.nevermined.rocks and uses the
  
 
 ## arbitrum-one
-Arbitrum production environment where users can interact with Nevermined protocol.<br/>
+The Arbitrum production environment where users can interact with the Nevermined protocol.<br/>
 
  **Production Environment** 
 The Native token being used is **ETH**. This environment is having the network name **arbitrum-one** and the chain id/network id **42161**. <br/>
@@ -63,7 +63,7 @@ The Gateway can be found on https://gateway.arbitrum-one.public.nevermined.rocks
 Ethereum testnet environment where users can interact with Nevermined protocol.<br/>
 
  **Testnet** 
-The Native token being used is **ETH**. This environment is having the network name **goerli** and the chain id/network id **5**. <br/>
+The Native token is **ETH**. This environment is **goerli** and the chain id/network id **5**. <br/>
 
 ### Nevermined configuration 
 
@@ -79,7 +79,7 @@ The Gateway can be found on https://gateway.goerli.public.nevermined.rocks and u
 Arbitrum testnet environment where users can interact with Nevermined protocol.<br/>
 
  **Testnet** 
-The Native token being used is **ETH**. This environment is having the network name **arbitrum-goerli** and the chain id/network id **421613**. <br/>
+The Native token is **ETH**. This environment is **arbitrum-goerli** and the chain id/network id **421613**. <br/>
 
 ### Nevermined configuration 
 
@@ -95,7 +95,7 @@ The Gateway can be found on https://gateway.arbitrum-goerli.public.nevermined.ro
 This environment is used for local development. If you want to have a fully functional environment running in your computer, please visit https://github.com/nevermined-io/tools/<br/>
 
  **Testnet** 
-The Native token being used is **ETH**. This environment is having the network name **geth-localnet** and the chain id/network id **1337**. <br/>
+The Native token is **ETH**. This environment is **geth-localnet** and the chain id/network id **1337**. <br/>
 
 ### Nevermined configuration 
 
