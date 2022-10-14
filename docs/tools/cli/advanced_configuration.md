@@ -8,7 +8,7 @@ The CLI is fully customizable via environment variables. By default the `ncli` h
 
 :::info
 
-If you want to see the existing pre-configured environments you just need to run: `ncli network list`
+If you want to see the existing pre-configured environments you simply run: `ncli network list`
 
 :::
 
@@ -84,6 +84,6 @@ The following list of variables are related to the configuration of the Nevermin
 
 :::info
 
-Finding a decent `NODE_URL` is some times difficult. We recommend to open an Infura or Alchemy account to have a better experience.
+Finding a decent `NODE_URL` is some times difficult. We recommend to open an Infura or Alchemy account for a more seamless experience.
 
 :::
