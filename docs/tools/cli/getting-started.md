@@ -4,11 +4,11 @@ sidebar_position: 2
 
 # Getting Started
 
-The Nevermined CLI (aka NVM CLI or `ncli`) allows to interact with a Nevermined deployment from the command line interface allowing to do everything is supported from a traditional Nevermined web environment like a Marketplace or similar DApp.
+The Nevermined CLI (aka NVM CLI or `ncli`) faciltates all Nevermined deployment via the command line interface supporting everything from a traditional Nevermined web environment like a Marketplace to a DApp.
 
-The `ncli` allows to connect to a local Nevermined environment (see in the [Nevermined Tools tutorial](https://docs.nevermined.io/docs/tutorials/running-locally) how to do that) or with a remote one.
+The `ncli` connects to the local Nevermined environment (see in the [Nevermined Tools tutorial](https://docs.nevermined.io/docs/tutorials/running-locally) how to do that) or a remote one.
 
-This section provides links to information about how to get started with the Nevermined Command Line Interface (NVM CLI or `ncli`).
+This section provides links to information on how to get started with the Nevermined Command Line Interface (NVM CLI or `ncli`).
 
 ## Pre-requisites
 
@@ -28,7 +28,7 @@ or
 yarn global add @nevermined-io/cli
 ```
 
-After doing that you should have available in your system the `ncli` tool.
+After doing that you should have the `ncli` tool available in your system .
 
 ```
 $ ncli --help
@@ -38,7 +38,7 @@ $ ncli --help
 
 ### Using your existing account
 
-The `ncli` requires a wallet to connect with the blockchain network (EVM compatible). To use an existing wallet with the `ncli` there are 2 options:
+The `ncli` requires a wallet to connect to the blockchain network (EVM compatible). To use an existing wallet with the `ncli` there are 2 options:
 
 ### Use a mnemonic
 
@@ -59,7 +59,7 @@ export KEYFILE_PASSWORD="<keyfile password>"
 
 ### Creating a new account
 
-If you don't have an account locally or you want to use a new one to use the `ncli`, create it is very simple, you just need to use the `ncli`:
+If you don't have an account locally or you want to use a new one to use the `ncli`, you just need to use the `ncli`:
 
 ```
 ncli accounts new
