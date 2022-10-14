@@ -21,34 +21,17 @@ The network fee in Nevermined testnets is **1%** and the receiver of that fee is
 
 ## Polygon - Mumbai
 
-- *`public-nvm-v2-mumbai`*: Polygon public testing environment (`mumbai`). Using `public` contract tag. Use this if you want to integrate with Nevermined in a Polygon Testnet.
+- *`public-v2-mumbai`*: Polygon public testing environment (`mumbai`). Using `public` contract tag. Use this if you want to integrate with Nevermined in a Polygon Testnet.
 
 | Environment | Network | Contracts Version | Tag | Component | URL | Comments |
 |-------------|---------|-------------------|-----|-----------|-----|----------|
-| public-nvm-v2-mumbai | Mumbai | 2.0.5 & 2.1.0 | public | Gateway | https://gateway.mumbai.public.nevermined.rocks | |
-| public-nvm-v2-mumbai | Mumbai | 2.0.5 & 2.1.0 | public | Marketplace API | https://marketplace-api.mumbai.public.nevermined.rocks | |
-| public-nvm-v2-mumbai | Mumbai | 2.0.5 & 2.1.0 | public | Faucet | https://faucet.mumbai.public.nevermined.rocks | |
-| public-nvm-v2-mumbai | Mumbai | 2.0.5 & 2.1.0 | public | GraphNode | https://api.thegraph.com/subgraphs/name/nevermined-io/public | Use with sdk >= 0.21.0 |
+| public-v2-mumbai | Mumbai | 2.1.0 | public | Gateway | https://gateway.mumbai.public.nevermined.network | |
+| public-v2-mumbai | Mumbai | 2.1.0 | public | Marketplace API | https://marketplace-api.mumbai.public.nevermined.network | |
 
-## Ethereum - Goerli
+All the contract events are exposed via [The Graph](https://thegraph.com/). You can find all the `Polygon Mumbai` Nevermined Subgraphs here (search by Nevermined):
 
-- *`public-nvm-v2-goerli`*: Ethereum testing environment (`goerli`). Using `public` contract tag. Use this if you want to integrate with Nevermined in a Ethereum Testnet.
+https://thegraph.com/hosted-service
 
-| Environment | Network | Contracts Version | Tag | Component | URL | Comments |
-|-------------|---------|-------------------|-----|-----------|-----|----------|
-| public-nvm-v2-goerli | Goerli | 2.1.0 | public | Gateway | https://gateway.goerli.public.nevermined.rocks | |
-| public-nvm-v2-goerli | Goerli | 2.1.0 | public | Marketplace API | https://marketplace-api.goerli.public.nevermined.rocks | |
-| public-nvm-v2-goerli | Goerli | 2.1.0 | public | Faucet | https://faucet.goerli.public.nevermined.rocks | |
-| public-nvm-v2-goerli | Goerli | 2.1.0 | public | GraphNode | https://api.thegraph.com/subgraphs/name/nevermined-io/public | Use with sdk >= 0.21.0 |
+For example for Nevermined Polygon Mumbai:
 
-
-## Arbitrum - Goerli
-
-- *`public-nvm-v2-arbitrum-goerli`*: Arbitrum testing environment (`arbitrum-goerli`). Using `public` contract tag. Use this if you want to integrate with Nevermined in a Arbitrum Testnet.
-
-| Environment | Network | Contracts Version | Tag | Component | URL | Comments |
-|-------------|---------|-------------------|-----|-----------|-----|----------|
-| public-nvm-v2-arbitrum-goerli | Arbitrum Goerli | 2.1.0 | public | Gateway | https://gateway.arbitrum-goerli.public.nevermined.rocks | |
-| public-nvm-v2-arbitrum-goerli | Arbitrum Goerli | 2.1.0 | public | Marketplace API | https://marketplace-api.arbitrum-goerli.public.nevermined.rocks | |
-| public-nvm-v2-arbitrum-goerli | Arbitrum Goerli | 2.1.0 | public | Faucet | https://faucet.arbitrum-goerli.public.nevermined.rocks | |
-| public-nvm-v2-arbitrum-goerli | Arbitrum Goerli | 2.1.0 | public | GraphNode | https://api.thegraph.com/subgraphs/name/nevermined-io/public | Use with sdk >= 0.21.0 |
+https://thegraph.com/hosted-service/subgraph/nevermined-io/publicmumbaiv2neverminedtoken
