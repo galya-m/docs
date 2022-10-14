@@ -4,7 +4,8 @@ sidebar_position: 5
 
 # Nevermined Environments
 
-Nevermined is a web3 developers framework that cam be deployed and used across multiple chains and networks for the implementation of different use cases pertaining to asset and data tokenization, storage and transfer. This is a list of the most used environments publicly available that you can use via the Nevermined Command Line interface.
+
+Nevermined is a web3 developers framework that allows can be deployed and used across several networks to implement different use cases. This is a list of the most used environments publicly available that you can use via the Nevermined Command Line interface.
 
 ## Environments
 
@@ -44,7 +45,8 @@ The Gateway can be found on https://gateway.public.nevermined.rocks and uses the
  
 
 ## arbitrum-one
-The Arbitrum production environment where users can interact with Nevermined protocol.<br/>
+
+The Arbitrum production environment where users can interact with the Nevermined protocol.<br/>
 
  **Production Environment** 
 The Native token is **ETH**. This environment is called **arbitrum-one** and the chain id/network id **42161**. <br/>
