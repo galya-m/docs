@@ -21,6 +21,7 @@ import { Config } from '@nevermined-io/nevermined-sdk-js';
 import { AuthToken } from '@nevermined-io/catalog-core';
 import { ethers } from 'ethers';
 
+export const nodeUri = process.env.REACT_APP_NODE_URI || 'https://matic-mumbai.chainstacklabs.com';
 export const gatewayAddress =
   process.env.REACT_APP_GATEWAY_ADDRESS || '0x5838B5512cF9f12FE9f2beccB20eb47211F9B0bc';
 export const gatewayUri =
@@ -121,7 +122,7 @@ export default ChainConfig;
 The example file `src/example/index.tsx` contains all the basic logic to handle a [NFT1155](../architecture/what-can-i-do.md#tokenization-of-assets-via-erc-1155-nfts-aka-nft-sales) as a component. It outlines each functionality and component in detail.
 
 ### SDKInstance
-This component will check if [sdk](../nevermined-sdk/getting-started.mdx) is loaded or not and display the status
+This component will check if [sdk](../nevermined-sdk/getting-started.md) is loaded or not and display the status
 
 ```tsx
 const SDKInstance = () => {
@@ -240,7 +241,7 @@ const BuyAsset = ({ddo}: {ddo: DDO}) => {
     }
 
     const currentAccount = await getCurrentAccount(sdk);
-    const response = await subscription.buySubscription(ddo.id, currentAccount, owner, 1, 1155);
+    const response = await subscription.buySubscription(ddo.id, currentAccount, owner, BigNumber.from(1), 1155);
     setIsBought(Boolean(response));
   };
 
@@ -309,7 +310,6 @@ const App = () => {
       author: '',
       license: '',
       dateCreated: new Date().toISOString(),
-      price: ''
     }
   };
 
@@ -317,7 +317,7 @@ const App = () => {
     try {
       const publisher = await getCurrentAccount(sdk);
       const rewardsRecipients: any[] = [];
-      const assetRewardsMap = constructRewardMap(rewardsRecipients, 100, publisher.getId());
+      const assetRewardsMap = constructRewardMap(rewardsRecipients, BigNumber.from(100), publisher.getId());
       const assetRewards = new AssetRewards(assetRewardsMap);
       const royaltyAttributes = {
         royaltyKind: RoyaltyKind.Standard,
@@ -332,9 +332,9 @@ const App = () => {
         gatewayAddress: String(appConfig.gatewayAddress),
         assetRewards,
         metadata,
-        nftAmount: 1,
+        nftAmount: BigNumber.from(1),
         preMint: true,
-        cap: 100,
+        cap: BigNumber.from(100),
         royaltyAttributes,
         erc20TokenAddress,
       });
@@ -479,7 +479,7 @@ const BuyAsset = ({ddo}: {ddo: DDO}) => {
     }
 
     const currentAccount = await getCurrentAccount(sdk);
-    const response = await subscription.buySubscription(ddo.id, currentAccount, owner, 1, 1155);
+    const response = await subscription.buySubscription(ddo.id, currentAccount, owner, BigNumber.from(1), 1155);
     setIsBought(Boolean(response));
   };
 
@@ -538,7 +538,6 @@ const App = () => {
       author: '',
       license: '',
       dateCreated: new Date().toISOString(),
-      price: ''
     }
   };
 
@@ -546,7 +545,7 @@ const App = () => {
     try {
       const publisher = await getCurrentAccount(sdk);
       const rewardsRecipients: any[] = [];
-      const assetRewardsMap = constructRewardMap(rewardsRecipients, 100, publisher.getId());
+      const assetRewardsMap = constructRewardMap(rewardsRecipients, BigNumber.from(100), publisher.getId());
       const assetRewards = new AssetRewards(assetRewardsMap);
       const royaltyAttributes = {
         royaltyKind: RoyaltyKind.Standard,
@@ -561,9 +560,9 @@ const App = () => {
         gatewayAddress: String(appConfig.gatewayAddress),
         assetRewards,
         metadata,
-        nftAmount: 1,
+        nftAmount: BigNumber.from(1),
         preMint: true,
-        cap: 100,
+        cap: BigNumber.from(100),
         royaltyAttributes,
         erc20TokenAddress,
       });

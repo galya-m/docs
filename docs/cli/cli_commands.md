@@ -651,6 +651,8 @@ A Smart Contract is represented by an ABI file that includes the definition of i
 | Name of the Argument | Type | Is required? | Default value | Description |
 |----------------------|------|-------------:|--------------:|-------------|
 | **params** | `array` |  |    | A list of parameters to be given during the contract initialization |
+| **approve** | `array` |  |    | A list of addresses to be approved to manage the NFT contract |
+| **subscription** | `boolean` |  |  `false`  | The NFT contract allows to mint NFTs as subscriptions |
 
 
 #### Example/s
@@ -688,8 +690,13 @@ Having a previously deployed ERC-721 NFT contract, this command registers a new 
 | **name** | `string` |  |    | The asset name |
 | **author** | `string` |  |    | The author of the file/s |
 | **urls** | `array` |  |    | The asset urls. It can be a comma separated list of urls for multiple files. |
+| **services** | `array` |  |    | The list of services attached to the asset |
 | **license** | `string` |  |    | The asset license (Creative Commons, etc) |
-| **price** | `number` |  |    | The NFT price |
+| **price** | `number` |  |  `0`  | The NFT price |
+| **preMint** | `boolean` |  |  `false`  | If true the NFTs will be minted during creation |
+| **subscription** | `boolean` |  |  `false`  | The NFT contract allows to mint NFTs as subscriptions |
+| **transfer** | `boolean` |  |  `true`  | It allows to transfer a NFT when purchased or mint |
+| **duration** | `number` |  |  `0`  | If the asset refers to a subscription, this parameter define the duration of that subscription in blocks |
 | **royalties** | `number` |  |  `0`  | The royalties (between 0 and 100%) to reward to the original creator in the secondary market. |
 | **nftType** | `string` |  |  `721`  | The NFT type |
 
@@ -699,6 +706,11 @@ Having a previously deployed ERC-721 NFT contract, this command registers a new 
 
 ```bash
 ncli nfts721 create 0xDef6F10d641BC9d8039365B27f4DF2C5F5eeb041 --name &quot;My NFT&quot; --author &quot;John Doe&quot; --price 1 --urls https://www.apache.org/licenses/LICENSE-2.0 --contentType text/plain
+```
+
+
+```bash
+ncli nfts721 create 0xDef6F10d641BC9d8039365B27f4DF2C5F5eeb041 --metadata test/resources/metadata-subscription.json
 ```
 
 
@@ -851,6 +863,42 @@ ncli nfts721 transfer 0x44dba17d62dd4004c109921cb976ac7c5ec6e4c07d24cc82182b0c49
 
 
 
+### access [did] [agreementId]
+Having a serviceAgreementId, it downloads the data associated to a ERC-721 NFT<br/>
+
+Providing a `serviceAgreementId` this command will allow to download the file contents associated to a DID that has a NFT (ERC-721) as access control mechanism. If the account of the user executing this command hold the NFT, it will be able to download the files.<br/>
+
+#### Positional Arguments
+
+| Name of the Argument | Type | Is required? | Default value | Description |
+|----------------------|------|-------------:|--------------:|-------------|
+| **did** | `string` |  |    | The DID of the asset |
+| **agreementId** | `string` |  |    | The identifier of the agreement created by the buyer |
+| **seller** | `string` |  &#x2611;  |    | The address of the seller (0x123..) |
+
+
+#### Optional Arguments
+
+| Name of the Argument | Type | Is required? | Default value | Description |
+|----------------------|------|-------------:|--------------:|-------------|
+| **destination** | `string` |  &#x2611;  |    | The destination of the files downloaded |
+| **nftType** | `number` |  |  `721`  | The NFT type |
+
+
+#### Example/s
+
+
+```bash
+ncli nfts721 access did:nv:afd733c23c41af948be7ec039c3fb2048d437e082a69ea3f336cdf452a49be7e 0xb716555c3b40bd01836826e114607d65b1ebb04e8a051977e6d902eca2df750b --destination /tmp/nevemined/ --seller 0xe2DD09d719Da89e5a3D0F2549c7E24566e947260
+```
+
+
+```bash
+ncli nfts721 access did:nv:04c50282c7e297c019cea5368c3d7b9e757dfa5d6e28b3d666dd710572669586 0xf988eca804ed9af51653de290e71564dfbbf40afd0dd0a28b25fc95b18476c77 --seller 0xe2DD09d719Da89e5a3D0F2549c7E24566e947260 --destination /tmp/ --accountIndex 1
+```
+
+
+
 ### download [did]
 As NFT holder this allows to download the files associated to a NFT<br/>
 
@@ -904,6 +952,7 @@ This command registers a new asset that allows the publisher to provide access t
 | **name** | `string` |  |    | The asset name |
 | **author** | `string` |  |    | The author of the file/s |
 | **urls** | `array` |  |    | The asset urls. It can be a comma separated list of urls for multiple files. |
+| **services** | `array` |  |    | The list of services attached to the asset |
 | **license** | `string` |  |    | The asset license (Creative Commons, etc) |
 | **price** | `number` |  |    | The NFT price |
 | **cap** | `number` |  |  `0`  | The NFT minting cap (0 means uncapped) |
@@ -1086,6 +1135,7 @@ Providing a `serviceAgreementId` this command will allow to download the file co
 | Name of the Argument | Type | Is required? | Default value | Description |
 |----------------------|------|-------------:|--------------:|-------------|
 | **destination** | `string` |  &#x2611;  |    | The destination of the files downloaded |
+| **nftType** | `number` |  |  `1155`  | The NFT type |
 
 
 #### Example/s

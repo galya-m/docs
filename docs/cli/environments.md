@@ -20,8 +20,8 @@ The Native token is **MATIC**. This environment has the network name **mumbai** 
 ### Nevermined configuration 
 
  The Nevermined contracts deployed have the version: **2.1.0**  The Nevermined contracts are labeled with the tag name: **public** 
-The Marketplace API used can be found on https://marketplace-api.mumbai.public.nevermined.rocks. <br/>
-The Gateway can be found on https://gateway.mumbai.public.nevermined.rocks and uses the public address **0xB82dc620BB4dE6712376055a5cfc0DF11112D442**.<br/>
+The Marketplace API used can be found on https://marketplace-api.mumbai.public.nevermined.network. <br/>
+The Gateway can be found on https://gateway.mumbai.public.nevermined.network and uses the public address **0x5838B5512cF9f12FE9f2beccB20eb47211F9B0bc**.<br/>
  There is deployed a faucet on https://faucet.mumbai.public.nevermined.rocks .<br/> The subgraphs to fetch contracts events can be found on https://api.thegraph.com/subgraphs/name/nevermined-io/public .<br/>
 
 
@@ -36,8 +36,8 @@ The Native token is **MATIC**. This environment has the network name **matic** a
 ### Nevermined configuration 
 
  The Nevermined contracts deployed have the version: **2.1.0**  The Nevermined contracts are labeled with the tag name: **public** 
-The Marketplace API used can be found on https://marketplace-api.public.nevermined.rocks. <br/>
-The Gateway can be found on https://gateway.public.nevermined.rocks and uses the public address **0xD1bF18059D590dE610D3E2D0F43Dd63C0eB2aA86**.<br/>
+The Marketplace API used can be found on https://marketplace-api.matic.public.nevermined.network. <br/>
+The Gateway can be found on https://gateway.matic.public.nevermined.network and uses the public address **0x5838B5512cF9f12FE9f2beccB20eb47211F9B0bc**.<br/>
  The subgraphs to fetch contracts events can be found on https://api.thegraph.com/subgraphs/name/nevermined-io/public .<br/>
 
 
