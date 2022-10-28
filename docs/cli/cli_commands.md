@@ -652,14 +652,14 @@ A Smart Contract is represented by an ABI file that includes the definition of i
 |----------------------|------|-------------:|--------------:|-------------|
 | **params** | `array` |  |    | A list of parameters to be given during the contract initialization |
 | **approve** | `array` |  |    | A list of addresses to be approved to manage the NFT contract |
-| **subscription** | `boolean` |  |  `false`  | The NFT contract allows to mint NFTs as subscriptions |
+| **addMinter** | `boolean` |  |  `true`  | If true adds the Nevermined Transfer condition with permissions to mint NFTs |
 
 
 #### Example/s
 
 
 ```bash
-ncli nfts721 deploy test/resources/nfts/TestERC721.json
+ncli nfts721 deploy test/resources/nfts/TestNFT721.json
 ```
 
 
@@ -837,20 +837,21 @@ ncli nfts721 order did:nv:afd733c23c41af948be7ec039c3fb2048d437e082a69ea3f336cdf
 ### transfer [agreementId]
 It allows to transfer a NFT (ERC-721) to the account of the buyer<br/>
 
-This command requires a valid `serviceAgreementId` created by the `buyerAccount` that demonstrates that an asset was bought. The asset is then transferred to the buyer&#39;s account.<br/>
+This command requires a valid `serviceAgreementId` and the `sellerAddress` that demonstrates that an asset was bought. The asset is then transferred to the buyer&#39;s account.<br/>
 
 #### Positional Arguments
 
 | Name of the Argument | Type | Is required? | Default value | Description |
 |----------------------|------|-------------:|--------------:|-------------|
 | **agreementId** | `string` |  |    | The identifier of the agreement created by the buyer |
-| **buyerAccount** | `string` |  |    | The address of the buyer (0x123..) |
 
 
 #### Optional Arguments
 
 | Name of the Argument | Type | Is required? | Default value | Description |
 |----------------------|------|-------------:|--------------:|-------------|
+| **sellerAddress** | `string` |  |    | The address of the seller (0x123..) |
+| **buyerAddress** | `string` |  |    | The address of the account who will receive the NFT |
 | **nftType** | `string` |  |  `721`  | The NFT type |
 
 
@@ -858,29 +859,29 @@ This command requires a valid `serviceAgreementId` created by the `buyerAccount`
 
 
 ```bash
-ncli nfts721 transfer 0x44dba17d62dd4004c109921cb976ac7c5ec6e4c07d24cc82182b0c49c6381869 --buyerAccount 0xBE5449a6A97aD46c8558A3356267Ee5D2731ab5e
+ncli nfts721 transfer 0x44dba17d62dd4004c109921cb976ac7c5ec6e4c07d24cc82182b0c49c6381869
 ```
 
 
 
-### access [did] [agreementId]
-Having a serviceAgreementId, it downloads the data associated to a ERC-721 NFT<br/>
+### access [did]
+It allows to download the contents associated to a NFT if the user is a holder<br/>
 
-Providing a `serviceAgreementId` this command will allow to download the file contents associated to a DID that has a NFT (ERC-721) as access control mechanism. If the account of the user executing this command hold the NFT, it will be able to download the files.<br/>
+Providing a `DID` this command will allow to download the file contents associated to a DID that has a NFT (ERC-721) as access control mechanism. If the account of the user executing this command hold the NFT, it will be able to download the files.<br/>
 
 #### Positional Arguments
 
 | Name of the Argument | Type | Is required? | Default value | Description |
 |----------------------|------|-------------:|--------------:|-------------|
 | **did** | `string` |  |    | The DID of the asset |
-| **agreementId** | `string` |  |    | The identifier of the agreement created by the buyer |
-| **seller** | `string` |  &#x2611;  |    | The address of the seller (0x123..) |
 
 
 #### Optional Arguments
 
 | Name of the Argument | Type | Is required? | Default value | Description |
 |----------------------|------|-------------:|--------------:|-------------|
+| **agreementId** | `string` |  |    | The identifier of the agreement created by the buyer |
+| **seller** | `string` |  |    | The address of the seller (0x123..) |
 | **destination** | `string` |  &#x2611;  |    | The destination of the files downloaded |
 | **nftType** | `number` |  |  `721`  | The NFT type |
 
@@ -889,12 +890,12 @@ Providing a `serviceAgreementId` this command will allow to download the file co
 
 
 ```bash
-ncli nfts721 access did:nv:afd733c23c41af948be7ec039c3fb2048d437e082a69ea3f336cdf452a49be7e 0xb716555c3b40bd01836826e114607d65b1ebb04e8a051977e6d902eca2df750b --destination /tmp/nevemined/ --seller 0xe2DD09d719Da89e5a3D0F2549c7E24566e947260
+ncli nfts721 access did:nv:afd733c23c41af948be7ec039c3fb2048d437e082a69ea3f336cdf452a49be7e 0xb716555c3b40bd01836826e114607d65b1ebb04e8a051977e6d902eca2df750b --destination /tmp/nevemined/ 
 ```
 
 
 ```bash
-ncli nfts721 access did:nv:04c50282c7e297c019cea5368c3d7b9e757dfa5d6e28b3d666dd710572669586 0xf988eca804ed9af51653de290e71564dfbbf40afd0dd0a28b25fc95b18476c77 --seller 0xe2DD09d719Da89e5a3D0F2549c7E24566e947260 --destination /tmp/ --accountIndex 1
+ncli nfts721 access did:nv:04c50282c7e297c019cea5368c3d7b9e757dfa5d6e28b3d666dd710572669586 0xf988eca804ed9af51653de290e71564dfbbf40afd0dd0a28b25fc95b18476c77  --destination /tmp/ --accountIndex 1
 ```
 
 
@@ -1102,8 +1103,9 @@ This command requires a valid `serviceAgreementId` created by the `buyerAccount`
 
 | Name of the Argument | Type | Is required? | Default value | Description |
 |----------------------|------|-------------:|--------------:|-------------|
+| **sellerAddress** | `string` |  |    | The address of the seller (0x123..) |
+| **buyerAddress** | `string` |  |    | The address of the account who will receive the NFT |
 | **amount** | `number` |  |  `1`  | The number of NFTs (ERC-1155) to transfer |
-| **buyerAccount** | `string` |  |    | The address of the buyer |
 | **nftType** | `string` |  |  `1155`  | The NFT type |
 
 
@@ -1111,12 +1113,12 @@ This command requires a valid `serviceAgreementId` created by the `buyerAccount`
 
 
 ```bash
-ncli nfts1155 transfer 0x44dba17d62dd4004c109921cb976ac7c5ec6e4c07d24cc82182b0c49c6381869 --amount 1 --buyerAccount 0xBE5449a6A97aD46c8558A3356267Ee5D2731ab5e
+ncli nfts1155 transfer 0x44dba17d62dd4004c109921cb976ac7c5ec6e4c07d24cc82182b0c49c6381869 --amount 1 --buyerAddress 0xBE5449a6A97aD46c8558A3356267Ee5D2731ab5e
 ```
 
 
 
-### access [did] [agreementId]
+### access [did]
 Having a serviceAgreementId, it downloads the data associated to a ERC-1155 NFT<br/>
 
 Providing a `serviceAgreementId` this command will allow to download the file contents associated to a DID that has a NFT (ERC-721) as access control mechanism. If the account of the user executing this command hold the NFT, it will be able to download the files.<br/>
@@ -1126,14 +1128,13 @@ Providing a `serviceAgreementId` this command will allow to download the file co
 | Name of the Argument | Type | Is required? | Default value | Description |
 |----------------------|------|-------------:|--------------:|-------------|
 | **did** | `string` |  |    | The DID of the asset |
-| **agreementId** | `string` |  |    | The identifier of the agreement created by the buyer |
-| **seller** | `string` |  &#x2611;  |    | The address of the seller (0x123..) |
 
 
 #### Optional Arguments
 
 | Name of the Argument | Type | Is required? | Default value | Description |
 |----------------------|------|-------------:|--------------:|-------------|
+| **agreementId** | `string` |  |    | The identifier of the agreement created by the buyer |
 | **destination** | `string` |  &#x2611;  |    | The destination of the files downloaded |
 | **nftType** | `number` |  |  `1155`  | The NFT type |
 
