@@ -362,14 +362,14 @@ When a user publishes content on Nevermined this command downloads the files att
 | Name of the Argument | Type | Is required? | Default value | Description |
 |----------------------|------|-------------:|--------------:|-------------|
 | **fileIndex** | `number` |  |  `-1`  | The index of the file to retrieve in the DDO |
-| **path** | `string` |  |  `.`  | Local path where the asset files will be downloaded |
+| **destination** | `string` |  |  `.`  | Local path where the asset files will be downloaded |
 
 
 #### Example/s
 
 
 ```bash
-ncli assets download  did:nv:912e7a547bcd675ffbc5d2063ef770e15744029f048f706f6bb0281df4f4700f --path /tmp
+ncli assets download  did:nv:912e7a547bcd675ffbc5d2063ef770e15744029f048f706f6bb0281df4f4700f --destination /tmp
 ```
 
 
@@ -421,19 +421,19 @@ This commands is the best entry point to access the files attached to a Nevermin
 | **agreementId** | `string` |  |    | Agreement Id of a previously purchased asset. If not given a new purchase will be executed |
 | **fileIndex** | `number` |  |  `-1`  | The index of the file to retrieve in the DDO |
 | **password** | `string` |  |    | Password for receiving encrypted files |
-| **path** | `string` |  |  `.`  | Local path where the asset files will be downloaded |
+| **destination** | `string` |  |  `.`  | Local path where the asset files will be downloaded |
 
 
 #### Example/s
 
 
 ```bash
-ncli assets get did:nv:912e7a547bcd675ffbc5d2063ef770e15744029f048f706f6bb0281df4f4700f --path /tmp
+ncli assets get did:nv:912e7a547bcd675ffbc5d2063ef770e15744029f048f706f6bb0281df4f4700f --destination /tmp
 ```
 
 
 ```bash
-ncli assets get did:nv:912e7a547bcd675ffbc5d2063ef770e15744029f048f706f6bb0281df4f4700f --agreementId 0x412dceaa0c5506095daa6b221be93c680e8a49bfd5b63ce54522d85d2b0e1384 --path /tmp
+ncli assets get did:nv:912e7a547bcd675ffbc5d2063ef770e15744029f048f706f6bb0281df4f4700f --agreementId 0x412dceaa0c5506095daa6b221be93c680e8a49bfd5b63ce54522d85d2b0e1384 --destination /tmp
 ```
 
 
@@ -746,6 +746,35 @@ ncli nfts721 show did:nv:afd733c23c41af948be7ec039c3fb2048d437e082a69ea3f336cdf4
 
 
 
+### hold [did]
+It checks if an address is a holder of the NFT<br/>
+
+This command allows to check if an address is a holder of a specific NFT wrapped by a Nevermined DID<br/>
+
+#### Positional Arguments
+
+| Name of the Argument | Type | Is required? | Default value | Description |
+|----------------------|------|-------------:|--------------:|-------------|
+| **did** | `string` |  |    | The DID to mint |
+
+
+#### Optional Arguments
+
+| Name of the Argument | Type | Is required? | Default value | Description |
+|----------------------|------|-------------:|--------------:|-------------|
+| **address** | `string` |  |    | The address of the account to validate as holder |
+| **nftType** | `string` |  |  `721`  | The NFT type |
+
+
+#### Example/s
+
+
+```bash
+ncli nfts721 hold did:nv:afd733c23c41af948be7ec039c3fb2048d437e082a69ea3f336cdf452a49be7e
+```
+
+
+
 ### mint [did]
 Mints a ERC-721 NFT<br/>
 
@@ -996,6 +1025,35 @@ For a given DID and NFT (ERC-1155) this command displays some information about 
 
 ```bash
 ncli nfts1155 show did:nv:afd733c23c41af948be7ec039c3fb2048d437e082a69ea3f336cdf452a49be7e
+```
+
+
+
+### hold [did]
+It checks if an address is a holder of the NFT<br/>
+
+This command allows to check if an address is a holder of a specific NFT wrapped by a Nevermined DID<br/>
+
+#### Positional Arguments
+
+| Name of the Argument | Type | Is required? | Default value | Description |
+|----------------------|------|-------------:|--------------:|-------------|
+| **did** | `string` |  |    | The DID to mint |
+
+
+#### Optional Arguments
+
+| Name of the Argument | Type | Is required? | Default value | Description |
+|----------------------|------|-------------:|--------------:|-------------|
+| **address** | `string` |  |    | The address of the account to validate as holder |
+| **nftType** | `string` |  |  `1155`  | The NFT type |
+
+
+#### Example/s
+
+
+```bash
+ncli nfts1155 hold did:nv:afd733c23c41af948be7ec039c3fb2048d437e082a69ea3f336cdf452a49be7e
 ```
 
 
